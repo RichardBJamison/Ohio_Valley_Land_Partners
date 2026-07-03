@@ -42,6 +42,15 @@ export const siteConfig = {
   ],
 };
 
+export const defaultOgImages = [
+  {
+    url: siteConfig.ogImage,
+    width: 1200,
+    height: 630,
+    alt: 'Ohio Valley Land Partners — Local Land Buyers in the Ohio Valley',
+  },
+];
+
 export const silos = {
   land: {
     title: 'Land Offers',

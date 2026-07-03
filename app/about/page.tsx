@@ -3,11 +3,15 @@ import Link from 'next/link';
 import { ArrowRight, Heart, Shield, MapPin, Handshake } from 'lucide-react';
 import { LegalDisclaimer } from '@/components/legal-disclaimer';
 import { communityGiving } from '@/lib/public-copy';
+import { siteConfig } from '@/lib/seo-config';
 
 export const metadata: Metadata = {
   title: 'About Us — Ohio Valley Land Partners',
   description:
     'Ohio Valley Land Partners is a principal land buyer focused on direct acquisition inquiries, private portfolio marketing, and community investment in the Ohio Valley.',
+  alternates: {
+    canonical: `${siteConfig.url}/about`,
+  },
 };
 
 const principles = [

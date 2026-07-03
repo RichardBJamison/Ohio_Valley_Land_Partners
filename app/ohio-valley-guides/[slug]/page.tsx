@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { counties, siteConfig } from '@/lib/seo-config';
+import { counties, defaultOgImages, siteConfig } from '@/lib/seo-config';
 import { countySellPages, getCountySellPage } from '@/lib/county-sell-data';
 import { notFound } from 'next/navigation';
 import { MapPin, CheckCircle, ArrowRight } from 'lucide-react';
@@ -36,6 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         `General land information and direct acquisition inquiries in ${county.name}, ${county.state}.`,
       url,
       type: 'website',
+      images: defaultOgImages,
     },
   };
 }

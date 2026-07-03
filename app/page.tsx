@@ -3,7 +3,7 @@ import { HeroSection } from '@/components/home/hero-section';
 import { LocalBusinessSchema, FAQSchema } from '@/components/seo/json-ld';
 import { TreePine, Clock, DollarSign, MapPin, Heart, ChevronDown, ArrowRight, Target } from 'lucide-react';
 import Link from 'next/link';
-import { silos, siteConfig } from '@/lib/seo-config';
+import { defaultOgImages, silos, siteConfig } from '@/lib/seo-config';
 import { countySellPages } from '@/lib/county-sell-data';
 import { campaignFeaturedSlug } from '@/lib/blog-data';
 import { LegalDisclaimer } from '@/components/legal-disclaimer';
@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     title: homepageSeoMeta.title,
     description: homepageSeoMeta.description,
     url: siteConfig.url,
+    images: defaultOgImages,
   },
 };
 

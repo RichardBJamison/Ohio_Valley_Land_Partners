@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { blogPosts, getBlogPost } from '@/lib/blog-data';
 import { ArticleSchema, BreadcrumbSchema } from '@/components/seo/json-ld';
-import { siteConfig } from '@/lib/seo-config';
+import { defaultOgImages, siteConfig } from '@/lib/seo-config';
 import { Badge } from '@/components/ui/badge';
 import { LegalDisclaimer } from '@/components/legal-disclaimer';
 import { publicBlogSummary } from '@/lib/public-copy';
@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url,
       publishedTime: post.datePublished,
       modifiedTime: post.dateModified,
+      images: defaultOgImages,
     },
   };
 }

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { countySellPages, getCountySellPage } from '@/lib/county-sell-data';
 import { getBlogPost } from '@/lib/blog-data';
-import { siteConfig } from '@/lib/seo-config';
+import { defaultOgImages, siteConfig } from '@/lib/seo-config';
 import { countySubheadline, faqFraming, sellerPositioning, softenCountyFaq } from '@/lib/public-copy';
 import { BreadcrumbSchema, FAQSchema, LocalBusinessSchema } from '@/components/seo/json-ld';
 import { LegalDisclaimer } from '@/components/legal-disclaimer';
@@ -34,6 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: county.metaDescription,
       url,
       type: 'website',
+      images: defaultOgImages,
     },
   };
 }

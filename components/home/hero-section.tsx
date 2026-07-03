@@ -6,6 +6,7 @@ import { MapPin, Clock, TreePine, ShieldCheck, Users, Target, Globe2 } from 'luc
 import { SellerForm } from '@/components/forms/seller-form';
 import { InvestorIntakeForm } from '@/components/forms/investor-intake-form';
 import { communityGiving, sellerPositioning } from '@/lib/public-copy';
+import { HeroVideo } from '@/components/home/hero-video';
 
 const stats = [
   { label: sellerPositioning.analysisLabel, value: 'Free', icon: Clock },
@@ -51,18 +52,7 @@ export function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-forest bg-[url('/og.jpg')] bg-cover bg-center md:bg-none motion-reduce:bg-[url('/og.jpg')] motion-reduce:bg-cover motion-reduce:bg-center">
 
-      {/* Hero video — desktop/tablet only; static image on mobile (video feels too fast on small screens) */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        className="absolute inset-0 hidden h-full w-full object-cover md:block motion-reduce:hidden"
-        aria-hidden="true"
-      >
-        <source src="/hero.mp4" type="video/mp4" />
-      </video>
+      <HeroVideo />
 
       {/* Gradient overlay — heavy on the left where content lives, fades right so video shows through */}
       <div className="absolute inset-0 bg-gradient-to-r from-forest/95 via-forest/75 to-forest/40" aria-hidden="true" />

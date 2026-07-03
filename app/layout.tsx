@@ -14,17 +14,21 @@ import { GhlChatEmbed } from '@/components/ghl-chat-embed';
 
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700'],
   variable: '--font-poppins',
   display: 'swap',
+  preload: true,
+  adjustFontFallback: true,
 });
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
-  style: ['normal', 'italic'],
+  weight: ['400'],
+  style: ['italic'],
   variable: '--font-cormorant',
   display: 'swap',
+  preload: false,
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {

@@ -5,6 +5,7 @@ import { Poppins, Cormorant_Garamond } from 'next/font/google';
 import { MainNav } from '@/components/navigation/main-nav';
 import { Footer } from '@/components/navigation/footer';
 import { MobileStickyCta } from '@/components/navigation/mobile-sticky-cta';
+import { PublicOnly, SiteMain } from '@/components/navigation/public-only';
 import SiteHitTracker from '@/components/analytics/site-hit-tracker';
 import { WebSiteSchema, PersonSchema, OrganizationSchema, ServiceSchema } from '@/components/seo/json-ld';
 import { siteConfig } from '@/lib/seo-config';
@@ -92,8 +93,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${cormorant.variable}`}>
       <body className={poppins.className}>
-        {/* GHL LeadConnector A2P widget — marker div stays in HTML for scanner detection; script loads post-hydration. */}
-        <GhlChatEmbed />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-7FQDXC8DVC"
           strategy="afterInteractive"
@@ -124,11 +123,18 @@ export default function RootLayout({
         <Suspense fallback={null}>
           <SiteHitTracker />
         </Suspense>
-        <MainNav />
-        <main className="min-h-screen pb-20 lg:pb-0">{children}</main>
-        <Footer />
-        <MobileStickyCta />
-        <GhlBubbleOnly />
+        {/* Marketing chrome is public-only — private /p/* previews ship their own header. */}
+        <PublicOnly>
+          <MainNav />
+        </PublicOnly>
+        <SiteMain>{children}</SiteMain>
+        <PublicOnly>
+          <Footer />
+          <MobileStickyCta />
+          {/* GHL LeadConnector — public pages only; marker div for A2P scanner; script loads post-hydration. */}
+          <GhlChatEmbed />
+          <GhlBubbleOnly />
+        </PublicOnly>
       </body>
     </html>
   );

@@ -80,22 +80,16 @@ export function MainNav() {
         {/* Desktop CTAs */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-3">
           <Link
-            href="/land-scouts"
-            className="text-sm font-medium text-white/60 hover:text-white transition-colors px-3 py-2"
-          >
-            Introductions
-          </Link>
-          <Link
             href="/#property-review"
             data-analytics-event="property_review_cta_click"
-            className="rounded-lg bg-amber px-4 py-2 text-sm font-semibold text-forest hover:bg-amber/90 transition-colors"
+            className="whitespace-nowrap rounded-lg bg-amber px-4 py-2 text-sm font-semibold text-forest hover:bg-amber/90 transition-colors"
           >
             Start Property Review
           </Link>
           <a
             href="https://ovlp-portal.vercel.app"
             data-analytics-event="buyer_portal_click"
-            className="rounded-lg border border-white/20 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
+            className="whitespace-nowrap rounded-lg border border-white/20 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
           >
             Buyer Portal
           </a>
@@ -146,13 +140,6 @@ export function MainNav() {
           </div>
 
           <div className="mt-8 flex flex-col gap-3 border-t border-white/10 pt-8">
-            <Link
-              href="/land-scouts"
-              onClick={() => setMobileMenuOpen(false)}
-              className="w-full rounded-lg border border-white/20 py-3 text-center text-sm font-semibold text-white hover:bg-white/10 transition-colors"
-            >
-              Introductions
-            </Link>
             <Link
               href="/#property-review"
               onClick={() => setMobileMenuOpen(false)}

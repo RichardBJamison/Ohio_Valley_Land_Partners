@@ -2,17 +2,17 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { MapPin, Clock, TreePine, ShieldCheck, Users, Target, Globe2 } from 'lucide-react';
+import { MapPin, ShieldCheck, Users, Target, Globe2 } from 'lucide-react';
 import { SellerForm } from '@/components/forms/seller-form';
 import { InvestorIntakeForm } from '@/components/forms/investor-intake-form';
 import { communityGiving, sellerPositioning } from '@/lib/public-copy';
 import { HeroVideo } from '@/components/home/hero-video';
 
 const stats = [
-  { label: sellerPositioning.analysisLabel, value: 'Direct', icon: Clock },
+  { label: sellerPositioning.analysisLabel, value: 'Direct', icon: MapPin },
   { label: 'Regional Focus', value: 'Ohio Valley', icon: Globe2 },
-  { label: 'Owner Choice', value: 'No Obligation', icon: TreePine },
-  { label: 'Communication', value: 'Principal-Led', icon: Target },
+  { label: 'No Obligation', value: 'Your Choice', icon: ShieldCheck },
+  { label: 'Direct Communication', value: 'Principal‑Led', icon: Target },
 ];
 
 const campaignRegions = [
@@ -117,8 +117,10 @@ export function HeroSection() {
                 return (
                   <div key={stat.label} className="flex flex-col items-center text-center">
                     <Icon className="h-4 w-4 text-amber mb-2" />
-                    <div className="text-xl font-bold text-white">{stat.value}</div>
-                    <div className="text-xs text-white/50 mt-0.5">{stat.label}</div>
+                    <div className="whitespace-nowrap text-lg font-bold tracking-[-0.01em] text-white">
+                      {stat.value}
+                    </div>
+                    <div className="mt-1 text-xs leading-tight text-white/50">{stat.label}</div>
                   </div>
                 );
               })}

@@ -8,12 +8,13 @@
 
 - **Branch:** `codex/ovlp-conversion-copy-mockup`
 - **Worktree:** `/Users/macbook15/Me-Nexus/working/ovlp-conversion-copy-mockup`
-- **Local preview:** `http://127.0.0.1:8894/?v=20260720-qa2`
+- **Local preview:** `http://127.0.0.1:8894/?v=20260720-header-proof-v1`
 - **Production:** unchanged; nothing pushed or deployed
 - **Scope:** seller clarity, Property Review terminology, form-language consistency, principal trust, seller empathy, five-step process, FAQ quality, county acquisition/guide intent separation, risky-claim cleanup, and GA4 conversion events
 - **Preserved:** county URLs, canonicals, sitemap, forms/API endpoints, Resend routing, GHL A2P widget, GA4, logo, colors, typography, imagery, animations, breakpoints, and shared design system
 - **Verification:** `tsc --noEmit` passed; production build passed for 63 pages; ESLint passed for every changed TS/TSX file; 9 acquisition pages and 9 county guides generated; key local URLs return HTTP 200
 - **Visual-review note:** the cache-busted mockup is open in Chrome. The Chrome review connection did not attach despite extension/native-host checks passing, so interactive automated visual QA was not substituted with another browser.
+- **Visual-review iteration:** Removed Introductions from the desktop and mobile header while retaining its footer link; kept the header CTAs on one line; and balanced the proof row as Direct / Ohio Valley / Your Choice / Principal-Led, with a small bullseye on the final item.
 - **Pickup:** Richard reviews the Chrome mockup. Only after explicit approval should this branch be pushed, merged, or deployed.
 
 ---

@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { HeroSection } from '@/components/home/hero-section';
+import { CountyFlipGrid, HomepageFAQFlipList, TrustFlipGrid } from '@/components/home/flip-groups';
 import { LocalBusinessSchema, FAQSchema } from '@/components/seo/json-ld';
-import { TreePine, MapPin, ChevronDown, ArrowRight, Target } from 'lucide-react';
+import { TreePine, MapPin, ArrowRight, Target } from 'lucide-react';
 import Link from 'next/link';
 import { defaultOgImages, siteConfig } from '@/lib/seo-config';
 import { countySellPages } from '@/lib/county-sell-data';
@@ -144,20 +145,9 @@ export default function Home() {
               {sellerPositioning.countySectionSub}
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {countySellPages.map((county) => (
-              <Link
-                key={county.slug}
-                href={`/sell-land/${county.slug}`}
-                className="flex items-center justify-between rounded-xl border border-border bg-background px-5 py-4 text-sm font-medium text-foreground hover:border-amber/40 hover:text-amber transition-colors"
-              >
-                <span>
-                  {county.name}, {county.stateAbbr}
-                </span>
-                <ArrowRight className="h-4 w-4 text-muted-foreground" />
-              </Link>
-            ))}
-          </div>
+          <CountyFlipGrid
+            counties={countySellPages.map(({ slug, name, stateAbbr }) => ({ slug, name, stateAbbr }))}
+          />
           <p className="mt-8 text-center text-sm text-muted-foreground">
             We also review property in{' '}
             <Link href={`/blog/${campaignFeaturedSlug}`} className="text-meadow font-semibold hover:underline">
@@ -269,20 +259,7 @@ export default function Home() {
               {faqFraming.sectionSub}
             </p>
           </div>
-          <dl className="flex flex-col gap-4">
-            {homepageFAQs.map((faq) => (
-              <details
-                key={faq.question}
-                className="group rounded-xl border border-border bg-card p-6 open:border-amber/30 transition-all"
-              >
-                <summary className="flex cursor-pointer items-center justify-between gap-4 font-semibold text-foreground list-none">
-                  <dt>{faq.question}</dt>
-                  <ChevronDown className="h-5 w-5 text-amber shrink-0 transition-transform group-open:rotate-180" />
-                </summary>
-                <dd className="mt-4 text-sm leading-7 text-muted-foreground">{faq.answer}</dd>
-              </details>
-            ))}
-          </dl>
+          <HomepageFAQFlipList faqs={homepageFAQs} />
           <LegalDisclaimer className="mt-10 text-center max-w-xl mx-auto" />
           <p className="mt-6 text-center text-sm text-muted-foreground">
             Have a question that isn&apos;t answered here?{' '}
@@ -329,20 +306,14 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-              {[
+            <TrustFlipGrid
+              items={[
                 { label: sellerPositioning.analysisLabel, value: 'Direct', sub: sellerPositioning.analysisSub },
                 { label: 'Regional focus', value: 'Ohio Valley', sub: 'Active acquisition focus varies by county and campaign' },
                 { label: 'Owner choice', value: 'No obligation', sub: 'Requesting a review does not commit you to sell' },
                 { label: 'Community commitment', value: '5%', sub: communityGiving.statSub },
-              ].map((item) => (
-                <div key={item.label} className="rounded-xl border border-border bg-background p-6">
-                  <div className="text-2xl font-black text-amber mb-1">{item.value}</div>
-                  <div className="text-sm font-semibold text-foreground mb-1">{item.label}</div>
-                  <div className="text-xs text-muted-foreground">{item.sub}</div>
-                </div>
-              ))}
-            </div>
+              ]}
+            />
           </div>
         </div>
       </section>

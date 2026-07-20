@@ -27,12 +27,13 @@ export function MobileStickyCta() {
           <Phone className="h-4 w-4" />
           Call Now
         </a>
-        <Link
-          href="/contact"
+      <Link
+          href="/#property-review"
           onClick={() => trackEvent('click_offer_mobile_cta')}
+          data-analytics-event="property_review_cta_click"
           className="flex flex-1 items-center justify-center rounded-lg bg-amber px-4 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
         >
-          Request Analysis
+          Start Property Review
         </Link>
       </div>
     </div>

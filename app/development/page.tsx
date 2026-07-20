@@ -29,7 +29,7 @@ export default function DevelopmentPage() {
               <p className="mt-6 text-xl leading-8 text-muted-foreground">
                 Residential development is part of our long-term vision for the Ohio Valley.
                 Our current focus is land acquisition — we are actively identifying parcels with
-                development potential across our Ohio Valley service area and Franklin County campaign.
+                development potential in active acquisition areas across the Ohio Valley.
               </p>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
                 If you have land you believe has residential development potential, contact us.
@@ -37,10 +37,11 @@ export default function DevelopmentPage() {
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
-                  href="/"
+                  href="/#property-review"
+                  data-analytics-event="property_review_cta_click"
                   className="inline-flex items-center gap-2 rounded-lg bg-amber px-6 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
                 >
-                  Request a Property Review <ArrowRight className="h-4 w-4" />
+                  Start My Property Review <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
                   href="/investor-portal"
@@ -56,7 +57,7 @@ export default function DevelopmentPage() {
         {/* What we're building toward */}
         <section className="py-16 bg-card border-t border-border">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <h2 className="text-2xl font-bold text-foreground mb-10">What We're Building Toward</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-10">What We’re Building Toward</h2>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
               {[
                 {
@@ -67,7 +68,7 @@ export default function DevelopmentPage() {
                 {
                   icon: Home,
                   title: 'Ohio Valley-Focused',
-                  description: 'We develop in the communities we operate in. No out-of-region plays. Every project we pursue will be in our Ohio Valley footprint or a deliberate campaign market like Franklin County.',
+                  description: 'We study development opportunities within active Ohio Valley acquisition areas, with local context shaping every property decision.',
                 },
                 {
                   icon: Users,
@@ -103,10 +104,11 @@ export default function DevelopmentPage() {
                 We may present a property-specific proposal when the parcel fits our criteria.
               </p>
               <Link
-                href="/"
+                href="/#property-review"
+                data-analytics-event="property_review_cta_click"
                 className="inline-flex items-center gap-2 rounded-lg bg-amber px-8 py-4 text-base font-bold text-forest hover:bg-amber/90 transition-colors"
               >
-                Request a Property Review <ArrowRight className="h-4 w-4" />
+                Start My Property Review <ArrowRight className="h-4 w-4" />
               </Link>
               <p className="mt-6 text-xs text-muted-foreground">
                 Ohio Valley Land Partners operates as a principal buyer of real estate, not a licensed broker or agent.

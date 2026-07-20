@@ -6,15 +6,14 @@ import { InvestorIntakeForm } from '@/components/forms/investor-intake-form';
 
 export const metadata: Metadata = {
   title: 'Buy Land — Ohio Valley Land Partners',
-  description: 'Join our buyer network to get first access to off-market land deals across the Ohio Valley (primarily Ohio, reaching into West Virginia, Kentucky, and Pennsylvania). Hunting tracts, farm ground, development sites, infill lots, and investment parcels.',
+  description: 'Join the OVLP buyer network and share your property criteria. Inventory and acquisition focus vary by county, with published acquisition areas concentrated in Ohio and West Virginia.',
   keywords: 'buy land Ohio Valley, off-market land deals Ohio, hunting land Ohio, farm ground Ohio West Virginia, land buyer network',
 };
 
 const regions = [
-  'Ohio',
-  'West Virginia',
-  'Kentucky',
-  'Pennsylvania',
+  'Ohio acquisition areas',
+  'West Virginia acquisition areas',
+  'Other matching Ohio Valley inventory',
 ];
 
 export default function PropertiesPage() {
@@ -37,16 +36,16 @@ export default function PropertiesPage() {
                   <span className="block text-amber mt-1">in the Ohio Valley.</span>
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                  We don't list properties publicly. When we have a parcel to sell, it goes to
-                  our buyer list first — directly, with a phone call. Join the list and tell us
-                  what you're looking for. We call when we have a match.
+                  Join the buyer list and tell us what you are looking for. OVLP may contact
+                  members when matching inventory becomes available; inventory, timing, and
+                  active focus vary by county.
                 </p>
 
                 <div className="mt-8 flex flex-col gap-3">
                   {[
-                    { icon: Bell, text: 'First access — before any public listing' },
+                    { icon: Bell, text: 'Updates when matching inventory becomes available' },
                     { icon: TreePine, text: 'Hunting, farm, development & investment parcels' },
-                    { icon: MapPin, text: 'Primarily Ohio, reaching into West Virginia, Kentucky, Pennsylvania & the broader Ohio Valley' },
+                    { icon: MapPin, text: 'Published acquisition areas are concentrated in Ohio and West Virginia' },
                   ].map((item) => {
                     const Icon = item.icon;
                     return (
@@ -82,7 +81,7 @@ export default function PropertiesPage() {
                 <div className="mb-6 text-center">
                   <h2 className="text-xl font-bold text-foreground">Join the Deal List</h2>
                   <p className="text-sm text-muted-foreground mt-1">
-                    Tell us what you want. We call when it's available.
+                    Share your criteria. We contact you when a matching opportunity is available.
                   </p>
                 </div>
                 <InvestorIntakeForm />
@@ -94,19 +93,20 @@ export default function PropertiesPage() {
         {/* No public listings note */}
         <section className="py-16 bg-card border-t border-border">
           <div className="mx-auto max-w-3xl px-6 lg:px-8 text-center">
-            <h2 className="text-xl font-bold text-foreground mb-4">Why We Don't List Publicly</h2>
+            <h2 className="text-xl font-bold text-foreground mb-4">How Buyer-List Updates Work</h2>
             <p className="text-muted-foreground leading-8 mb-4">
-              When we acquire a parcel and have it ready to sell, it goes to our buyer list first.
-              Buyers who've told us what they want get a direct call. If it's a fit, we work the
-              deal directly. No listing fees, no bidding wars, no agents in the middle.
+              When OVLP has a parcel ready for buyer review, we may contact buyer-list members
+              whose submitted criteria appear to match. Property availability, outreach order,
+              process, and terms vary by opportunity.
             </p>
             <p className="text-muted-foreground leading-8">
-              If you want first access to Ohio Valley and Franklin County land, the buyer list
-              is the only way to get it.
+              Join the list if you want OVLP to consider your criteria when matching inventory
+              becomes available in a current acquisition area.
             </p>
             <div className="mt-8">
               <Link
                 href="/investor-portal"
+                data-analytics-event="buyer_portal_click"
                 className="inline-flex items-center gap-2 rounded-lg bg-amber px-6 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
               >
                 Full Buyer Portal <ArrowRight className="h-4 w-4" />

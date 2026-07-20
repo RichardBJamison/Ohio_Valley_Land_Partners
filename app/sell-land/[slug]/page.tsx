@@ -53,7 +53,7 @@ export default function CountySellPage({ params }: Props) {
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: siteConfig.url },
-          { name: 'Sell Your Land', url: `${siteConfig.url}/ohio-valley-guides` },
+          { name: 'Sell Land', url: `${siteConfig.url}/land` },
           { name: `${county.name}, ${county.stateAbbr}`, url: `${siteConfig.url}/sell-land/${county.slug}` },
         ]}
       />
@@ -74,7 +74,7 @@ export default function CountySellPage({ params }: Props) {
               </li>
               <li aria-hidden="true"><ChevronRight className="h-3 w-3" /></li>
               <li>
-                <Link href="/ohio-valley-guides" className="hover:text-foreground transition-colors">Sell Your Land</Link>
+                <Link href="/land" className="hover:text-foreground transition-colors">Sell Land</Link>
               </li>
               <li aria-hidden="true"><ChevronRight className="h-3 w-3" /></li>
               <li className="font-medium text-foreground">{county.name}, {county.stateAbbr}</li>
@@ -104,7 +104,7 @@ export default function CountySellPage({ params }: Props) {
 
                 <div className="mt-8">
                   <h2 className="text-base font-semibold text-foreground mb-4">
-                    Common Situations We Help With
+                    Common Property and Owner Situations
                   </h2>
                   <ul className="flex flex-col gap-3">
                     {county.commonSituations.map((s) => (
@@ -135,7 +135,7 @@ export default function CountySellPage({ params }: Props) {
 
               {/* Right — Seller form */}
               <div>
-                <div className="rounded-2xl border border-border bg-card p-8 shadow-lg">
+                <div id="property-review" className="rounded-2xl border border-border bg-card p-8 shadow-lg scroll-mt-28">
                   <div className="mb-6 text-center">
                     <h2 className="text-xl font-bold text-foreground">
                       {sellerPositioning.formTitle}
@@ -218,10 +218,11 @@ export default function CountySellPage({ params }: Props) {
               <li>
                 <Link
                   href={`/ohio-valley-guides/${county.slug}`}
+                  data-analytics-event="county_guide_click"
                   className="inline-flex items-center gap-2 text-sm font-medium text-amber hover:text-amber/80 transition-colors"
                 >
                   <BookOpen className="h-4 w-4" />
-                  {county.name} Ohio Valley Land Guide — market overview &amp; pricing context
+                  {county.name} Land Market and Seller Guide
                 </Link>
               </li>
               {relatedPosts.map((post) => post && (
@@ -237,11 +238,12 @@ export default function CountySellPage({ params }: Props) {
               ))}
               <li>
                 <Link
-                  href="/contact"
+                  href="/#property-review"
+                  data-analytics-event="county_page_cta_click"
                   className="inline-flex items-center gap-2 text-sm font-medium text-amber hover:text-amber/80 transition-colors"
                 >
                   <ChevronRight className="h-4 w-4" />
-                  Contact us about a direct purchase inquiry
+                  Start a direct property review
                 </Link>
               </li>
             </ul>
@@ -252,12 +254,11 @@ export default function CountySellPage({ params }: Props) {
         <section className="py-16 border-t border-border">
           <div className="mx-auto max-w-xl px-6 text-center">
             <h2 className="text-2xl font-bold text-foreground mb-4">
-              Ready to Sell Your {county.name} Land?
+              Not sure whether your {county.name} property fits? Start with the address.
             </h2>
             <p className="text-muted-foreground mb-8">
-              Submit your property above, start a direct purchase inquiry on our{' '}
-              <Link href="/contact" className="text-amber hover:underline">contact page</Link>, or
-              browse our{' '}
+              You do not need to understand the title, zoning, taxes, access, or possible use
+              before reaching out. Share what you know, or browse our{' '}
               <Link href={`/ohio-valley-guides/${county.slug}`} className="text-amber hover:underline">
                 {county.name} land guide
               </Link>{' '}
@@ -265,10 +266,11 @@ export default function CountySellPage({ params }: Props) {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
-                href="/contact"
+                href="#property-review"
+                data-analytics-event="county_page_cta_click"
                 className="rounded-lg bg-amber px-5 py-2.5 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
               >
-                Request Property Review
+                Start My Property Review
               </Link>
               <Link
                 href={`/ohio-valley-guides/${county.slug}`}

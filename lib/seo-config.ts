@@ -1,14 +1,13 @@
 export const siteConfig = {
   name: 'Ohio Valley Land Partners',
-  description: 'Direct land acquisition inquiries, portfolio marketing, and regional property information from a prospective principal buyer in the Ohio Valley',
+  description: 'A direct regional land buyer that reviews each property, understands the Ohio Valley, and explains the purchase process clearly',
   url: 'https://ohiovalleylandpartners.com',
   ogImage: 'https://ohiovalleylandpartners.com/og.jpg',
   phone: '(614) 653-7430',
   email: 'info@ohiovalleylandpartners.com',
-  // Author / founder — used in Article schema and About page
-  // TODO: Replace with real name once About page is updated
+  // Verified principal attribution — used in Article schema and About page
   authorName: 'Richard B. Jamison',
-  authorTitle: 'Founder, Ohio Valley Land Partners',
+  authorTitle: 'Principal, Ohio Valley Land Partners',
   authorUrl: 'https://ohiovalleylandpartners.com/about',
   // sameAs — populate as each account is created
   // TODO: Replace placeholder comments with real URLs
@@ -53,10 +52,10 @@ export const defaultOgImages = [
 
 export const silos = {
   land: {
-    title: 'Land Offers',
+    title: 'Sell Land',
     path: '/land',
-    description: 'Direct land acquisition inquiries and private portfolio opportunities from a prospective principal buyer',
-    keywords: 'land offers, cash land buyers, motivated sellers, Ohio Valley land',
+    description: 'Start a direct property review with a regional principal buyer serving the Ohio Valley',
+    keywords: 'sell land, direct land buyer, property review, Ohio Valley land',
   },
   commercial: {
     title: 'Commercial Real Estate',
@@ -71,19 +70,17 @@ export const silos = {
     keywords: 'residential development, investor relations, long-term projects, Ohio Valley',
   },
   guides: {
-    title: 'Ohio Valley Guides',
+    title: 'Ohio Valley Land Market & Seller Guides',
     path: '/ohio-valley-guides',
-    description: 'General county-by-county land information and market observations for the Ohio Valley region',
-    keywords: 'Ohio Valley real estate, Franklin County land, county guides, local market analysis',
+    description: 'County-by-county land market context, seller education, and property considerations across the Ohio Valley',
+    keywords: 'Ohio Valley real estate, Franklin County land, county guides, local land context',
   },
 };
 
 export const ohioValleyStates = [
-  { name: 'Ohio', href: '/land' },
-  { name: 'Pennsylvania', href: '/land' },
-  { name: 'West Virginia', href: '/land' },
-  { name: 'Kentucky', href: '/land' },
-  { name: 'Indiana', href: '/land' },
+  { name: 'Ohio acquisition areas', href: '/#where-we-buy' },
+  { name: 'West Virginia acquisition areas', href: '/#where-we-buy' },
+  { name: 'Other Ohio Valley property', href: '/land' },
 ] as const;
 
 export const counties = [

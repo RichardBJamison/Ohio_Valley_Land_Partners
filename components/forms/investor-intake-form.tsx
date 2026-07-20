@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { CheckCircle, Loader2 } from 'lucide-react';
+import { trackConversionEvent } from '@/components/analytics/conversion-tracker';
 
 const counties = [
   'Franklin County, OH',
@@ -67,6 +68,10 @@ export function InvestorIntakeForm() {
     setError('');
     if (!form.name || !form.email || !form.counties.trim()) {
       setError('Name, email, and counties of interest are required.');
+      trackConversionEvent('form_error', {
+        form_name: 'builders_network_form',
+        error_type: 'validation',
+      });
       return;
     }
     setLoading(true);
@@ -83,8 +88,13 @@ export function InvestorIntakeForm() {
       });
       if (!res.ok) throw new Error('Submission failed');
       setSubmitted(true);
+      trackConversionEvent('successful_submission', { form_name: 'builders_network_form' });
     } catch {
       setError("Something went wrong. Email us directly at info@ohiovalleylandpartners.com");
+      trackConversionEvent('form_error', {
+        form_name: 'builders_network_form',
+        error_type: 'request',
+      });
     } finally {
       setLoading(false);
     }
@@ -94,16 +104,20 @@ export function InvestorIntakeForm() {
     return (
       <div className="flex flex-col items-center justify-center gap-4 py-10 text-center">
         <CheckCircle className="h-12 w-12 text-green-500" />
-        <h3 className="text-xl font-bold text-foreground">You're on the List</h3>
+        <h3 className="text-xl font-bold text-foreground">You’re on the List</h3>
         <p className="text-muted-foreground text-sm max-w-xs">
-          We'll contact you directly when a deal matching your criteria becomes available in the Ohio Valley.
+          We’ll contact you directly when a deal matching your criteria becomes available in the Ohio Valley.
         </p>
       </div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+    <form
+      onSubmit={handleSubmit}
+      className="flex flex-col gap-5"
+      data-analytics-form="builders_network_form"
+    >
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div className="flex flex-col gap-1.5">
           <Label htmlFor="inv-name">Full Name</Label>

@@ -5,44 +5,45 @@
  * to independent licensed professionals.
  */
 
-/** Community giving — 5% of profits to all nonprofit partners (currently three). */
+/** Community reinvestment commitment — avoid implying distributions before they are verified. */
 export const communityGiving = {
-  headline: '5% of profits. Shared across all three nonprofit partners.',
+  headline: '5% of company profits committed to local community reinvestment.',
   principles:
-    '5% of profits is donated to all three of our nonprofit partners — Arc of Appalachia, the Salvation Army\'s East Palestine recovery work, and COCIC Franklin County Land Bank. A business operating in the Ohio Valley should invest in it.',
+    'OVLP has committed 5% of company profits to local community reinvestment as the business grows.',
   mission:
-    '5% of profits is donated to all three nonprofit partners — Arc of Appalachia, Salvation Army East Palestine recovery, and COCIC Franklin County Land Bank. A business operating in the Ohio Valley should invest in it.',
-  statSub: 'Of profits to all three nonprofit partners',
-  badge: '5% of profits supports our nonprofit partners',
-  footer: '5% of profits back to the Ohio Valley',
+    'OVLP has committed 5% of company profits to local community reinvestment as the business grows.',
+  statSub: 'Committed to local community reinvestment as the business grows',
+  badge: '5% of company profits committed to local reinvestment',
+  footer: '5% of company profits committed to the Ohio Valley',
   communityClosing:
-    '5% of profits supports all three nonprofit partners — Arc of Appalachia, Salvation Army East Palestine recovery, and COCIC Franklin County Land Bank.',
+    'OVLP has committed 5% of company profits to local community reinvestment as the business grows.',
 } as const;
 
-/** Visible on-page seller positioning — no cash-offer or fast-closing language. */
+/** Visible seller positioning — clear first, with legal limits after the useful answer. */
 export const sellerPositioning = {
-  analysisLabel: 'Full Property Analysis',
-  analysisSub: 'In-depth review before every proposal',
-  countySectionTitle: 'County Property Pages',
+  analysisLabel: 'Property Review',
+  analysisSub: 'Property-specific review before any proposal',
+  countySectionTitle: 'Where We Review Property',
   countySectionSub:
-    'Every county we work in has a dedicated page with local FAQs, property context, and a direct path to a full property analysis.',
-  formTitle: 'Request Your Property Analysis',
-  formSub: 'Full in-depth property review by a prospective principal buyer.',
+    'Our county pages preserve local property context and provide a direct path to start a property review.',
+  formTitle: 'Start My Property Review',
+  formSub: 'Share the property address and the best email to reach you.',
+  reassurance:
+    'Requesting a review does not commit you to sell. If the property fits our current criteria, we will contact you, ask a few questions, and determine whether a written proposal makes sense.',
+  reviewExplanation:
+    'We review the parcel, taxes, access, title information, surrounding activity, zoning considerations, and possible use to determine whether OVLP can present a direct purchase proposal.',
 } as const;
 
 export function countySubheadline(countyName: string): string {
-  return `Full property analysis for ${countyName} parcels across the Ohio Valley.`;
+  return `Direct property review for ${countyName} parcels by a regional principal buyer.`;
 }
 
 /** FAQ section framing — process only, not seller advice. */
 export const faqFraming = {
-  sectionTitle: 'Questions About Working With OVLP',
+  sectionTitle: 'Questions About a Direct Property Review',
   sectionSub:
-    'What we can tell you about our acquisition process — not legal, tax, brokerage, or sale-strategy advice.',
+    'Useful answers about OVLP’s acquisition process, with legal and professional limits noted where they matter.',
 } as const;
-
-const PROFESSIONAL_TOPIC =
-  /(probate|inherit|estate|executor|administrator|fiduciary|heir|court|tax|lien|foreclos|forfeit|mineral|deed|title|split|survey|easement|zoning|legal)/i;
 
 export function softenCountyFaq(question: string, answer: string): string {
   const combined = `${question} ${answer}`;
@@ -55,25 +56,9 @@ export function softenCountyFaq(question: string, answer: string): string {
     return 'OVLP is a prospective principal buyer, not a listing agent or broker. Whether you use a real estate agent is your decision. We do not advise on sale strategy or marketing. Consult a licensed real estate professional if you want guidance on your options.';
   }
 
-  if (/(probate|inherit|estate|executor|administrator|fiduciary|heir|court)/i.test(combined)) {
-    return 'Estate authority and the ability to transfer inherited property depend on the deed, estate documents, court orders, and applicable law. OVLP may review the parcel only as a prospective principal buyer and does not determine who may sign or what the estate must do. Please consult the estate attorney and title company.';
-  }
-
-  if (/(tax|lien|foreclos|forfeit|sheriff|redemption)/i.test(combined)) {
-    return 'Delinquent taxes and related deadlines are property- and county-specific. OVLP may consider the parcel in its acquisition review, but does not interpret notices, calculate legal deadlines, or promise that a transaction can resolve the matter. Confirm the current status with the county and consult an attorney, title company, and tax professional.';
-  }
-
-  if (/(mineral|oil|gas|lease|surface rights)/i.test(combined)) {
-    return 'Mineral and surface interests depend on recorded documents and applicable law. OVLP may consider the interests disclosed during its acquisition review, but does not provide a title or mineral-rights opinion. A qualified attorney, title professional, and—when appropriate—independent appraiser should review the records.';
-  }
-
-  if (/(title|deed|split|survey|easement|access|landlocked|zoning|utilities|flood)/i.test(combined)) {
-    return 'Access, boundaries, zoning, utilities, title, and other parcel conditions require property-specific verification. OVLP reviews these matters only to decide whether the property fits its own criteria. Our review is not a survey, title opinion, zoning determination, appraisal, or legal opinion.';
-  }
-
   return answer
-    .replace(/Typically 14–21 days[^.]*\./gi, 'Timing varies by property, written terms, title review, and third-party requirements.')
-    .replace(/within 24 hours/gi, 'after review')
+    .replace(/we can close fast/gi, 'we can review the requested timing')
+    .replace(/we handle remote closings/gi, 'remote participation may be available through the closing professionals')
     .replace(/worth less/gi, 'may be evaluated differently')
     .replace(/we handle them/gi, 'additional professional review may be needed');
 }

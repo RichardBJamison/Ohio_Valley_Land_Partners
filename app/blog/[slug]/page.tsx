@@ -96,7 +96,7 @@ export default function BlogPostPage({ params }: Props) {
                 <Clock className="h-4 w-4" />
                 {post.readingTime}
               </span>
-              <span className="font-medium text-foreground">Ohio Valley Land Partners</span>
+              <span className="font-medium text-foreground">{siteConfig.authorName}</span>
             </div>
           </header>
 
@@ -118,24 +118,20 @@ export default function BlogPostPage({ params }: Props) {
             dangerouslySetInnerHTML={{ __html: post.body }}
           />
 
-          {/* Keywords (for SEO context, hidden visually) */}
-          <div className="sr-only" aria-hidden="true">
-            {post.keywords.join(', ')}
-          </div>
-
           {/* CTA box */}
           <div className="mt-16 rounded-2xl border border-amber/30 bg-amber/5 p-8 text-center">
             <h2 className="text-xl font-bold text-foreground mb-2">
-              Ready to Request a Property Review?
+              Ready to Start a Property Review?
             </h2>
             <p className="text-sm text-muted-foreground mb-6">
               No obligation. OVLP will review the property only as a prospective principal buyer. Not every property will fit our criteria.
             </p>
             <Link
-              href="/contact"
+              href="/#property-review"
+              data-analytics-event="property_review_cta_click"
               className="inline-flex items-center gap-2 rounded-lg bg-amber px-6 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
             >
-              Request Analysis &amp; Offer <ArrowRight className="h-4 w-4" />
+              Start My Property Review <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
 

@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 
 const FILTER_TABS = [
   { label: 'All Guides', href: '/ohio-valley-guides', active: true },
-  { label: 'Geauga Campaign', href: '/blog/sell-vacant-land-geauga-county-ohio-2026' },
-  { label: 'Valley Market Report', href: '/blog/ohio-valley-land-market-2026' },
+  { label: 'Geauga County Notes', href: '/blog/sell-vacant-land-geauga-county-ohio-2026' },
+  { label: 'Valley Market Guide', href: '/blog/ohio-valley-land-market-2026' },
   { label: 'Franklin County', href: '/ohio-valley-guides/franklin-county-oh' },
   { label: 'Belmont County', href: '/ohio-valley-guides/belmont-county-oh' },
   { label: 'Columbiana County', href: '/ohio-valley-guides/columbiana-county-oh' },
@@ -79,7 +79,7 @@ const COUNTY_GUIDES = [
     name: 'Franklin County',
     state: 'Ohio',
     hook: 'Columbus infill & metro-fringe lots',
-    description: 'Central Ohio campaign — a different market from the river counties, presented as general context.',
+    description: 'Central Ohio context — a different market from the river counties, with distinct infill and development conditions.',
   },
   {
     slug: 'ohio-county-wv',
@@ -130,7 +130,7 @@ const SCOPE_STATS = [
   {
     num: '4',
     label: 'Ohio River states',
-    sub: 'Pennsylvania, Ohio, West Virginia & Kentucky — the valley is vast before you reach a single county.',
+    sub: 'Pennsylvania, Ohio, West Virginia & Kentucky — regional geography, not equal acquisition depth.',
   },
   {
     num: '981',
@@ -140,7 +140,7 @@ const SCOPE_STATS = [
   {
     num: '9',
     label: 'County guides',
-    sub: 'Our active footprint within the valley — where we publish, buy, and know the ground.',
+    sub: 'County-specific context for the areas where we currently publish acquisition information.',
   },
 ];
 
@@ -192,7 +192,7 @@ export default function GuidesPage() {
                     href="/blog/ohio-valley-land-market-2026"
                     className="text-xs font-semibold px-4 py-2 rounded-full bg-white/10 border border-white/15 hover:bg-white/15 transition-colors"
                   >
-                    2026 market report
+                    Ohio Valley market guide
                   </Link>
                   <Link
                     href="/blog"
@@ -208,8 +208,8 @@ export default function GuidesPage() {
                   The Ohio Valley atlas
                 </h2>
                 <p className="text-sm text-white/65 text-center mb-5 leading-relaxed">
-                  The Ohio River runs 981 miles — Pennsylvania to Illinois. Four states define the
-                  heart of the valley we work in.
+                  The Ohio River runs 981 miles — Pennsylvania to Illinois. These four states show
+                  the broader geography surrounding our published county areas.
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                   {ATLAS_STATES.map((state) => (
@@ -225,7 +225,7 @@ export default function GuidesPage() {
                   ))}
                 </div>
                 <p className="mt-5 text-center text-sm text-white/55 heading-serif italic">
-                  Our guides cover 9 active counties within this corridor — the ground we know.
+                  Our guides cover 9 published county areas, with acquisition focus varying by county.
                 </p>
               </div>
             </div>
@@ -253,7 +253,7 @@ export default function GuidesPage() {
 
         {/* Featured Franklin */}
         <section className="mx-auto max-w-7xl px-6 lg:px-8 pt-14 pb-4">
-          <p className="heading-serif text-amber text-2xl mb-2">Primary campaign</p>
+          <p className="heading-serif text-amber text-2xl mb-2">Central Ohio guide</p>
           <h2 className="text-3xl font-extrabold tracking-tight">Start here if you&apos;re in Central Ohio</h2>
 
           <article className="mt-6 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] rounded-2xl overflow-hidden border-2 border-amber bg-card shadow-[0_12px_48px_rgba(200,150,58,0.12)]">
@@ -266,7 +266,7 @@ export default function GuidesPage() {
                 sizes="(max-width: 1024px) 100vw, 60vw"
               />
               <span className="absolute top-5 left-5 bg-amber text-forest text-xs font-extrabold uppercase tracking-wider px-3 py-1.5 rounded-md">
-                Franklin County · Active Campaign
+                Franklin County · Central Ohio
               </span>
             </div>
             <div className="flex flex-col justify-center p-8 sm:p-10">
@@ -275,8 +275,8 @@ export default function GuidesPage() {
                 Columbus infill lots, residential parcels & urban-fringe acreage
               </p>
               <p className="text-muted-foreground text-sm leading-relaxed mt-4">
-                Franklin sits outside the core Ohio River Valley — it&apos;s our active Columbus campaign.
-                A different market than Belmont or Jefferson, with its own zoning, pricing, and buyer demand.
+                Franklin sits outside the core Ohio River Valley and has its own zoning, access,
+                utility, infill, and surrounding-development considerations.
               </p>
               <div className="flex flex-wrap gap-2 mt-5">
                 {['Infill lots', 'Intel corridor', 'Columbus metro'].map((tag) => (
@@ -303,8 +303,8 @@ export default function GuidesPage() {
           <p className="heading-serif text-amber text-2xl mb-2">Our active footprint</p>
           <h2 className="text-3xl font-extrabold tracking-tight">County guides — Ohio & West Virginia</h2>
           <p className="text-muted-foreground mt-3 max-w-xl leading-relaxed">
-            Nine counties where we buy and publish. Each guide covers land types, common seller
-            situations, and county-specific FAQs.
+            Nine counties where we publish local property context. Each guide covers land types,
+            common owner situations, local geography, and county-specific questions.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
@@ -381,7 +381,7 @@ export default function GuidesPage() {
                 href="/blog/ohio-valley-land-market-2026"
                 className="text-[#e8c47a] font-semibold hover:text-amber transition-colors"
               >
-                2026 Ohio Valley land market report
+                Ohio Valley Land Market Guide
               </Link>{' '}
               for regional context across PA, OH, WV, and KY.
             </p>
@@ -394,9 +394,10 @@ export default function GuidesPage() {
               </Link>
               <Link
                 href="/land"
+                data-analytics-event="property_review_cta_click"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/30 px-5 py-3 text-sm font-bold hover:bg-white/10 transition-colors"
               >
-                Ready to sell? Start here
+                Start My Property Review
               </Link>
             </div>
             <LegalDisclaimer className="mt-8" tone="on-dark" />

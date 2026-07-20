@@ -36,23 +36,23 @@ Ohio Valley Land Partners has a technically sound Next.js foundation and a well-
 **Fix:** Create `/public/llms.txt` in the Next.js project. Minimum viable content:
 ```
 # Ohio Valley Land Partners
-> Cash land buyers serving 8 counties in eastern Ohio and northern West Virginia.
-> We buy vacant, inherited, and tax-delinquent land for cash. Close in 14–21 days.
+> Regional principal buyer reviewing property in eastern Ohio and northern West Virginia.
+> We review vacant, inherited, tax-burdened, and difficult-to-manage land for possible direct purchase.
 
 ## Core Pages
 - /: Homepage — overview, service counties, process
 - /about: Company background, giving commitment
-- /sell-land/[county]: County-specific cash offer pages (8 pages)
+- /sell-land/[county]: County-specific direct property-review pages (8 pages)
 - /ohio-valley-guides/[county]: County land market guides (8 pages)
 - /blog: Land seller educational content
-- /contact: Get a cash offer
+- /contact: Start a property review
 
 ## Service Area
 Ohio counties: Belmont, Jefferson, Columbiana, Harrison, Carroll
 West Virginia counties: Ohio, Marshall, Brooke
 
 ## Key Topics
-- Cash land purchases, no agent fees, 14–21 day close
+- Direct purchase inquiries and property-specific internal review
 - Inherited land, back taxes, probate situations
 - Ohio Valley land market data
 ```
@@ -177,12 +177,12 @@ All blog post Article schemas declare `"author": {"@type": "Organization"}`. Goo
 The homepage gets the most traffic and AI crawler attention, but contains zero structured Q&A content. The FAQPage schema on county pages is the site's strongest GEO structural asset — it is absent from the page that matters most.
 
 **Fix:** Add a FAQ section to the homepage with FAQPage schema (4–6 questions minimum):
-- How long does it take to sell land to a cash buyer in Ohio?
+- What happens after I share my property with OVLP?
 - What counties do you buy land in?
-- Do I need to pay agent fees or commissions?
+- Does requesting a property review commit me to sell?
 - Can you buy land with back taxes?
 - What types of land do you buy?
-- How is my cash offer calculated?
+- What does OVLP consider before presenting a proposal?
 
 ---
 
@@ -235,9 +235,9 @@ The probate article and cash buyer guide have no internal links to county-specif
 ---
 
 ### M-4: Community page has no structured data
-The community page contains the site's most differentiated content (named charity partners, specific disaster event) but has only OG meta tags — no schema markup.
+The community page contains differentiated regional context and a forward-looking reinvestment commitment but has only OG meta tags — no schema markup.
 
-**Fix:** Add Organization schema with `knowsAbout` or `memberOf` references to the charity partners, or at minimum add an `Event` reference to the East Palestine response. This is the site's best entity-building content and is completely unmarked.
+**Fix:** Add only schema that can be verified. Do not use `memberOf`, recipient, donation, or partnership relationships unless OVLP can document them. Regional topics may be described with `knowsAbout`; any event reference should link to an authoritative public source.
 
 ---
 
@@ -296,7 +296,7 @@ Homepage marketing copy ("Sell your land with confidence") scores 28/100 for cit
 
 The brand exists on one domain. No Wikipedia, no Reddit, no YouTube, no confirmed directory listings, no press coverage. AI models build entity maps by cross-referencing a name across multiple authoritative sources. Ohio Valley Land Partners has one source: its own website.
 
-The East Palestine / Arc of Appalachia angle is the highest-leverage earned media hook on the site. This story — a land company donating 5% of every closing to East Palestine disaster recovery — is genuinely newsworthy for The Intelligencer (Wheeling), Parkersburg News & Sentinel, and regional Appalachian coverage outlets. One placement in a local paper creates an inbound citation, an entity reference, and a domain link simultaneously.
+The community-reinvestment commitment may become a useful earned-media angle once distributions can be documented. Until then, describe it only as OVLP's commitment to reinvest 5% of company profits as the business grows; do not name recipients or claim completed outcomes without records.
 
 ---
 

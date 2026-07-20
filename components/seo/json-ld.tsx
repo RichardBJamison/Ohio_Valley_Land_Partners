@@ -319,12 +319,6 @@ export function ServiceSchema() {
       '@type': 'AdministrativeArea',
       name: area,
     })),
-    offers: {
-      '@type': 'Offer',
-      availability: 'https://schema.org/InStock',
-      priceCurrency: 'USD',
-      description: 'Property-specific review with no guarantee of purchase, price, or response time',
-    },
   };
 
   return (

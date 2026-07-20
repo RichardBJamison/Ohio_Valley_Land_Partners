@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { CheckCircle, Upload, FileSpreadsheet, Download, Loader2, X } from 'lucide-react';
+import { trackConversionEvent } from '@/components/analytics/conversion-tracker';
 
 export function PropertyUploadForm() {
   const [file, setFile] = useState<File | null>(null);
@@ -45,10 +46,18 @@ export function PropertyUploadForm() {
 
     if (!uploaderName.trim() || !uploaderEmail.trim()) {
       setError('Name and email are required.');
+      trackConversionEvent('form_error', {
+        form_name: 'property_upload_form',
+        error_type: 'validation',
+      });
       return;
     }
     if (!file) {
       setError('Please select a file to upload.');
+      trackConversionEvent('form_error', {
+        form_name: 'property_upload_form',
+        error_type: 'validation',
+      });
       return;
     }
 
@@ -67,8 +76,13 @@ export function PropertyUploadForm() {
       });
       if (!res.ok) throw new Error('Upload failed');
       setSubmitted(true);
+      trackConversionEvent('successful_submission', { form_name: 'property_upload_form' });
     } catch {
       setError('Something went wrong. Email your file directly to info@ohiovalleylandpartners.com');
+      trackConversionEvent('form_error', {
+        form_name: 'property_upload_form',
+        error_type: 'request',
+      });
     } finally {
       setLoading(false);
     }
@@ -80,14 +94,18 @@ export function PropertyUploadForm() {
         <CheckCircle className="h-12 w-12 text-green-500" />
         <h3 className="text-xl font-bold text-foreground">Upload Received</h3>
         <p className="text-muted-foreground text-sm max-w-xs">
-          We&apos;ve received your property list. Our team will review it and reach out within 24 hours.
+          We&apos;ve received your property list. Our team will review it and follow up about parcels that match active buyer demand.
         </p>
       </div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+    <form
+      onSubmit={handleSubmit}
+      className="flex flex-col gap-6"
+      data-analytics-form="property_upload_form"
+    >
       {/* Uploader info */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div className="flex flex-col gap-1.5">

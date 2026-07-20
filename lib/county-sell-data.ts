@@ -90,44 +90,44 @@ export const countySellPages: CountySellData[] = [
       'Inherited Franklin County land and do not want to list it',
       'Owe back taxes or have a parcel that has become a burden',
       'Have a small residential lot that agents have struggled to sell',
-      'Want a clean sale without showings, repair requests, or commission fees',
+      'Want to compare a direct principal-buyer option with other paths',
     ],
     faqs: [
       {
         q: 'Is Franklin County part of the Ohio Valley?',
-        a: 'No. Franklin County is the Columbus and Central Ohio market. Ohio Valley Land Partners is the company brand, and Franklin County is our first active sales campaign outside the core Ohio River Valley footprint.',
+        a: 'Franklin County is a Central Ohio market rather than an Ohio River county. Ohio Valley Land Partners is the regional company brand, and our Franklin County work has its own acquisition criteria for Columbus-area infill lots, residential parcels, and acreage.',
       },
       {
         q: 'Do you buy small infill lots in Columbus?',
-        a: 'Yes. Franklin County is mainly an infill-lot and residential-lot campaign for us. We review access, utilities, zoning, frontage, nearby sales, and builder demand before making an offer.',
+        a: 'Yes. OVLP reviews small infill and residential lots in Columbus. We consider access, utilities, zoning, frontage, surrounding activity, and possible use before deciding whether the parcel fits our current buying criteria.',
       },
       {
         q: 'Do you buy larger acreage in Franklin County?',
-        a: 'Yes. We also review larger lots and acreage, especially parcels of 0.8 acres and above with strong access, clean ownership, and clear resale or development demand.',
+        a: 'Yes. OVLP also reviews larger lots and acreage. Access, ownership information, parcel configuration, surrounding uses, and possible future use all affect whether a property fits.',
       },
       {
         q: 'How do you price Franklin County land?',
-        a: 'We compare recent land sales, active listings, utility access, zoning, buildability, tax status, and buyer demand in the specific ZIP or neighborhood. We then make a direct offer based on what the parcel can realistically support.',
+        a: 'OVLP reviews location, parcel size, access, title information, taxes, zoning, utilities, nearby activity, comparable transactions, possible use, holding costs, and purchase risk. This is an internal acquisition review for our own account, not a formal appraisal or statement of market value.',
       },
       {
         q: 'Will you text me after I submit my property?',
-        a: 'For the first month of this campaign, our outreach is call-first. We use phone calls, voicemail when appropriate, and direct follow-up tasks rather than text campaigns.',
+        a: 'The short property-review form collects an email address. Phone and SMS communication is available only through the site’s GHL chat widget and its consent process. OVLP will use the contact method the owner provides.',
       },
       {
         q: 'Can I sell land in Franklin County if the property taxes are past due?',
-        a: 'Yes — owing back taxes does not prevent you from selling vacant land in Franklin County. Under ORC § 5721.181, delinquent taxes become a lien on the property, but that lien is typically paid at or before closing from sale proceeds, so you walk away clean. Ohio Valley Land Partners buys tax-delinquent lots regularly and handles the payoff coordination as part of closing.',
+        a: 'OVLP may review Franklin County property with reported delinquent taxes. The current balance, lien status, deadlines, and effect on any transaction must be verified with the county and the appropriate title, legal, and tax professionals. OVLP does not promise that a purchase can resolve the balance or meet a deadline.',
       },
       {
         q: 'How does Franklin County\'s land split process affect my timeline if I want to sell part of my lot?',
-        a: 'Splitting a parcel in Franklin County requires approval through the Franklin County Engineer\'s Office and, for lots inside Columbus city limits, may also require subdivision review. This process can take several weeks to several months depending on parcel size and zoning. Ohio Valley Land Partners can purchase the entire parcel as-is — no surveying or split approval required on your end.',
+        a: 'A proposed split can add survey, access, zoning, subdivision, and approval questions that depend on the parcel and jurisdiction. OVLP may review the existing parcel or a proposed configuration, but only the relevant public offices and licensed professionals can determine requirements or timing.',
       },
       {
         q: 'Can I sell inherited Franklin County land while probate is still open?',
-        a: 'Yes, with court authorization. Under ORC § 2113.39, the executor or administrator can petition the Franklin County Probate Court to approve a sale of estate real property before probate fully closes. Ohio Valley Land Partners regularly purchases from estates mid-probate and coordinates with the court-appointed fiduciary.',
+        a: 'OVLP may review inherited or estate-owned Franklin County land while probate is open. The estate’s authority to sell depends on the deed, estate documents, court orders, and Ohio law, so the personal representative should confirm the process with the estate attorney and title company.',
       },
       {
         q: 'Do you buy vacant lots inside Columbus city limits with no utilities?',
-        a: 'We evaluate them case by case. Columbus zoning districts (R-1 through R-4 and mixed-use overlays) and utility availability at the curb strongly affect what a vacant infill lot is worth. We pull Franklin County Auditor records and Columbus zoning maps before making an offer — you do not need a survey first.',
+        a: 'Yes, OVLP reviews utility-limited lots case by case. Current zoning information, frontage, access, utility proximity, parcel dimensions, and surrounding development all affect our interest. Our review is not a zoning determination, survey, or appraisal.',
       },
     ],
   },
@@ -180,24 +180,24 @@ export const countySellPages: CountySellData[] = [
       'Delinquent tax properties',
     ],
     commonSituations: [
-      'Inherited land from a family estate and need to settle quickly',
-      'Owe back property taxes and want to avoid the county tax sale',
+      'Inherited land from a family estate and need a clear first step',
+      'Owe back property taxes and need to understand the parcel status',
       'Own land out of state and have no use for it',
       'Been listed with an agent for months with no results',
-      'Want a clean sale with no showings, repairs, or conditions',
+      'Want to explore a direct property review without an initial long questionnaire',
     ],
     faqs: [
       {
-        q: 'How fast can you close on Belmont County land?',
-        a: 'Typically 14–21 days from signed purchase agreement. Title work in Belmont County runs through a local title company and is straightforward on most parcels.',
+        q: 'What affects closing timing for Belmont County land?',
+        a: 'Timing varies with the written agreement, title review, ownership records, property conditions, and third-party requirements. OVLP can discuss an owner’s requested timing, but does not promise a closing date before those items are reviewed.',
       },
       {
         q: 'Do you buy land with delinquent taxes in Belmont County?',
-        a: 'Yes. We account for back taxes in our offer and pay them off at closing. You don\'t need to bring cash to the table.',
+        a: 'OVLP may review Belmont County land with reported delinquent taxes. The county, title company, attorney, and tax professional should verify the balance and explain how it may affect a transaction; OVLP does not guarantee a payoff structure or owner proceeds.',
       },
       {
         q: 'What if my land is landlocked or has no road access?',
-        a: 'We still evaluate it. Landlocked parcels are worth less, but many still have value — especially if they adjoin larger tracts. Submit the address and we\'ll give you an honest assessment.',
+        a: 'OVLP reviews landlocked and access-limited parcels case by case. Recorded easements, neighboring ownership, terrain, and practical access may affect our interest. The review is not a survey, title opinion, legal access determination, or appraisal.',
       },
       {
         q: 'Does OVLP act as my real estate agent?',
@@ -205,19 +205,19 @@ export const countySellPages: CountySellData[] = [
       },
       {
         q: 'Does having oil, gas, or mineral rights attached to my Belmont County land affect how I sell it?',
-        a: 'It can, and it\'s one of the most important questions to clarify before accepting an offer. Belmont County sits within Ohio\'s Utica and Marcellus shale formation areas, and mineral rights — whether severed from the surface or still attached — can significantly affect a parcel\'s value. Review your deed and any recorded Memorandums of Oil and Gas Lease at the Belmont County Recorder\'s Office to understand what you own. Ohio Valley Land Partners purchases surface rights and, where applicable, unsevered mineral interests.',
+        a: 'Yes. Recorded leases and whether mineral interests are attached to or severed from the surface can affect OVLP’s interest and purchase terms. Belmont County Recorder records may provide background, but a qualified attorney and title professional should determine what interests are owned. OVLP does not provide a mineral-rights or value opinion.',
       },
       {
         q: 'What happens to my Belmont County land if it goes into the county tax forfeiture process?',
-        a: 'Under ORC § 5723.01, land with unpaid taxes can eventually be certified to the State of Ohio as forfeited land, at which point it may be sold through the Belmont County Auditor\'s forfeited land sale and the original owner loses all interest. If your Belmont County property has accumulated delinquent taxes, selling to a direct buyer before forfeiture is initiated is typically the fastest and cleanest option — you receive proceeds rather than walking away with nothing.',
+        a: 'Long-unpaid taxes can place a Belmont County parcel into a formal collection or forfeiture process. Deadlines and rights are property-specific. Confirm the current status with the county and consult an Ohio attorney promptly; OVLP may review the parcel but cannot interpret notices or promise a purchase before a deadline.',
       },
       {
         q: 'How do I check whether mineral rights were severed from my Belmont County deed?',
-        a: 'Review your deed and any recorded Memorandums of Oil and Gas Lease at the Belmont County Recorder\'s Office in St. Clairsville. A prior owner may have reserved minerals in a separate conveyance decades ago. Ohio Valley Land Partners evaluates surface rights independently and will explain how severed minerals affect our offer before you sign anything.',
+        a: 'The Belmont County Recorder’s records are a useful starting point for deeds, reservations, and recorded oil-and-gas documents. Because mineral ownership can involve multiple instruments, a qualified attorney or title professional should determine what is attached to the surface estate. OVLP can then explain how the verified information affects its own purchase interest.',
       },
       {
         q: 'Do you buy Belmont County land near the Ohio River or I-70 corridor?',
-        a: 'Yes. Parcels along the Ohio River near Shadyside and Powhatan Point and along the I-70 corridor through St. Clairsville are active acquisition areas for us. River frontage, road access, and flood zone status (check FEMA flood maps for your parcel) all factor into pricing.',
+        a: 'Yes. OVLP reviews parcels along the Ohio River near Shadyside and Powhatan Point and along the I-70 corridor through St. Clairsville. River frontage, road access, flood information, parcel configuration, and surrounding uses are part of the property review.',
       },
     ],
   },
@@ -270,43 +270,43 @@ export const countySellPages: CountySellData[] = [
     ],
     commonSituations: [
       'Inherited land in Jefferson County and live out of state',
-      'Owe delinquent property taxes and want out before foreclosure',
+      'Owe delinquent property taxes and need to understand the current status',
       'Land has been sitting unused for years with no plan',
       'Listed with a realtor with no offers',
-      'Need to settle an estate quickly and cleanly',
+      'Need a clear path for estate-owned property',
     ],
     faqs: [
       {
         q: 'Do you buy land near Steubenville?',
-        a: 'Yes. We buy throughout Jefferson County including Steubenville, Toronto, Brilliant, Mingo Junction, and all rural townships.',
+        a: 'Yes. OVLP reviews property throughout Jefferson County, including Steubenville, Toronto, Brilliant, Mingo Junction, and rural townships. Every parcel still must fit the current acquisition criteria.',
       },
       {
         q: 'What if there is an old structure on the land?',
-        a: 'We buy land as-is including parcels with old outbuildings, collapsed structures, or debris. We account for demo costs in our offer.',
+        a: 'OVLP may review parcels with old outbuildings, deteriorated structures, or debris. The structure’s condition, possible removal costs, environmental concerns, and intended use are considered before we decide whether the property fits.',
       },
       {
         q: 'How do you determine what to offer for Jefferson County land?',
-        a: 'We pull recent comparable sales from the Jefferson County Auditor records, assess the parcel\'s access, utilities, zoning, and any encumbrances, and build an offer from there. We\'ll walk you through the number.',
+        a: 'OVLP reviews Jefferson County Auditor records, comparable transactions, access, utilities, zoning information, title matters, taxes, surrounding activity, possible use, holding costs, and purchase risk. The result is an internal acquisition decision, not a formal appraisal or market-value opinion.',
       },
       {
         q: 'Can you close through a local title company?',
-        a: 'Yes. We use Ohio-licensed title companies and work with local attorneys familiar with Jefferson County records.',
+        a: 'If both sides choose to proceed, the transaction moves through a qualified title or closing professional for the property’s state. The written agreement and property-specific title work determine the exact closing process.',
       },
       {
         q: 'Do you buy inherited Jefferson County land from out-of-state heirs?',
-        a: 'Frequently. Most of our Jefferson County sellers live outside Ohio. Under ORC § 2113, the estate executor or administrator must obtain court authority to sell, but you do not need to travel to Steubenville — we handle remote closings through a local title company.',
+        a: 'OVLP may review inherited Jefferson County property owned by out-of-state heirs. Authority to sell and whether remote signing is available depend on the estate, deed, written terms, and closing professionals. The estate representative should confirm requirements with the estate attorney and title company.',
       },
       {
         q: 'What if my Jefferson County land has delinquent property taxes?',
-        a: 'Back taxes do not block a sale. Under ORC § 5721.181, delinquent taxes become a lien paid at closing from sale proceeds. We factor the total tax debt into our offer so you walk away without paying out of pocket.',
+        a: 'OVLP may review Jefferson County property with reported delinquent taxes. The county and the appropriate title, legal, and tax professionals must verify the balance, status, and effect on a proposed transaction. OVLP does not guarantee payoff terms or proceeds.',
       },
       {
         q: 'Do you buy Ohio River frontage parcels in Jefferson County?',
-        a: 'Yes. River frontage near Steubenville, Mingo Junction, and Toronto attracts recreational and investment buyers. We evaluate flood zone status using FEMA flood map data and assess road access before making an offer.',
+        a: 'Yes. OVLP reviews river-frontage parcels near Steubenville, Mingo Junction, and Toronto. Flood information, road access, parcel configuration, environmental conditions, and surrounding uses are part of the property-specific review.',
       },
       {
         q: 'How is Jefferson County land priced compared to Belmont or Harrison counties?',
-        a: 'Jefferson County parcels near Steubenville typically command higher per-acre values than remote rural townships, but still trade below Columbus metro prices. We pull Jefferson County Auditor comparable sales and recent land transfers to build each offer.',
+        a: 'OVLP does not apply one countywide price. We review location, parcel size, access, utilities, title information, taxes, zoning, nearby activity, comparable transactions, possible use, costs, and risk. This internal review is not a formal appraisal or comparison of market value across counties.',
       },
     ],
   },
@@ -362,40 +362,40 @@ export const countySellPages: CountySellData[] = [
       'Inherited property from a parent or grandparent',
       'Land is generating property tax bills with no income',
       'Exploring a direct purchase inquiry',
-      'Owe back taxes and need to act before the tax sale',
+      'Owe back taxes and need to verify the county status and deadlines',
     ],
     faqs: [
       {
         q: 'Do you buy agricultural land in Columbiana County?',
-        a: 'Yes. Farm ground is one of our primary acquisition types. Whether it\'s actively farmed or fallow, we can make an offer.',
+        a: 'Yes. OVLP reviews active and fallow farm ground in Columbiana County. Access, soils and current use information, parcel configuration, leases, utilities, and surrounding activity help determine whether the property fits.',
       },
       {
         q: 'What is my Columbiana County land worth?',
-        a: 'It depends on location, size, access, zoning, and condition. The best way to find out is to submit your address — we\'ll research it and give you a real number within 24 hours.',
+        a: 'OVLP reviews location, size, access, title information, taxes, zoning, utilities, nearby activity, comparable transactions, possible use, holding costs, and purchase risk. Any OVLP proposal reflects our own acquisition criteria and is not a formal appraisal or statement of market value.',
       },
       {
         q: 'Can you close quickly if I\'m facing a tax sale?',
-        a: 'Yes. If there\'s a pending tax sale date, tell us immediately. We can often close within 10–14 days when there\'s a deadline involved.',
+        a: 'Tell OVLP about any known deadline when you submit the address. We can review the requested timing, but title work, ownership, written terms, county status, and third-party requirements determine whether a transaction is possible. No closing date is guaranteed.',
       },
       {
         q: 'Do I need a survey before selling?',
-        a: 'Not to sell to us. We work with the existing legal description on file with the county auditor. You don\'t need to commission a new survey.',
+        a: 'A new survey is not required merely to request an OVLP property review. Whether a survey is later needed depends on boundaries, access, the written agreement, title requirements, and the closing professionals. OVLP does not make boundary determinations.',
       },
       {
         q: 'Do you buy hunting and recreational land in Columbiana County?',
-        a: 'Yes. Wooded tracts in the northern townships near the Pennsylvania border are popular with hunters from the Youngstown and Pittsburgh metros. We evaluate access roads, timber condition, and zoning before making an offer.',
+        a: 'Yes. OVLP reviews wooded and recreational tracts in northern Columbiana County. Recorded access, terrain, timber condition, zoning information, parcel size, and surrounding uses are among the factors considered.',
       },
       {
         q: 'Can I sell Columbiana County land with back taxes before the county tax sale?',
-        a: 'Yes. Under ORC § 5721, delinquent taxes become a lien paid at closing. Selling before the Columbiana County Auditor\'s tax sale or forfeiture process lets you keep sale proceeds instead of losing the parcel entirely.',
+        a: 'OVLP may review Columbiana County land with reported delinquent taxes. Confirm the balance, status, and deadlines with the county and the appropriate legal, title, and tax professionals. OVLP cannot promise that a purchase will occur before a tax-sale or forfeiture deadline.',
       },
       {
         q: 'Do you buy land near East Liverpool or the Ohio River?',
-        a: 'We evaluate Ohio River corridor parcels in East Liverpool and Wellsville. Flood zone designation (check FEMA maps), road frontage, and any industrial history on the parcel all factor into our offer.',
+        a: 'OVLP reviews Ohio River corridor parcels in East Liverpool and Wellsville. Flood information, road frontage, environmental or industrial history, parcel configuration, and surrounding uses are part of the internal review.',
       },
       {
         q: 'What if multiple heirs inherited Columbiana County land?',
-        a: 'Under ORC § 5307 (Uniform Partition of Heirs Property Act), co-heirs have specific rights when one wants to sell. If the estate has a court-appointed executor with authority to sell, we can proceed. Active disputes among heirs must be resolved before closing.',
+        a: 'OVLP may review property with multiple heirs, but the deed, estate documents, court orders, and applicable law determine who may sign. The heirs or estate representative should work with an Ohio attorney and title company to confirm authority and resolve any disagreement before closing.',
       },
     ],
   },
@@ -451,21 +451,21 @@ export const countySellPages: CountySellData[] = [
       'Own hunting land that no one in the family uses anymore',
       'Inherited wooded acreage in Harrison County',
       'Owe back taxes on a rural parcel',
-      'Want to sell without listing or showings',
+      'Want to compare a direct purchase inquiry with other sale paths',
       'Timber has been cut and land is no longer productive',
     ],
     faqs: [
       {
         q: 'Is there demand for hunting land in Harrison County?',
-        a: 'Yes — strong demand. Harrison County is one of Ohio\'s top counties for white-tailed deer. Well-located hunting tracts move quickly to buyers from the metro areas.',
+        a: 'Hunting and recreational land is an established parcel type in Harrison County. Buyer interest still varies with access, acreage, terrain, timber, neighboring uses, improvements, and price, so OVLP reviews each tract individually.',
       },
       {
         q: 'Do you buy timber land in Harrison County?',
-        a: 'Yes. We buy timber parcels whether the timber has been recently harvested or is mature and standing. We evaluate the land independently of the timber value.',
+        a: 'Yes. OVLP reviews timber parcels whether timber has been harvested or remains standing. Access, terrain, remaining timber condition, boundaries, surrounding uses, and possible use all affect our acquisition interest; we do not provide a timber appraisal.',
       },
       {
         q: 'What if my land has an old oil or gas well on it?',
-        a: 'We evaluate properties with plugged or active wells. An active well with a lease is often a positive. An orphaned well may be a liability. Submit the property and we\'ll give you an honest assessment.',
+        a: 'OVLP reviews available records for active, plugged, or orphaned wells and considers how they may affect access, use, cost, and risk. A qualified attorney, title professional, environmental professional, or public agency should verify the well and lease status.',
       },
       {
         q: 'How do I find out if I owe back taxes in Harrison County?',
@@ -473,19 +473,19 @@ export const countySellPages: CountySellData[] = [
       },
       {
         q: 'Do you buy mineral rights parcels in Harrison County?',
-        a: 'We evaluate surface and unsevered mineral interests. Harrison County sits within Ohio\'s Utica shale play, and recorded leases at the Harrison County Recorder\'s Office affect what a parcel is worth. Review your deed before accepting any offer.',
+        a: 'OVLP may review surface property and disclosed mineral interests. Recorded leases and whether minerals are severed can affect our purchase interest, but OVLP does not determine mineral ownership or provide a mineral-rights opinion. Use the Harrison County Recorder and qualified title and legal professionals to verify the records.',
       },
       {
         q: 'Can I sell inherited Harrison County hunting land during probate?',
-        a: 'Yes, with court approval. Under ORC § 2113.39, the estate fiduciary can petition the Harrison County Probate Court to authorize a sale. Ohio Valley Land Partners works with executors mid-probate and does not require the estate to be fully closed first.',
+        a: 'OVLP may review inherited Harrison County land while probate is open. Whether the estate can sell depends on the deed, estate documents, court orders, and Ohio law. The fiduciary should confirm authority and timing with the estate attorney and title company.',
       },
       {
         q: 'What if my Harrison County land has no road access?',
-        a: 'Landlocked parcels are worth less but often still salable if they adjoin larger tracts or have an easement on record. Submit the parcel address and we will check Harrison County Auditor GIS maps and recorded easements before giving you an honest assessment.',
+        a: 'OVLP reviews landlocked and access-limited Harrison County parcels case by case. Auditor GIS, recorded easements, neighboring ownership, and terrain can provide background, but a surveyor, title professional, or attorney must verify boundaries and legal access.',
       },
       {
-        q: 'How fast can you close on Harrison County land with back taxes?',
-        a: 'Typically 14–21 days. Under ORC § 5721.181, delinquent taxes are paid from closing proceeds. If a Harrison County tax sale date is approaching, tell us immediately — we can often accelerate the timeline.',
+        q: 'What affects timing when Harrison County land has back taxes?',
+        a: 'Timing depends on the written agreement, ownership, title review, county status, and third-party requirements. Tell OVLP about any known tax deadline, but confirm it with the county and an Ohio attorney. OVLP does not guarantee a payoff structure or closing date.',
       },
     ],
   },
@@ -540,42 +540,42 @@ export const countySellPages: CountySellData[] = [
     commonSituations: [
       'Family farm or hunting land that no one is using',
       'Inherited Carroll County property from an estate',
-      'Delinquent property taxes piling up',
-      'Out-of-state owner with no connection to the land',
+      'Repeated or delinquent property-tax bills',
+      'Out-of-state owner who no longer uses the land',
       'Exploring a direct sale timeline',
     ],
     faqs: [
       {
         q: 'Do you buy land near Carrollton, Ohio?',
-        a: 'Yes. We buy throughout Carroll County — Carrollton, Sherrodsville, Malvern, Minerva, and all rural townships.',
+        a: 'Yes. OVLP reviews property throughout Carroll County, including Carrollton, Sherrodsville, Malvern, Minerva, and rural townships. Each parcel must still fit the current acquisition criteria.',
       },
       {
-        q: 'How quickly can you close in Carroll County?',
-        a: 'Typically 14–21 days. If there\'s a time-sensitive situation like a pending tax sale or estate deadline, we can often move faster.',
+        q: 'What affects closing timing in Carroll County?',
+        a: 'Timing varies with ownership, the written agreement, title review, property conditions, and third-party requirements. OVLP can discuss a requested timeline but does not guarantee a closing date.',
       },
       {
         q: 'Do oil and gas rights affect my land\'s value?',
-        a: 'Yes. If you own mineral rights and there is Utica or Marcellus shale activity in your township, it can significantly increase the land\'s value. Let us know when you submit.',
+        a: 'Recorded leases and whether mineral interests are attached to or severed from the surface can affect OVLP’s acquisition interest. A qualified attorney and title professional should determine ownership; OVLP’s review is not a mineral-rights opinion or appraisal.',
       },
       {
         q: 'What happens if there\'s a dispute among heirs about selling?',
-        a: 'We buy from authorized sellers. If the estate has a designated executor with authority to sell, we can proceed. If there\'s an active dispute, that needs to be resolved before any sale can close.',
+        a: 'OVLP can review the property, but only the deed, estate documents, court orders, and applicable law determine who may sell. The heirs or estate representative should work with an attorney and title company to confirm authority and resolve any dispute.',
       },
       {
         q: 'Do you buy land near Atwood Lake or Carrollton?',
-        a: 'Yes. Recreational parcels near Atwood Lake and rural acreage around Carrollton are active acquisition areas. We evaluate lake access, road frontage, and Carroll County zoning before making an offer.',
+        a: 'Yes. OVLP reviews recreational parcels near Atwood Lake and rural acreage around Carrollton. Lake and road access, zoning information, utilities, parcel configuration, and surrounding uses are part of the property review.',
       },
       {
         q: 'How do Utica shale leases affect Carroll County land value?',
-        a: 'Active or recorded oil and gas leases at the Carroll County Clerk\'s Office can increase or complicate a parcel\'s value depending on whether minerals are severed. Tell us about any lease activity when you submit — we review recorded documents before pricing.',
+        a: 'Recorded oil-and-gas leases and severed mineral interests can affect use, title, and OVLP’s purchase interest. Share any known lease information when you submit, and use the Carroll County Recorder plus qualified legal and title professionals to verify the recorded interests.',
       },
       {
         q: 'Can I sell Carroll County farm ground that is no longer being worked?',
-        a: 'Yes. Fallow farm ground is one of our most common acquisition types in Carroll County. We use Carroll County Auditor comparable sales and USDA NASS cropland benchmarks to build each offer.',
+        a: 'Yes. OVLP reviews active and fallow farm ground in Carroll County. Access, current use, parcel configuration, leases, soils information, surrounding activity, comparable transactions, costs, and risk all inform our internal acquisition review.',
       },
       {
         q: 'What if my Carroll County land has delinquent taxes?',
-        a: 'Under ORC § 5721.181, back taxes are a lien paid at closing from sale proceeds. Selling before the Carroll County tax forfeiture process under ORC § 5723.01 is almost always better than letting the county take the parcel.',
+        a: 'OVLP may review Carroll County property with reported delinquent taxes. Confirm the balance, collection status, and deadlines with the county and the appropriate legal, title, and tax professionals. OVLP does not promise that a purchase can resolve the balance or occur before a deadline.',
       },
     ],
   },
@@ -629,42 +629,42 @@ export const countySellPages: CountySellData[] = [
     commonSituations: [
       'Inherited a lot or parcel in the Wheeling area',
       'Own land that\'s been sitting vacant for years',
-      'Owe West Virginia property taxes and want to sell',
+      'Repeated or delinquent West Virginia property-tax bills',
       'Out-of-state heir with West Virginia land',
       'Exploring a direct purchase inquiry',
     ],
     faqs: [
       {
         q: 'Do you buy land in West Virginia?',
-        a: 'Yes. We buy throughout the Ohio Valley — including Ohio County, Marshall County, and Brooke County in West Virginia.',
+        a: 'Yes. OVLP reviews property in Ohio, Marshall, and Brooke counties in West Virginia, along with other Ohio Valley acquisition areas. Current interest still depends on the county and the parcel.',
       },
       {
         q: 'Is West Virginia land harder to sell than Ohio land?',
-        a: 'WV land has a smaller buyer pool for traditional listings, which is exactly why direct buyers like us are valuable. We know the market and have buyers specifically looking for WV panhandle parcels.',
+        a: 'West Virginia land is not uniformly harder or easier to sell. Buyer interest varies with location, access, topography, utilities, title and mineral interests, parcel size, and possible use. Ohio County parcels near Wheeling differ from remote hillside acreage, so each property needs its own review.',
       },
       {
         q: 'How does WV probate differ from Ohio probate for land sales?',
-        a: 'West Virginia probate follows a similar general process but goes through the WV Circuit Court rather than Ohio Probate Court. Timelines and procedures vary by county. We\'ve worked through WV estate sales before and can navigate it with you.',
+        a: 'West Virginia and Ohio have different estate laws, offices, documents, and procedures. OVLP may review inherited property as a prospective buyer, but cannot explain which state process applies or who has authority to sign. The estate representative should consult a West Virginia attorney and title professional.',
       },
       {
         q: 'Do you buy land in the city of Wheeling?',
-        a: 'Yes — urban and suburban lots in Wheeling are something we evaluate. Value depends on location, zoning, and condition of any existing structures.',
+        a: 'Yes. OVLP reviews urban and suburban lots in Wheeling. Location, access, zoning information, utilities, parcel dimensions, existing structures, surrounding uses, costs, and risk affect whether a property fits.',
       },
       {
         q: 'Do you work with out-of-state heirs who inherited Ohio County WV land?',
-        a: 'Frequently. Under WV Code § 44-1, the personal representative must obtain authority to sell estate property, but you do not need to travel to Wheeling. We handle remote closings through a local WV title company.',
+        a: 'OVLP may review inherited Ohio County property owned by out-of-state heirs. Authority to sell and whether remote signing is available depend on the estate, deed, written terms, and closing professionals. Confirm the requirements with a West Virginia attorney and title professional.',
       },
       {
         q: 'What happens if my Ohio County WV property taxes are delinquent?',
-        a: 'Under WV Code § 11A-3, delinquent taxes can lead to a sheriff\'s tax sale. Selling to a direct buyer before that process completes lets you receive proceeds instead of losing the parcel through redemption deadlines.',
+        a: 'Reported delinquent taxes can affect timing, title, and whether a transaction is possible. Confirm the current balance, status, notices, and deadlines with the county and a West Virginia attorney. OVLP may review the parcel but cannot interpret notices or promise a purchase before a deadline.',
       },
       {
         q: 'Do you buy Ohio River frontage land in Ohio County?',
-        a: 'Yes. River corridor parcels near Wheeling and the I-70 bridge attract recreational and investment buyers. We check FEMA flood zone maps and Ohio County Assessor records before pricing.',
+        a: 'Yes. OVLP reviews river-corridor parcels near Wheeling and the I-70 bridge. Flood information, road access, parcel configuration, environmental conditions, and surrounding uses are part of the property-specific review.',
       },
       {
         q: 'How is WV land in Ohio County priced compared to across the river in Ohio?',
-        a: 'Ohio County WV parcels near Wheeling often trade at lower per-acre prices than comparable Ohio parcels, which is why direct buyers are valuable — we have end buyers specifically looking in the WV panhandle. We pull Ohio County Assessor comparable sales for each offer.',
+        a: 'OVLP does not apply a blanket Ohio-versus-West-Virginia discount. We review Ohio County location, size, access, utilities, title and mineral information, taxes, nearby activity, comparable transactions, possible use, costs, and risk. The result is not a formal appraisal or cross-state market-value opinion.',
       },
     ],
   },
@@ -719,41 +719,41 @@ export const countySellPages: CountySellData[] = [
       'Inherited West Virginia land and live out of state',
       'Own land that\'s been unused for a decade or more',
       'Delinquent WV property taxes on a rural parcel',
-      'Family land no one can agree on — need a clean exit',
-      'Want a fast, simple sale without WV listing process',
+      'Family land that no one wants to continue managing',
+      'Want a clear direct-purchase process for West Virginia property',
     ],
     faqs: [
       {
         q: 'Do you buy land near Moundsville, WV?',
-        a: 'Yes. We buy throughout Marshall County — Moundsville, Cameron, Glen Dale, Bendale, and all rural areas.',
+        a: 'Yes. OVLP reviews property throughout Marshall County, including Moundsville, Cameron, Glen Dale, Benwood, and rural areas. Each parcel must still fit the current acquisition criteria.',
       },
       {
         q: 'Is there demand for Marshall County land?',
-        a: 'Yes — particularly for rural residential, recreational, and agricultural parcels. The Ohio River corridor also attracts commercial interest.',
+        a: 'Buyer interest in Marshall County varies by location, road access, terrain, utilities, parcel size, title and mineral information, surrounding uses, and price. Rural residential land, recreational acreage, farm ground, and Ohio River corridor parcels each draw different buyer groups, so OVLP reviews the specific property rather than applying one countywide demand claim.',
       },
       {
         q: 'What if my West Virginia land has mineral rights issues?',
-        a: 'Many WV parcels have severed mineral rights — meaning the surface and mineral ownership are separate. We evaluate surface rights independently and will be upfront about how severed minerals affect value.',
+        a: 'Severed mineral interests can affect title, use, access, and OVLP’s purchase interest. OVLP can review the disclosed surface and mineral information but does not determine ownership or provide a mineral-rights or value opinion. Qualified legal and title professionals should verify the records.',
       },
       {
-        q: 'Can you buy WV land quickly if there\'s an estate deadline?',
-        a: 'Yes. We can close fast when there\'s a time constraint. Let us know the situation when you submit and we\'ll prioritize accordingly.',
+        q: 'What affects timing when a Marshall County estate has a deadline?',
+        a: 'Tell OVLP about the requested timing when you submit the address. Estate authority, title work, written terms, property conditions, and third-party requirements determine whether and when a closing is possible. No closing date is guaranteed.',
       },
       {
         q: 'Do you buy land near Moundsville or the former prison site area?',
-        a: 'Yes. Parcels in and around Moundsville, Glen Dale, and along US-2 are active evaluation areas. Zoning, road access, and any recorded easements at the Marshall County Clerk\'s Office factor into pricing.',
+        a: 'Yes. OVLP reviews parcels in and around Moundsville, Glen Dale, and along US-2. Zoning information, road access, recorded easements, utilities, parcel configuration, and surrounding uses are part of the review.',
       },
       {
         q: 'What if my Marshall County WV land has severed mineral rights?',
-        a: 'Many WV parcels have minerals severed from the surface estate. We evaluate surface rights independently and explain upfront how severed minerals affect our offer — review your deed and any recorded leases before signing.',
+        a: 'OVLP may review the surface estate even when mineral interests are severed. The Marshall County Clerk’s records are a useful starting point, but a qualified attorney and title professional should determine what is owned. OVLP will explain how verified information affects its own acquisition interest.',
       },
       {
         q: 'Can I sell Marshall County land with delinquent WV property taxes?',
-        a: 'Yes. Under WV Code § 11A-3, delinquent taxes must be addressed at closing. We factor the total tax debt into our offer and pay the county from sale proceeds so you do not pay out of pocket.',
+        a: 'OVLP may review Marshall County land with reported delinquent taxes. The county and the appropriate legal, title, and tax professionals must verify the balance, status, deadlines, and effect on a proposed transaction. OVLP does not guarantee payoff terms or owner proceeds.',
       },
       {
         q: 'Do you buy Ohio River frontage in Marshall County?',
-        a: 'River corridor parcels from Moundsville south toward Cameron attract recreational and investment interest. We check FEMA flood maps and Marshall County Assessor parcel data before making an offer.',
+        a: 'Yes. OVLP reviews Ohio River frontage and river-corridor parcels in Marshall County. Flood information, legal and practical access, parcel configuration, environmental conditions, utilities, and surrounding uses are part of the property review.',
       },
     ],
   },
@@ -809,40 +809,40 @@ export const countySellPages: CountySellData[] = [
       'Old family land with delinquent taxes',
       'Small parcel that\'s hard to sell through traditional channels',
       'Exploring a direct purchase inquiry',
-      'Need to wrap up an estate and get the land sold cleanly',
+      'Need a clear first step for estate-owned property',
     ],
     faqs: [
       {
         q: 'Do you buy land in Brooke County, WV?',
-        a: 'Yes. We buy throughout Brooke County — Wellsburg, Beech Bottom, Follansbee, and all rural areas.',
+        a: 'Yes. OVLP reviews property throughout Brooke County, including Wellsburg, Beech Bottom, Follansbee, and rural areas. Each parcel must still fit the current acquisition criteria.',
       },
       {
         q: 'Is Brooke County land hard to sell?',
-        a: 'Small WV panhandle parcels can sit on the market for a long time through traditional channels because the buyer pool is limited. We have buyers looking specifically in this area and can move quickly.',
+        a: 'Brooke County buyer interest varies with location, access, topography, utilities, parcel size, title and mineral information, and possible use. Some small or access-limited parcels have a narrower buyer pool, but no single countywide rule determines marketability or timing.',
       },
       {
         q: 'Do you work with out-of-state WV landowners?',
-        a: 'Frequently. Most of our Brooke County sellers live in Pennsylvania, Ohio, or other states. We handle everything remotely — you don\'t need to come to WV to close.',
+        a: 'Yes. OVLP reviews Brooke County property owned from outside West Virginia. Whether remote signing is available depends on the ownership documents, written agreement, and closing professionals, so we confirm the process after the property review.',
       },
       {
         q: 'What is the WV property tax situation on delinquent parcels?',
-        a: 'West Virginia sells tax liens at annual sheriff\'s sales. If your parcel\'s taxes are severely delinquent, the redemption window can be short. Tell us the situation and we\'ll tell you if we can move in time.',
+        a: 'Delinquent-tax status and deadlines are property-specific. Confirm the current balance, notices, sale status, and any rights with the county and a West Virginia attorney. OVLP may review the parcel but cannot interpret notices or promise a transaction before a deadline.',
       },
       {
         q: 'Do you buy small Brooke County lots that are hard to sell on the MLS?',
-        a: 'Yes — small WV panhandle parcels are exactly what we specialize in. Traditional listings struggle here because the buyer pool is limited. We have end buyers looking specifically in Brooke County and can close without showings or agent fees.',
+        a: 'Yes. OVLP reviews small Brooke County lots, including parcels that did not sell through a prior listing. Access, dimensions, utilities, zoning information, title, surrounding uses, costs, and possible use determine whether a parcel fits our criteria.',
       },
       {
         q: 'Can I sell inherited Brooke County land from Pennsylvania or Ohio?',
-        a: 'Frequently. Under WV Code § 44-1, the estate personal representative must have authority to sell, but you do not need to travel to Wellsburg. We coordinate remote closings through a West Virginia title company.',
+        a: 'OVLP may review inherited Brooke County land owned from Pennsylvania, Ohio, or another state. The estate’s authority to sell and remote-signing options depend on the deed, estate documents, written terms, and closing professionals. Confirm requirements with a West Virginia attorney and title professional.',
       },
       {
         q: 'Do you buy land near Wellsburg or along the Ohio River?',
-        a: 'Yes. River corridor parcels and hillside acreage near Wellsburg and Follansbee are active areas. We evaluate flood zone status via FEMA maps and Brooke County Assessor parcel records.',
+        a: 'Yes. OVLP reviews river-corridor parcels and hillside acreage near Wellsburg and Follansbee. Flood information, access, topography, parcel configuration, utilities, environmental conditions, and surrounding uses are part of the review.',
       },
       {
-        q: 'How fast can you close on Brooke County WV land?',
-        a: 'Typically 14–21 days for a clean title. If a Brooke County sheriff\'s tax sale is approaching, contact us immediately — under WV Code § 11A-3, redemption windows can be short and we may be able to accelerate.',
+        q: 'What affects closing timing for Brooke County WV land?',
+        a: 'Timing depends on ownership, title review, the written agreement, property conditions, county status, and third-party requirements. Tell OVLP about any known deadline and confirm it with the county and a West Virginia attorney. OVLP does not guarantee a closing date.',
       },
     ],
   },

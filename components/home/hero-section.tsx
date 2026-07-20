@@ -9,10 +9,10 @@ import { communityGiving, sellerPositioning } from '@/lib/public-copy';
 import { HeroVideo } from '@/components/home/hero-video';
 
 const stats = [
-  { label: sellerPositioning.analysisLabel, value: 'Free', icon: Clock },
-  { label: 'Ohio Valley Coverage', value: '5 States', icon: Globe2 },
-  { label: 'Core Acres', value: '1.77M+', icon: TreePine },
-  { label: 'Campaigns & Buyers Network', value: 'Active', icon: Target },
+  { label: sellerPositioning.analysisLabel, value: 'Direct', icon: Clock },
+  { label: 'Regional Focus', value: 'Ohio Valley', icon: Globe2 },
+  { label: 'Owner Choice', value: 'No Obligation', icon: TreePine },
+  { label: 'Communication', value: 'Principal-Led', icon: Target },
 ];
 
 const campaignRegions = [
@@ -32,14 +32,14 @@ const serviceRegions = [
 ];
 
 const sellerTrustPoints = [
-  'We buy land all over the Ohio Valley — OH, PA, WV, KY, and Indiana',
-  'Multiple active campaigns backed by an active builders network',
-  'Full property analysis before every proposal',
-  'Principal buyer — not a broker or listing agent',
+  'Local principal buyer',
+  'Property-specific review',
+  'Direct communication',
+  'No obligation to accept a proposal',
 ];
 
 const buyerTrustPoints = [
-  'First access to off-market land across the entire Ohio Valley',
+  'First access to land in current acquisition areas',
   'Hunting, farm, development & investment parcels',
   'No membership fees — ever',
 ];
@@ -65,21 +65,19 @@ export function HeroSection() {
 
             {/* Serif italic label — Mynd style */}
             <p className="heading-serif text-amber text-2xl mb-4">
-              {activeTab === 'sell' ? 'Explore a direct sale.' : 'Buy before it hits the market.'}
+              {activeTab === 'sell' ? 'Ohio Valley. Local. Intentional. Fair.' : 'Buy before it hits the market.'}
             </p>
 
             {activeTab === 'sell' ? (
               <>
                 <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl leading-tight">
-                  We Buy Land All Over the Ohio Valley.
-                  <span className="block text-amber mt-1">Local. Intentional. Fair.</span>
+                  Explore a direct sale for your land.
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-white/70">
-                  Vacant lots, inherited property, and back-tax parcels across Ohio, Pennsylvania,
-                  West Virginia, Kentucky, and Indiana. Multiple active campaigns with an active
-                  builders network — a local principal buyer in counties throughout the region, not
-                  just Franklin. Full property analysis first, then a property-specific proposal
-                  when the parcel fits our criteria.
+                  Ohio Valley Land Partners reviews vacant, inherited, tax-burdened, and
+                  difficult-to-manage property across the region for possible direct purchase.
+                  Share the property address and we will determine whether it fits our current
+                  buying criteria.
                 </p>
                 <ul className="mt-6 flex flex-col gap-3">
                   {sellerTrustPoints.map((point) => (
@@ -99,7 +97,7 @@ export function HeroSection() {
                 <p className="mt-6 text-lg leading-8 text-white/70">
                   Join our active builders network and get first access to off-market land deals —
                   hunting tracts, farm ground, development sites, and investment parcels
-                  across the Ohio Valley in OH, PA, WV, KY, and Indiana.
+                  across the Ohio Valley. Inventory and active focus vary by county.
                 </p>
                 <ul className="mt-6 flex flex-col gap-3">
                   {buyerTrustPoints.map((point) => (
@@ -139,7 +137,7 @@ export function HeroSection() {
           </div>
 
           {/* Right — Tabbed form card */}
-          <div className="w-full animate-fade-up-delay-1">
+          <div id="property-review" className="w-full animate-fade-up-delay-1 scroll-mt-28">
             <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden shadow-2xl">
 
               {/* Tab switcher */}
@@ -147,6 +145,7 @@ export function HeroSection() {
                 <button
                   type="button"
                   onClick={() => setActiveTab('sell')}
+                  data-analytics-event="seller_property_review_tab_click"
                   className={`py-4 text-sm font-bold tracking-wide transition-all ${
                     activeTab === 'sell'
                       ? 'bg-amber text-forest'
@@ -158,6 +157,7 @@ export function HeroSection() {
                 <button
                   type="button"
                   onClick={() => setActiveTab('buy')}
+                  data-analytics-event="builders_network_click"
                   className={`py-4 text-sm font-bold tracking-wide transition-all border-l border-white/10 ${
                     activeTab === 'buy'
                       ? 'bg-amber text-forest'
@@ -185,7 +185,7 @@ export function HeroSection() {
                     <div className="mb-6 text-center">
                       <h2 className="text-xl font-bold text-foreground">Join the Deal List</h2>
                       <p className="text-sm text-muted-foreground mt-1">
-                        Tell us what you want. We call when it's available.
+                        Tell us what you want. We call when it’s available.
                       </p>
                     </div>
                     <InvestorIntakeForm />
@@ -199,7 +199,7 @@ export function HeroSection() {
         {/* County strip */}
         <div className="mt-16 border-t border-white/10 pt-10">
           <p className="text-xs font-semibold text-white/40 uppercase tracking-widest text-center mb-5">
-            Active Campaigns
+            Where We Review Property
           </p>
           <div className="flex flex-wrap justify-center gap-2 mb-4">
             {campaignRegions.map((region) => (

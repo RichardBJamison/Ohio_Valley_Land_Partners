@@ -14,12 +14,9 @@ export function countyVisualSubheadline(countyName: string): string {
 export function countySellMetaTitle(
   countyName: string,
   stateAbbr: string,
-  slug?: string,
+  _slug?: string,
 ): string {
-  if (slug === 'franklin-county-oh') {
-    return `Sell Land in Franklin County, OH | Cash Offer in 24 Hours | Columbus`;
-  }
-  return `Sell Land in ${countyName}, ${stateAbbr} | Cash Offer in 24 Hours`;
+  return `We Buy Land in ${countyName}, ${stateAbbr} | Direct Property Review`;
 }
 
 export function countySellMetaDescription(
@@ -28,21 +25,18 @@ export function countySellMetaDescription(
   stateAbbr: string,
   slug?: string,
 ): string {
-  const region =
-    slug === 'franklin-county-oh'
-      ? 'Columbus and Central Ohio'
-      : `the ${countyName} market in ${state}`;
-  return `Selling vacant land, inherited property, or back-tax parcels in ${countyName}, ${stateAbbr}? Ohio Valley Land Partners buys land in ${region} — cash offer in 24 hours, close in 14–21 days. No agent fees. Principal buyer serving the Ohio Valley.`;
+  const region = slug === 'franklin-county-oh' ? 'Columbus and Central Ohio' : `${countyName}, ${state}`;
+  return `Ohio Valley Land Partners reviews vacant, inherited, tax-burdened, and difficult-to-manage property in ${region} for possible direct purchase. No obligation; not every property receives a proposal.`;
 }
 
 export const homepageSeoMeta = {
-  title: 'Sell Land in the Ohio Valley | Cash Land Buyer',
+  title: 'Sell Land in the Ohio Valley | Direct Property Review',
   description:
-    'We buy land all over the Ohio Valley — Ohio and West Virginia. Cash offers in 24 hours, close in 14–21 days. Vacant lots, inherited property, and tax-delinquent parcels. Principal buyer, no agent fees.',
+    'Explore a direct sale with Ohio Valley Land Partners. We review vacant, inherited, tax-burdened, and difficult-to-manage property for possible direct purchase, with no obligation to sell.',
   keywords: [
     'sell land Ohio Valley',
-    'cash land buyer Ohio',
-    'cash offer for land',
+    'direct land buyer Ohio',
+    'direct property review Ohio',
     'sell vacant land Ohio',
     'sell inherited land Ohio',
     'we buy land Ohio Valley',

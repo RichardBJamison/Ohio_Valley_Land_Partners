@@ -6,10 +6,12 @@ import Image from 'next/image';
 
 const footerNavigation = {
   services: [
-    { name: 'Land Offers', href: '/land' },
+    { name: 'Sell Land', href: '/land' },
+    { name: 'How It Works', href: '/land#how-it-works' },
+    { name: 'Seller Resources', href: '/blog' },
     { name: 'Commercial Real Estate', href: '/commercial' },
     { name: 'Residential Development', href: '/development' },
-    { name: 'Investor Portal', href: '/investor-portal' },
+    { name: 'Investor Portal', href: 'https://investors.ohiovalleylandpartners.com' },
   ],
   sellLandStates: ohioValleyStates.map((state) => ({
     name: state.name,
@@ -17,11 +19,11 @@ const footerNavigation = {
   })),
   campaigns: [
     { name: 'Geauga County, OH', href: '/blog/sell-vacant-land-geauga-county-ohio-2026' },
-    { name: 'Franklin County Campaign', href: '/sell-land/franklin-county-oh' },
+    { name: 'Franklin County, OH', href: '/sell-land/franklin-county-oh' },
   ],
   company: [
     { name: 'About Us', href: '/about' },
-    { name: 'Community & Giving', href: '/community' },
+    { name: 'Community Commitment', href: '/community' },
     { name: 'Introductions', href: '/land-scouts' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
@@ -50,7 +52,7 @@ export function Footer() {
               />
             </Link>
             <p className="text-sm leading-6 text-white/60 max-w-xs">
-              Prospective principal land buyer across the Ohio Valley — OH, PA, WV, KY, and Indiana. Direct acquisition inquiries and private portfolio marketing.
+              Direct regional land buyer reviewing vacant, inherited, tax-burdened, and difficult-to-manage property across the Ohio Valley.
             </p>
             <div className="flex flex-col gap-3 text-sm text-white/60">
               <div className="flex items-center gap-2">
@@ -85,7 +87,11 @@ export function Footer() {
                 <ul role="list" className="space-y-4">
                   {footerNavigation.services.map((item) => (
                     <li key={item.name}>
-                      <Link href={item.href} className="text-sm text-white/60 hover:text-amber transition-colors">
+                      <Link
+                        href={item.href}
+                        data-analytics-event={item.name === 'Investor Portal' ? 'buyer_portal_click' : undefined}
+                        className="text-sm text-white/60 hover:text-amber transition-colors"
+                      >
                         {item.name}
                       </Link>
                     </li>
@@ -125,7 +131,7 @@ export function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-6">Campaigns</h3>
+                <h3 className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-6">Acquisition Areas</h3>
                 <ul role="list" className="space-y-4 mb-8">
                   {footerNavigation.campaigns.map((item) => (
                     <li key={item.name}>

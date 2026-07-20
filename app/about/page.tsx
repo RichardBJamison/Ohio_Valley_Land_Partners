@@ -8,7 +8,7 @@ import { siteConfig } from '@/lib/seo-config';
 export const metadata: Metadata = {
   title: 'About Us — Ohio Valley Land Partners',
   description:
-    'Ohio Valley Land Partners is a principal land buyer focused on direct acquisition inquiries, private portfolio marketing, and community investment in the Ohio Valley.',
+    'Ohio Valley Land Partners is a regional principal land buyer focused on direct acquisition inquiries, property-specific review, and a forward-looking community-reinvestment commitment.',
   alternates: {
     canonical: `${siteConfig.url}/about`,
   },
@@ -29,9 +29,9 @@ const principles = [
   },
   {
     icon: MapPin,
-    title: 'Local. Not a Land Grab.',
+    title: 'Regional Accountability.',
     description:
-      'There is real concern in the Ohio Valley about outside investors sweeping in to buy family land cheap. We are not that. We are rooted here — buying in specific Ohio Valley counties and running a deliberate Franklin County campaign because we know these markets, not because an algorithm pointed us here.',
+      'OVLP reviews property across the Ohio Valley, with active acquisition focus varying by county and campaign. Local context, direct communication, and property-specific facts shape every decision.',
   },
   {
     icon: Heart,
@@ -51,21 +51,19 @@ export default function AboutPage() {
           <div className="mx-auto max-w-3xl">
             <p className="heading-serif text-amber text-2xl mb-4">Our story</p>
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl leading-tight">
-              We Started This Because
-              <span className="block text-amber mt-2">Landowners Deserve Better.</span>
+              A Direct Regional Buyer
+              <span className="block text-amber mt-2">That Studies Each Property.</span>
             </h1>
             <div className="mt-8 flex flex-col gap-5 text-lg leading-9 text-muted-foreground">
               <p>
-                Selling land in the Ohio Valley is harder than it should be. The traditional
-                market ignores rural parcels. National bulk buyers treat them as line items.
-                Agents who do take the listing rarely know the county, the zoning, or the
-                specific circumstances that make every land sale different.
+                Land can become difficult to manage for many reasons: inheritance, distance,
+                recurring taxes, uncertain access, title questions, or a parcel that no longer
+                has a clear purpose for the owner.
               </p>
               <p>
-                Ohio Valley Land Partners was built to change that — one parcel at a time,
-                in counties we know and care about, including our active Franklin County
-                campaign. Direct, honest, and committed to doing right by every seller we
-                work with.
+                Ohio Valley Land Partners approaches those situations as a prospective principal
+                buyer. We study the available property information, explain whether the parcel
+                fits our current buying criteria, and communicate directly with the owner.
               </p>
             </div>
           </div>
@@ -98,28 +96,28 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* The mission */}
+      {/* Principal trust layer */}
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 items-center">
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">
-                The Commitment Beyond the Deal
+                The people reviewing your property
               </h2>
               <div className="flex flex-col gap-5 text-muted-foreground leading-8">
                 <p>
-                  Ohio Valley Land Partners is currently forming a nonprofit organization
-                  dedicated to children and families in need across the Ohio Valley region.
-                  A portion of every land transaction we close will fund that organization.
+                  <strong className="text-foreground">Richard B. Jamison</strong><br />
+                  Principal, Ohio Valley Land Partners
                 </p>
                 <p>
-                  This isn't a cause we added to a website to look good. It is the reason
-                  the company was built the way it was — with a long-term commitment to this
-                  specific region, not a short-term play to flip deals and move on.
+                  Richard works directly on property review, acquisition strategy, seller
+                  communication, and the systems behind each transaction. The goal is not to
+                  pressure an owner into selling. It is to understand the property, explain whether
+                  it fits OVLP’s buying criteria, and create a clear path when both sides want to proceed.
                 </p>
                 <p>
-                  When you sell your land to Ohio Valley Land Partners, part of that transaction
-                  stays in the Ohio Valley — invested in the people and families who live here.
+                  Your property is not sent into a national call center or an anonymous offer system.
+                  OVLP reviews each opportunity directly and communicates with owners throughout the process.
                 </p>
               </div>
             </div>
@@ -127,31 +125,21 @@ export default function AboutPage() {
             <div className="rounded-2xl border border-meadow/30 bg-meadow/5 p-10">
               <Heart className="h-10 w-10 text-meadow mb-6" />
               <h3 className="text-xl font-bold text-foreground mb-4">
-                Our Community Partners
+                Community Reinvestment Commitment
               </h3>
               <div className="flex flex-col gap-4 text-sm text-muted-foreground leading-7 mb-6">
+                <p>{communityGiving.principles}</p>
                 <p>
-                  <strong className="text-foreground">Arc of Appalachia</strong> — protecting
-                  Ohio's forests, wetlands, and waterways. Cleaning up what others have left behind.
-                </p>
-                <p>
-                  <strong className="text-foreground">Salvation Army — East Palestine</strong> — on
-                  the ground for Columbiana County families since the 2023 Norfolk Southern
-                  derailment. Clean water, cleanup support, and recovery resources.
-                </p>
-                <p>
-                  <strong className="text-foreground">COCIC Franklin County Land Bank</strong> — returning
-                  vacant and abandoned properties to productive use in the communities we operate in most.
+                  The community page highlights regional stewardship, recovery, and land-banking
+                  work that helps explain the kinds of local needs OVLP is studying. It does not
+                  claim a completed distribution, recipient relationship, or community outcome.
                 </p>
               </div>
-              <p className="text-sm font-bold text-foreground mb-4">
-                {communityGiving.headline}
-              </p>
               <Link
                 href="/community"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-meadow hover:text-meadow/80 transition-colors"
               >
-                See how our giving works <ArrowRight className="h-4 w-4" />
+                Read our community commitment <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -161,13 +149,13 @@ export default function AboutPage() {
       {/* Who this is for */}
       <section className="py-16 bg-card border-t border-border">
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-foreground mb-6">Who We're Here For</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-6">Who We’re Here For</h2>
           <div className="flex flex-col gap-4 text-muted-foreground leading-8">
             <p>
-              We built this company for the family that inherited land from a parent and
-              doesn't know what to do with it. For the landowner who's been paying taxes
-              on a parcel they haven't visited in years. For an estate representative exploring possible buyers while relying on the estate's own attorney and other professionals. For the out-of-state heir who just
-              needs the process to be simple.
+              We built this company for the family that inherited land from a parent and does not
+              know what to do with it. For the owner paying taxes on a parcel they have not visited
+              in years. For the estate representative exploring possible buyers while relying on
+              the estate’s own professionals. For the out-of-state owner who needs a clear first step.
             </p>
             <p>
               We are not the right buyer for every deal. But for land in the Ohio Valley
@@ -177,10 +165,11 @@ export default function AboutPage() {
           </div>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
-              href="/"
+              href="/#property-review"
+              data-analytics-event="property_review_cta_click"
               className="inline-flex items-center gap-2 rounded-lg bg-amber px-6 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
             >
-              Request Analysis &amp; Offer <ArrowRight className="h-4 w-4" />
+              Start My Property Review <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="/contact"

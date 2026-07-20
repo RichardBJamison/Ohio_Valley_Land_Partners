@@ -74,7 +74,7 @@ export default function PropertyUploads() {
               </div>
               <h3 className="font-semibold text-foreground mb-2">3. Upload &amp; We Review</h3>
               <p className="text-sm text-muted-foreground">
-                Our team reviews within 24 hours and matches parcels to active buyers.
+                Our team reviews the file and follows up about parcels that match active buyers.
               </p>
             </div>
           </div>

@@ -57,7 +57,7 @@ export default function BlogPage() {
         {campaignPost ? (
           <div className="mb-8 rounded-2xl border border-amber/30 bg-amber/5 px-6 py-4 text-center">
             <p className="text-sm font-semibold text-amber">
-              Active campaign — Geauga County, Ohio
+              Current acquisition focus — Geauga County, Ohio
             </p>
             <p className="mt-1 text-sm text-muted-foreground">
               Acquisition review for vacant lots and other land in western Geauga — Chesterland, Chardon, Bainbridge, and surrounding townships.
@@ -141,10 +141,11 @@ export default function BlogPage() {
             Request an internal property review. Any proposal reflects only OVLP’s interest as a prospective principal buyer.
           </p>
           <Link
-            href="/"
+            href="/#property-review"
+            data-analytics-event="property_review_cta_click"
             className="inline-flex items-center gap-2 rounded-lg bg-amber px-6 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
           >
-            Request Analysis &amp; Offer <ArrowRight className="h-4 w-4" />
+            Start My Property Review <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </div>

@@ -162,15 +162,15 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'ohio-valley-land-market-2026',
-    title: 'Ohio Valley Land Market: Observations for 2026',
+    title: 'Ohio Valley Land Market Guide',
     metaDescription:
-      'A ground-level look at the 2026 Ohio Valley land market. Which counties are up, which are flat, and what\'s driving demand for vacant land across the region.',
+      'An observational guide to the property factors Ohio Valley Land Partners reviews across varied regional land markets. General context, not a formal market report or appraisal.',
     category: 'Market Reports',
     datePublished: '2026-03-12',
     dateModified: '2026-03-14',
     readingTime: '7 min read',
     excerpt:
-      'The Ohio Valley land market in 2026 is more divided than ever — some counties are booming, others are stagnant. Here\'s what\'s actually happening and what it means for sellers.',
+      'Land conditions vary across the Ohio Valley. This guide explains the property-specific factors OVLP reviews without presenting a formal market report or appraisal.',
     keywords: [
       'Ohio Valley land market 2026',
       'Ohio land values',
@@ -179,6 +179,7 @@ export const blogPosts: BlogPost[] = [
       'wholesale land deals Ohio Valley',
     ],
     body: `
+<p>Land conditions vary significantly across the Ohio Valley. A small buildable lot near a growing town, inherited rural acreage, a landlocked parcel, and property with timber or mineral considerations should not be evaluated in the same way. This guide explains the factors OVLP reviews when considering land across the region.</p>
 <h2>A region made of many local markets</h2>
 <p>The Ohio Valley is not one uniform real estate market. Buyer interest can differ by county, permitted use, access, utilities, parcel size, employment activity, agricultural conditions, and many other property-specific facts.</p>
 <h2>How to treat market commentary</h2>
@@ -446,13 +447,13 @@ export const blogPosts: BlogPost[] = [
     slug: 'franklin-county-ohio-sell-vacant-land-2026',
     title: 'Franklin County, Ohio Vacant Land: 2026 Campaign Notes',
     metaDescription:
-      'Franklin County, Ohio vacant land campaign notes for 2026. Full property analysis from a local principal buyer — inherited lots, back taxes, and landlocked parcels welcome.',
+      'Franklin County, Ohio vacant land notes for 2026. Property-specific review from a regional principal buyer considering inherited lots, tax-burdened parcels, and access-limited land.',
     category: 'County Guides',
     datePublished: '2026-05-20',
     dateModified: '2026-06-21',
     readingTime: '7 min read',
     excerpt:
-      'Franklin County landowners: from inherited lots to tax-delinquent parcels — how OVLP reviews direct acquisition inquiries after a full property analysis.',
+      'Franklin County landowners: from inherited lots to tax-delinquent parcels — how OVLP handles a direct property review.',
     keywords: [
       'sell land Franklin County Ohio',
       'Franklin County direct land buyer',
@@ -543,7 +544,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'sell-vacant-land-geauga-county-ohio-2026',
     title: 'Geauga County, Ohio Vacant Land: 2026 Campaign Notes',
     metaDescription:
-      'Geauga County, Ohio vacant land campaign notes for Chesterland, Chardon, Bainbridge, and western townships. Full property analysis from a local principal buyer.',
+      'Geauga County, Ohio vacant land notes for Chesterland, Chardon, Bainbridge, and western townships. Property-specific review from a regional principal buyer.',
     category: 'County Guides',
     datePublished: '2026-06-19',
     dateModified: '2026-06-21',
@@ -555,7 +556,7 @@ export const blogPosts: BlogPost[] = [
       'direct land buyer Geauga County',
       'sell lot Chesterland Ohio',
       'sell inherited land Geauga County',
-      'Geauga County vacant lot analysis',
+      'Geauga County vacant lot review',
       'sell land Bainbridge Ohio',
       'sell land Chardon Ohio',
     ],

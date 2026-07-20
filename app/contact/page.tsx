@@ -22,9 +22,9 @@ export default function ContactPage() {
             Get in Touch
           </h1>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Whether you're ready to sell land, want to join our buyer network, or have
-            questions about a specific parcel — fill out the form and we'll respond within
-            24 hours.
+            For a property review, share the property address and the best email to reach you.
+            You do not need to answer a long list of property questions before the first
+            conversation. Buyer-network, partnership, and general questions can use the same form.
           </p>
         </div>
 
@@ -76,24 +76,24 @@ export default function ContactPage() {
             </div>
 
             <div className="rounded-2xl border border-border bg-card p-8">
-              <h3 className="text-lg font-semibold text-foreground mb-4">Response Times</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-4">What to Expect</h3>
               <ul className="space-y-3 text-sm text-muted-foreground">
                 <li className="flex items-baseline gap-2">
                   <span className="inline-block h-2 w-2 rounded-full bg-amber flex-shrink-0" />
                   <span>
-                    <strong className="text-foreground">Land Inquiries:</strong> 24 hours
+                    <strong className="text-foreground">Property Review:</strong> Start with the address and your email
                   </span>
                 </li>
                 <li className="flex items-baseline gap-2">
                   <span className="inline-block h-2 w-2 rounded-full bg-amber flex-shrink-0" />
                   <span>
-                    <strong className="text-foreground">Buyer Network:</strong> 24 hours
+                    <strong className="text-foreground">Direct Communication:</strong> We follow up when the property appears to fit
                   </span>
                 </li>
                 <li className="flex items-baseline gap-2">
                   <span className="inline-block h-2 w-2 rounded-full bg-amber flex-shrink-0" />
                   <span>
-                    <strong className="text-foreground">Land Scout Partnerships:</strong> 48 hours
+                    <strong className="text-foreground">No Obligation:</strong> A review request does not commit you to sell
                   </span>
                 </li>
               </ul>

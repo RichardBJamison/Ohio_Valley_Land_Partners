@@ -7,6 +7,7 @@ import { Footer } from '@/components/navigation/footer';
 import { MobileStickyCta } from '@/components/navigation/mobile-sticky-cta';
 import { PublicOnly, SiteMain } from '@/components/navigation/public-only';
 import SiteHitTracker from '@/components/analytics/site-hit-tracker';
+import ConversionTracker from '@/components/analytics/conversion-tracker';
 import { WebSiteSchema, PersonSchema, OrganizationSchema, ServiceSchema } from '@/components/seo/json-ld';
 import { siteConfig } from '@/lib/seo-config';
 import Script from 'next/script';
@@ -40,9 +41,9 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   keywords: [
     'Ohio Valley real estate',
-    'land offers',
+    'direct property review',
     'sell land Ohio Valley',
-    'cash land buyer Ohio',
+    'direct land buyer Ohio Valley',
     'Belmont County land',
     'Jefferson County land',
     'sell inherited land Ohio',
@@ -123,6 +124,7 @@ export default function RootLayout({
         <Suspense fallback={null}>
           <SiteHitTracker />
         </Suspense>
+        <ConversionTracker />
         {/* Marketing chrome is public-only — private /p/* previews ship their own header. */}
         <PublicOnly>
           <MainNav />

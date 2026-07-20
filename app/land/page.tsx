@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { BreadcrumbSchema } from '@/components/seo/json-ld';
 import { SellerForm } from '@/components/forms/seller-form';
 import { LegalDisclaimer } from '@/components/legal-disclaimer';
+import { sellerPositioning } from '@/lib/public-copy';
 
 export const metadata: Metadata = {
   title: silos.land.title,
@@ -30,39 +31,45 @@ const counties = [
 const process = [
   {
     step: '01',
-    title: 'Submit Your Property',
-    description: 'Give us the address and your phone number. That\'s all we need to get started.',
+    title: 'Share the property',
+    description: 'Send the property address and the best email to reach you. A parcel number is helpful later, but it is not required to begin.',
     icon: MapPin,
   },
   {
     step: '02',
-    title: 'Internal Property Review',
-    description: 'A team member may contact you to ask property-specific questions and discuss whether the parcel fits our acquisition criteria.',
+    title: 'We review the parcel',
+    description: 'OVLP examines available property, tax, access, title, zoning, surrounding-market, and possible-use information.',
     icon: Clock,
   },
   {
     step: '03',
-    title: 'Written Offer After Review',
-    description: 'If interested, we may send a written purchase proposal reflecting our own intended use, costs, and risk. It is not an appraisal or broker price opinion.',
-    icon: DollarSign,
+    title: 'We speak with you',
+    description: 'We ask any necessary questions and explain whether the property appears to fit our current acquisition criteria.',
+    icon: TreePine,
   },
   {
     step: '04',
-    title: 'Close On Your Timeline',
-    description: 'If both parties sign an agreement, the transaction proceeds through the applicable title and closing process. Timing and costs are governed by the written agreement and property-specific conditions.',
+    title: 'You may receive a written proposal',
+    description: 'When the property fits and the information supports a purchase, OVLP may present a direct written proposal.',
+    icon: DollarSign,
+  },
+  {
+    step: '05',
+    title: 'You decide',
+    description: 'There is no obligation to accept. If both sides proceed, the transaction moves through title review and closing.',
     icon: ShieldCheck,
   },
 ];
 
 const whatWeBuy = [
-  'Vacant land — any size, any condition',
-  'Inherited property going through probate',
-  'Land with delinquent or back taxes',
-  'Farm ground where the owner is ready to exit',
+  'Vacant lots and unused land',
+  'Inherited and estate-owned property',
+  'Land with delinquent or repeated tax bills',
+  'Farm ground and rural acreage',
   'Timber tracts and hunting land',
-  'Out-of-state owners with Ohio Valley parcels',
-  'Landowners who\'ve tried and failed to sell through agents',
-  'Estate land being liquidated after a settlement',
+  'Property owned from outside the region',
+  'Parcels that did not sell through a prior listing',
+  'Family property no one wants to manage',
 ];
 
 export default function LandPage() {
@@ -80,20 +87,21 @@ export default function LandPage() {
               <div>
                 <p className="heading-serif text-amber text-2xl mb-4">Local land buyer</p>
                 <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl leading-tight">
-                  We Buy Ohio Valley Land.
-                  <span className="block text-amber mt-1">Direct Inquiry. Property-Specific Review.</span>
+                  Explore a direct sale for your land.
+                  <span className="block text-amber mt-1">Regional knowledge. Property-specific review.</span>
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                  Vacant land, inherited property, back-tax parcels — we review all of it across the
-                  entire Ohio Valley in OH, PA, WV, KY, and Indiana. Multiple active campaigns with
-                  an active builders network. Free internal acquisition review and, when appropriate, a property-specific written proposal. Our review is not an appraisal or professional opinion of value.
+                  Ohio Valley Land Partners reviews vacant, inherited, tax-burdened, and
+                  difficult-to-manage property across the region for possible direct purchase.
+                  Active acquisition focus varies by county and campaign. Share the address and we
+                  will determine whether the property fits our current buying criteria.
                 </p>
                 <ul className="mt-6 flex flex-col gap-3">
                   {[
-                    'Local buyer — active across Ohio Valley counties in OH, PA, WV, KY, and Indiana',
-                    'OVLP acts only as a prospective principal buyer',
-                    'Requested timing is considered but never guaranteed',
-                    'All terms are property-specific and subject to a written agreement',
+                    'Local principal buyer',
+                    'Property-specific review',
+                    'Direct communication',
+                    'No obligation to accept a proposal',
                   ].map((point) => (
                     <li key={point} className="flex items-center gap-3 text-sm font-medium text-foreground">
                       <ShieldCheck className="h-4 w-4 text-amber flex-shrink-0" />
@@ -123,10 +131,10 @@ export default function LandPage() {
               </div>
 
               {/* Seller form */}
-              <div className="rounded-2xl border border-border bg-card p-8 shadow-lg">
+              <div id="property-review" className="rounded-2xl border border-border bg-card p-8 shadow-lg scroll-mt-28">
                 <div className="mb-6 text-center">
-                  <h2 className="text-xl font-bold text-foreground">Request a Property Review</h2>
-                  <p className="text-sm text-muted-foreground mt-1">Free internal acquisition review. Not an appraisal, broker price opinion, or legal or tax review.</p>
+                  <h2 className="text-xl font-bold text-foreground">{sellerPositioning.formTitle}</h2>
+                  <p className="text-sm text-muted-foreground mt-1">{sellerPositioning.formSub}</p>
                 </div>
                 <SellerForm />
               </div>
@@ -135,13 +143,13 @@ export default function LandPage() {
         </section>
 
         {/* Process */}
-        <section className="py-20 bg-card border-t border-border">
+        <section id="how-it-works" className="py-20 bg-card border-t border-border scroll-mt-28">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="text-center mb-14">
               <h2 className="text-3xl font-bold text-foreground">How It Works</h2>
-              <p className="mt-4 text-muted-foreground">Four steps. No surprises.</p>
+              <p className="mt-4 text-muted-foreground">Five clear steps, with no obligation to accept a proposal.</p>
             </div>
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
               {process.map((step) => {
                 const Icon = step.icon;
                 return (
@@ -177,16 +185,25 @@ export default function LandPage() {
               </div>
               <div className="mt-10 pt-8 border-t border-border">
                 <p className="text-sm text-muted-foreground mb-4">
-                  If your land is in our Ohio Valley service area or the Franklin County campaign
-                  and you want to sell, we want to hear from you. Even if you're not sure it
-                  qualifies — call us anyway.
+                  Not sure whether your property fits? Start with the address. You do not need to
+                  understand the title, zoning, taxes, access, or possible use before reaching out.
+                  Share what you know, and we will begin there.
                 </p>
-                <Link
-                  href="/"
-                  className="inline-flex items-center gap-2 rounded-lg bg-amber px-6 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
-                >
-                  Request Analysis &amp; Offer <ArrowRight className="h-4 w-4" />
-                </Link>
+                <div className="flex flex-wrap gap-3">
+                  <Link
+                    href="/#property-review"
+                    data-analytics-event="property_review_cta_click"
+                    className="inline-flex items-center gap-2 rounded-lg bg-amber px-6 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
+                  >
+                    Start My Property Review <ArrowRight className="h-4 w-4" />
+                  </Link>
+                  <a
+                    href={`tel:${siteConfig.phone.replace(/\D/g, '')}`}
+                    className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-6 py-3 text-sm font-bold text-foreground hover:border-amber/50 transition-colors"
+                  >
+                    Talk With Richard
+                  </a>
+                </div>
               </div>
             </div>
             <LegalDisclaimer className="mt-10 text-center" />

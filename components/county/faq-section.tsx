@@ -14,27 +14,27 @@ export function FAQSection({ county, state }: FAQSectionProps) {
   const faqs: FAQItem[] = [
     {
       question: `What is the average price of land in ${county}, ${state}?`,
-      answer: `Land prices in ${county}, ${state} vary depending on location, size, and zoning, but typically range from affordable rural parcels to premium development-ready properties. Our market reports provide current median prices and trends specific to ${county}.`,
+      answer: `There is no single countywide price that applies to every parcel in ${county}. Location, size, access, utilities, title information, zoning, nearby activity, comparable transactions, possible use, costs, and risk all matter. OVLP's review is an internal acquisition decision, not a formal appraisal or market-value opinion.`,
     },
     {
       question: `Is ${county} a good investment for real estate?`,
-      answer: `${county} offers diverse investment opportunities including direct land buying, residential development, and commercial real estate. The region benefits from strategic Ohio Valley location, established infrastructure, and steady appreciation rates.`,
+      answer: `OVLP does not advise whether property in ${county} is a good investment or predict appreciation. A buyer should review the specific parcel, objectives, costs, risks, and independent professional advice before making an investment decision.`,
     },
     {
       question: `What types of properties are available in ${county}?`,
-      answer: `${county} features a wide range of properties including raw land, development-ready parcels, commercial sites, and residential lots. We specialize in connecting investors with off-market land opportunities and institutional-grade developments.`,
+      answer: `Parcel types in ${county} can include vacant lots, rural acreage, farm ground, wooded land, residential sites, and commercial-adjacent property. Available OVLP inventory changes over time; buyer-network members can share their criteria for possible matching opportunities.`,
     },
     {
       question: `How long does it take to sell land in ${county}?`,
-      answer: `Timing depends on property type, title review, and the written agreement. OVLP provides a full property analysis first, then discusses next steps only if we wish to purchase the property for our own account.`,
+      answer: `Timing depends on property type, title review, the written agreement, and third-party requirements. OVLP completes a property review first, then discusses next steps only if the parcel fits our current acquisition criteria.`,
     },
     {
       question: `What are the zoning regulations in ${county}?`,
-      answer: `Zoning regulations in ${county} vary by township and municipality. Our team provides comprehensive zoning analysis and development feasibility studies for all properties in our portfolio, ensuring investors understand all regulatory requirements.`,
+      answer: `Zoning rules in ${county} can vary by township, municipality, and parcel. OVLP may review published zoning information for its own acquisition decision, but does not provide a zoning determination or development feasibility study. Confirm permitted use with the appropriate local office and qualified professionals.`,
     },
     {
       question: `Does Ohio Valley Land Partners offer financing?`,
-      answer: `Ohio Valley Land Partners buys land for our own account as a principal buyer. We maintain relationships with regional lenders and can provide introductions to financing partners for qualified projects in ${county}.`,
+      answer: `Ohio Valley Land Partners buys land for its own account as a principal buyer and does not advertise a public financing program on this site. Buyers should arrange financing and professional advice independently.`,
     },
   ];
 

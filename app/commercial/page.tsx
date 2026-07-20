@@ -32,8 +32,8 @@ export default function CommercialPage() {
                 are evaluated on a deal-by-deal basis.
               </p>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                If you have a commercial property in our Ohio Valley service area or Franklin
-                County campaign and want to talk, contact us directly. We don't run automated
+                If you have a commercial property in an active Ohio Valley acquisition area and
+                want to talk, contact us directly. We don’t run automated
                 valuations — we evaluate real deals with real numbers.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
@@ -63,12 +63,12 @@ export default function CommercialPage() {
                 {
                   icon: MapPin,
                   title: 'Known-Market Location',
-                  description: 'We prioritize commercial parcels inside our Ohio Valley footprint and active campaign markets like Franklin County.',
+                  description: 'We prioritize commercial parcels inside active Ohio Valley acquisition areas, with each location reviewed on its own facts.',
                 },
                 {
                   icon: Building2,
-                  title: 'Motivated Sellers',
-                  description: 'We\'re interested in commercial property where the seller needs to move quickly or has a specific situation to work through.',
+                  title: 'Property-Specific Fit',
+                  description: 'We review the location, parcel facts, possible use, and the owner’s situation before deciding whether a direct conversation makes sense.',
                 },
                 {
                   icon: Phone,
@@ -96,7 +96,7 @@ export default function CommercialPage() {
           <div className="mx-auto max-w-xl px-6 text-center">
             <h2 className="text-2xl font-bold text-foreground mb-4">Have a Commercial Property to Discuss?</h2>
             <p className="text-muted-foreground mb-8">
-              Use the contact form and select "Commercial" as your inquiry type. We respond within 48 hours.
+              Use the contact form and select &quot;Commercial&quot; as your inquiry type. Share the address and the best email to reach you.
             </p>
             <Link
               href="/contact?type=commercial"

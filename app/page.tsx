@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import { HeroSection } from '@/components/home/hero-section';
 import { LocalBusinessSchema, FAQSchema } from '@/components/seo/json-ld';
-import { TreePine, Clock, DollarSign, MapPin, Heart, ChevronDown, ArrowRight, Target } from 'lucide-react';
+import { TreePine, MapPin, ChevronDown, ArrowRight, Target } from 'lucide-react';
 import Link from 'next/link';
-import { defaultOgImages, silos, siteConfig } from '@/lib/seo-config';
+import { defaultOgImages, siteConfig } from '@/lib/seo-config';
 import { countySellPages } from '@/lib/county-sell-data';
 import { campaignFeaturedSlug } from '@/lib/blog-data';
 import { LegalDisclaimer } from '@/components/legal-disclaimer';
@@ -27,61 +27,61 @@ export const metadata: Metadata = {
 
 const homepageFAQs = [
   {
-    question: 'What does a direct sale to Ohio Valley Land Partners look like?',
+    question: 'What types of property does Ohio Valley Land Partners review?',
     answer:
-      'Submit your parcel information for our internal acquisition review. If the property fits our criteria, we may present a written purchase proposal as a prospective principal buyer. Owners remain free to consult an attorney, appraiser, tax professional, or licensed real estate professional and to compare other sale options.',
+      'OVLP reviews vacant lots, inherited land, tax-burdened parcels, rural acreage, infill lots, and other difficult-to-manage property for possible direct purchase. Acquisition focus varies by county and by the facts of each parcel.',
   },
   {
-    question: 'Do you buy land with back taxes or tax liens?',
+    question: 'What happens after I share the property address?',
     answer:
-      'We consider properties with reported delinquent taxes, but the effect on ownership, timing, and proceeds depends on the parcel and local process. A title company, attorney, and tax professional can explain how any balance may affect a transaction. Our role is limited to evaluating whether we wish to purchase the property.',
+      'OVLP reviews available parcel, tax, access, title, zoning, surrounding-activity, and possible-use information. If the property appears to fit our current criteria, we contact you, ask any necessary questions, and decide whether a written proposal makes sense.',
   },
   {
-    question: 'Will OVLP consider inherited or estate-owned land?',
+    question: 'Does requesting a property review commit me to sell?',
     answer:
-      'We may review estate-owned parcels as a prospective buyer. Who has authority to sell, and whether a sale can occur before probate concludes, depends on the estate, title, and applicable law. OVLP does not advise on estate strategy. Consult the estate attorney and title company.',
+      'No. Sharing a property does not commit you to sell, and receiving a proposal does not require you to accept it. You decide whether the written terms make sense for you.',
   },
   {
-    question: 'Do you buy landlocked parcels with no road access?',
+    question: 'How does OVLP develop a direct purchase proposal?',
     answer:
-      'We review access-limited parcels case by case from our own acquisition perspective. Access, recorded easements, terrain, and neighboring uses may affect our interest and proposed price. Our review is not an appraisal, survey, title opinion, or legal determination.',
+      'OVLP considers location, size, access, title information, taxes, zoning, nearby activity, possible use, holding costs, and purchase risk. This is an internal acquisition review for OVLP’s own account, not a formal appraisal or statement of market value.',
   },
   {
-    question: 'How fast can you close on vacant land?',
+    question: 'Will every submitted property receive an offer?',
     answer:
-      'We can discuss a requested timeline, but every transaction depends on title review, the written agreement, third-party professionals, and property-specific conditions. Any timing discussed before a signed agreement is an estimate, not a guarantee.',
+      'No. Some properties will not fit OVLP’s current buying criteria. When the property fits and the available information supports a purchase, OVLP may present a written proposal.',
   },
   {
-    question: 'What counties in Ohio and West Virginia do you buy land in?',
+    question: 'Will OVLP review inherited land or property with delinquent taxes?',
     answer:
-      'We buy across the entire Ohio Valley — Ohio, Pennsylvania, West Virginia, Kentucky, and Indiana — with multiple active campaigns and dedicated sell-land pages and Ohio Valley guides for Franklin, Belmont, Jefferson, Columbiana, Harrison, Carroll, Ohio County WV, Marshall, and Brooke counties.',
+      'Yes, OVLP may review inherited or tax-burdened property. Ownership authority, balances, deadlines, and closing requirements are property-specific, so owners should confirm those issues with the appropriate attorney, title company, county office, and tax professional.',
   },
   {
-    question: 'How do you develop a purchase proposal for land?',
+    question: 'Will OVLP review a landlocked parcel or land with difficult access?',
     answer:
-      'We review public records and property characteristics to decide what we may be willing to pay for our own account. That figure reflects our intended use, costs, risk, and business judgment; it is not an appraisal, broker price opinion, or statement of market value.',
+      'Yes, access-limited parcels are reviewed case by case. Recorded access, easements, terrain, neighboring uses, and possible future use may affect whether the property fits our criteria. OVLP’s review is not a survey or legal access opinion.',
   },
   {
-    question: 'What happens after I submit my parcel information?',
+    question: 'Where does Ohio Valley Land Partners review property?',
     answer:
-      'We start with a full property analysis using available parcel information. If interested, we contact you with a written purchase proposal. Any transaction requires a mutually signed agreement and appropriate title and professional review. You can also reach us at (614) 653-7430.',
+      'OVLP reviews property across the Ohio Valley, with active acquisition focus varying by county and campaign. The county pages list the areas where we currently publish local acquisition information; owners in other regional counties may still share an address for review.',
   },
 ];
 
 const whatWeDo = [
   {
-    name: silos.land.title,
-    description: 'Direct acquisition inquiries for vacant land and other parcels across the Ohio Valley. OVLP acts only as a prospective principal buyer.',
-    href: silos.land.path,
+    name: 'Richard B. Jamison',
+    description: 'Principal, Ohio Valley Land Partners. Richard works directly on property review, acquisition strategy, seller communication, and the systems behind each transaction.',
+    href: '/about',
     icon: TreePine,
-    tag: 'Core Business',
+    tag: 'Principal',
   },
   {
-    name: silos.guides.title,
-    description: 'County-by-county guides to selling land in the Ohio Valley and active campaign markets — what land sells for, who buys it, and how the process works.',
-    href: silos.guides.path,
+    name: 'A property-specific review',
+    description: 'The goal is to understand the parcel, explain whether it fits OVLP’s buying criteria, and create a clear path when both sides want to proceed.',
+    href: '/land#how-it-works',
     icon: MapPin,
-    tag: '9 Active',
+    tag: 'Direct Process',
   },
 ];
 
@@ -93,36 +93,39 @@ export default function Home() {
 
       <HeroSection />
 
-      {/* Geauga County campaign — Monday outbound push */}
+      {/* Seller empathy — existing banner design retained */}
       <section className="border-b border-amber/20 bg-amber/5">
         <div className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div className="max-w-2xl">
               <div className="inline-flex items-center gap-2 rounded-full border border-amber/30 bg-amber/10 px-3 py-1 text-xs font-semibold text-amber mb-4">
                 <Target className="h-3.5 w-3.5" />
-                Active Campaign — Geauga County, OH
+                Start with what you know
               </div>
               <h2 className="text-2xl font-bold text-foreground sm:text-3xl">
-                Selling vacant land in Chesterland, Chardon, or western Geauga?
+                Owning land can become more complicated than expected.
               </h2>
               <p className="mt-3 text-muted-foreground leading-relaxed">
-                We are buying vacant lots, inherited parcels, and long-held infill ground across
-                western Geauga — ZIP codes 44022, 44023, 44026, 44065, 44072, and 44202. Free
-                full property analysis through our Geauga County campaign page.
+                Some owners inherited property they have never visited. Others are paying taxes
+                on land they no longer use, dealing with title questions, or trying to understand
+                whether a parcel has any practical future. You do not need to solve every issue
+                before contacting OVLP. Start with the address. We will help identify the questions
+                that matter.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
-              <Link
-                href={`/blog/${campaignFeaturedSlug}`}
+              <a
+                href={`tel:${siteConfig.phone.replace(/\D/g, '')}`}
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground hover:border-amber/40 transition-colors"
               >
-                Read the Geauga guide
-              </Link>
+                Talk With Richard
+              </a>
               <Link
-                href="/contact"
+                href="/#property-review"
+                data-analytics-event="homepage_property_review_cta_click"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-amber px-5 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
               >
-                Request Your Analysis <ArrowRight className="h-4 w-4" />
+                Start My Property Review <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -130,7 +133,7 @@ export default function Home() {
       </section>
 
       {/* Sell-land index — crawl paths for county conversion pages */}
-      <section className="py-16 border-b border-border bg-card">
+      <section id="where-we-buy" className="py-16 border-b border-border bg-card scroll-mt-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-10">
             <p className="heading-serif text-amber text-xl mb-2">Sell Your Land</p>
@@ -156,11 +159,11 @@ export default function Home() {
             ))}
           </div>
           <p className="mt-8 text-center text-sm text-muted-foreground">
-            Also buying in{' '}
+            We also review property in{' '}
             <Link href={`/blog/${campaignFeaturedSlug}`} className="text-meadow font-semibold hover:underline">
               Geauga County, Ohio
             </Link>
-            {' '}this season —{' '}
+            {' '}when it fits the current acquisition area —{' '}
             <Link href="/ohio-valley-guides" className="text-meadow font-semibold hover:underline">
               browse all county guides
             </Link>
@@ -169,35 +172,32 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Market Coverage — Census-verified numbers */}
+      {/* Trust strip — existing three-column layout retained */}
       <section className="py-16 border-b border-border bg-card">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 text-center">
             <div className="flex flex-col items-center gap-2">
-              <span className="text-5xl font-black text-amber">1.77M+</span>
-              <span className="text-sm font-semibold text-foreground">Core Ohio Valley Acres</span>
+              <span className="text-5xl font-black text-amber">Local</span>
+              <span className="text-sm font-semibold text-foreground">Principal Buyer</span>
               <span className="text-xs text-muted-foreground max-w-[200px]">
-                Multiple active campaigns across OH, PA, WV, KY, and Indiana
+                Property review and seller communication stay close to the people making the purchase decision.
               </span>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <span className="text-5xl font-black text-amber">370K+</span>
-              <span className="text-sm font-semibold text-foreground">Core Service-Area Population</span>
+              <span className="text-5xl font-black text-amber">Specific</span>
+              <span className="text-sm font-semibold text-foreground">Parcel-by-Parcel Review</span>
               <span className="text-xs text-muted-foreground max-w-[200px]">
-                Active builders network connecting local buyers across the Ohio Valley.
+                Access, taxes, title information, zoning, surroundings, and possible use all matter.
               </span>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <span className="text-5xl font-black text-amber">9</span>
-              <span className="text-sm font-semibold text-foreground">Active Campaigns</span>
+              <span className="text-5xl font-black text-amber">Optional</span>
+              <span className="text-sm font-semibold text-foreground">No Obligation to Sell</span>
               <span className="text-xs text-muted-foreground max-w-[200px]">
-                Multiple Ohio Valley campaigns actively giving back to local communities.
+                A property review is a first conversation, not a commitment to accept a proposal.
               </span>
             </div>
           </div>
-          <p className="mt-8 text-center text-xs text-muted-foreground">
-            Source: U.S. Census Bureau, 2020 Decennial Census
-          </p>
         </div>
       </section>
 
@@ -205,12 +205,14 @@ export default function Home() {
       <section className="py-24 sm:py-32 bg-background">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="heading-serif text-amber text-2xl mb-3">Who we are / What we do</p>
+            <p className="heading-serif text-amber text-2xl mb-3">Direct accountability</p>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              We are builders and developers working directly with landowners.
+              The people reviewing your property
             </h2>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              No hedge fund. We evaluate land for our own account and connect portfolio opportunities with our private builders network. Property owners choose whether our direct-purchase model fits their goals.
+              Your property is not sent into a national call center or an anonymous offer system.
+              Ohio Valley Land Partners reviews each opportunity directly, studies the available
+              property information, and communicates with owners throughout the process.
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-4xl grid grid-cols-1 gap-8 sm:grid-cols-2">
@@ -291,44 +293,48 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Mission section */}
+      {/* Final CTA — existing split section and cards retained */}
       <section className="py-24 sm:py-32 bg-card border-t border-border">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 items-center">
             <div>
-              <p className="heading-serif text-amber text-2xl mb-3">Why we exist</p>
+              <p className="heading-serif text-amber text-2xl mb-3">Start with the address</p>
               <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                Built for the Ohio Valley.
-                <span className="block text-amber mt-1">Not Just Built in It.</span>
+                Not sure whether your property fits?
+                <span className="block text-amber mt-1">Start with the address.</span>
               </h2>
               <div className="mt-6 flex flex-col gap-4 text-muted-foreground leading-8">
                 <p>
-                  We are an intentional buyer — not an international one. Rooted in the
-                  Ohio Valley, buying land across counties in Ohio, Pennsylvania, West Virginia,
-                  Kentucky, and Indiana — not just one market. No out-of-state hedge fund.
-                  A local buyer who knows this region, understands what this
-                  land means to families here, and answers the phone.
+                  You do not need to understand the title, zoning, taxes, access, or possible use
+                  before reaching out. Share what you know, and we will begin there.
                 </p>
                 <p>
                   {communityGiving.mission}
                 </p>
               </div>
-              <div className="mt-8">
+              <div className="mt-8 flex flex-wrap gap-3">
                 <Link
-                  href="/about"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-meadow hover:text-meadow/80 transition-colors"
+                  href="/#property-review"
+                  data-analytics-event="homepage_property_review_cta_click"
+                  className="inline-flex items-center gap-2 rounded-lg bg-amber px-6 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
                 >
-                  More about who we are and why we started &rarr;
+                  Start My Property Review <ArrowRight className="h-4 w-4" />
                 </Link>
+                <a
+                  href={`tel:${siteConfig.phone.replace(/\D/g, '')}`}
+                  className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-6 py-3 text-sm font-bold text-foreground hover:border-amber/50 transition-colors"
+                >
+                  Talk With Richard
+                </a>
               </div>
             </div>
 
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               {[
-                { label: sellerPositioning.analysisLabel, value: 'Free', sub: sellerPositioning.analysisSub, icon: Clock },
-                { label: 'Ohio Valley coverage', value: '5 States', sub: 'Every county across OH, PA, WV, KY, and IN', icon: MapPin },
-                { label: 'Agent fees charged', value: '$0', sub: 'You deal directly with the buyer', icon: DollarSign },
-                { label: 'Back to the Ohio Valley', value: '5%', sub: communityGiving.statSub, icon: Heart },
+                { label: sellerPositioning.analysisLabel, value: 'Direct', sub: sellerPositioning.analysisSub },
+                { label: 'Regional focus', value: 'Ohio Valley', sub: 'Active acquisition focus varies by county and campaign' },
+                { label: 'Owner choice', value: 'No obligation', sub: 'Requesting a review does not commit you to sell' },
+                { label: 'Community commitment', value: '5%', sub: communityGiving.statSub },
               ].map((item) => (
                 <div key={item.label} className="rounded-xl border border-border bg-background p-6">
                   <div className="text-2xl font-black text-amber mb-1">{item.value}</div>

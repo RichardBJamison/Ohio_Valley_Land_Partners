@@ -14,10 +14,10 @@ import {
 } from '@/components/ui/sheet';
 
 const navigation = [
-  { name: 'Buy Land', href: '/properties', description: 'Browse available listings' },
-  { name: 'County Guides', href: silos.guides.path, description: 'County-by-county market guides' },
-  { name: 'Blog', href: '/blog', description: 'Seller guides & market reports' },
-  { name: 'Community', href: '/community', description: 'Our giving commitment' },
+  { name: 'Sell Land', href: silos.land.path, description: 'Start with a direct property review' },
+  { name: 'How It Works', href: '/land#how-it-works', description: 'The five-step purchase process' },
+  { name: 'Where We Buy', href: '/#where-we-buy', description: 'County acquisition areas and guides' },
+  { name: 'Seller Resources', href: '/blog', description: 'Land guides and practical answers' },
   { name: 'About', href: '/about', description: 'Who we are' },
 ];
 
@@ -86,13 +86,15 @@ export function MainNav() {
             Introductions
           </Link>
           <Link
-            href="/"
+            href="/#property-review"
+            data-analytics-event="property_review_cta_click"
             className="rounded-lg bg-amber px-4 py-2 text-sm font-semibold text-forest hover:bg-amber/90 transition-colors"
           >
-            Property Review
+            Start Property Review
           </Link>
           <a
             href="https://ovlp-portal.vercel.app"
+            data-analytics-event="buyer_portal_click"
             className="rounded-lg border border-white/20 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
           >
             Buyer Portal
@@ -152,15 +154,17 @@ export function MainNav() {
               Introductions
             </Link>
             <Link
-              href="/"
+              href="/#property-review"
               onClick={() => setMobileMenuOpen(false)}
+              data-analytics-event="property_review_cta_click"
               className="w-full rounded-lg bg-amber py-3 text-center text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
             >
-              Property Review
+              Start Property Review
             </Link>
             <a
               href="https://ovlp-portal.vercel.app"
               onClick={() => setMobileMenuOpen(false)}
+              data-analytics-event="buyer_portal_click"
               className="w-full rounded-lg border border-white/20 py-3 text-center text-sm font-semibold text-white hover:bg-white/10 transition-colors"
             >
               Buyer Portal

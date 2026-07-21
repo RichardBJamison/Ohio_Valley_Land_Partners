@@ -162,7 +162,7 @@ export default function PrivatePreviewPage({ params }: Props) {
                   <Phone className="h-4 w-4 text-amber" />
                   <span>
                     <strong className="block text-foreground">(614) 653-7430</strong>
-                    <span className="text-muted-foreground">Call Richard Jamison</span>
+                    <span className="text-muted-foreground">Call Ohio Valley Land Partners</span>
                   </span>
                 </a>
                 <a

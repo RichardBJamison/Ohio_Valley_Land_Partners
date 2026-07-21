@@ -95,7 +95,7 @@ export default function BlogPostPage({ params }: Props) {
                 <Clock className="h-4 w-4" />
                 {post.readingTime}
               </span>
-              <span className="font-medium text-foreground">{siteConfig.authorName}</span>
+              <span className="font-medium text-foreground">{siteConfig.name}</span>
             </div>
           </header>
 

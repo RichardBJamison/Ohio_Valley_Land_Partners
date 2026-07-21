@@ -8,7 +8,7 @@ import { MobileStickyCta } from '@/components/navigation/mobile-sticky-cta';
 import { PublicOnly, SiteMain } from '@/components/navigation/public-only';
 import SiteHitTracker from '@/components/analytics/site-hit-tracker';
 import ConversionTracker from '@/components/analytics/conversion-tracker';
-import { WebSiteSchema, PersonSchema, OrganizationSchema, ServiceSchema } from '@/components/seo/json-ld';
+import { WebSiteSchema, OrganizationSchema, ServiceSchema } from '@/components/seo/json-ld';
 import { siteConfig } from '@/lib/seo-config';
 import Script from 'next/script';
 import { GhlBubbleOnly } from '@/components/ghl-bubble-only';
@@ -109,7 +109,6 @@ export default function RootLayout({
         <WebSiteSchema />
         <OrganizationSchema />
         <ServiceSchema />
-        <PersonSchema />
         {siteConfig.clarityProjectId ? (
           <Script id="microsoft-clarity" strategy="afterInteractive">
             {`

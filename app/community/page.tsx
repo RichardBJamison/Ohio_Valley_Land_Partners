@@ -178,7 +178,7 @@ export default function CommunityPage() {
                   &ldquo;We&apos;re not building a business on top of this valley. We&apos;re building it into the valley.&rdquo;
                 </p>
                 <cite className="block mt-3 text-xs font-semibold text-muted-foreground not-italic">
-                  — Richard B. Jamison, OVLP
+                  — Ohio Valley Land Partners
                 </cite>
               </div>
             </div>

@@ -84,7 +84,7 @@ export function CountyFlipGrid({ counties }: { counties: CountyItem[] }) {
         return rect.top + rect.height / 2 + scrollY;
       };
 
-      // Richard's recorded county sequence:
+      // Recorded county sequence:
       // tile 1 begins when the full set reaches the viewport; tile 9 completes at mid-screen.
       const startScroll = Math.max(...cards.map((card) => documentTop(card) - viewportHeight));
       const endScroll = documentCenter(lastCard) - viewportMiddle;

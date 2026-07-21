@@ -46,9 +46,9 @@ export function Footer() {
               <Image
                 src="/logo.png"
                 alt="Ohio Valley Land Partners"
-                width={200}
-                height={80}
-                className="object-contain"
+                width={512}
+                height={341}
+                className="h-32 w-auto object-contain"
               />
             </Link>
             <p className="text-sm leading-6 text-white/60 max-w-xs">

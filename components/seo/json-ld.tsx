@@ -144,15 +144,10 @@ export function ArticleSchema({
       '@id': pageUrl,
     },
     author: {
-      '@type': 'Person',
-      name: siteConfig.authorName,
-      url: siteConfig.authorUrl,
-      jobTitle: siteConfig.authorTitle,
-      worksFor: {
-        '@type': 'Organization',
-        name: siteConfig.name,
-        url: siteConfig.url,
-      },
+      '@type': 'Organization',
+      '@id': `${siteConfig.url}#organization`,
+      name: siteConfig.name,
+      url: siteConfig.url,
     },
     publisher: {
       '@type': 'Organization',
@@ -216,39 +211,6 @@ export function OrganizationSchema() {
       name: area,
     })),
     ...(siteConfig.sameAs.length > 0 && { sameAs: siteConfig.sameAs }),
-  };
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
-}
-
-export function PersonSchema() {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'Person',
-    '@id': `${siteConfig.url}#author`,
-    name: siteConfig.authorName,
-    url: siteConfig.authorUrl,
-    jobTitle: siteConfig.authorTitle,
-    worksFor: {
-      '@type': 'Organization',
-      '@id': `${siteConfig.url}#organization`,
-      name: siteConfig.name,
-      url: siteConfig.url,
-    },
-    knowsAbout: [
-      'Land acquisition',
-      'Rural land sales',
-      'Ohio real estate',
-      'West Virginia real estate',
-      'Direct land purchases',
-      'Ohio Valley land market',
-      'Direct land acquisition',
-    ],
   };
 
   return (

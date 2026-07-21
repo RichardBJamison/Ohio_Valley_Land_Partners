@@ -5,10 +5,6 @@ export const siteConfig = {
   ogImage: 'https://ohiovalleylandpartners.com/og.jpg',
   phone: '(614) 653-7430',
   email: 'info@ohiovalleylandpartners.com',
-  // Verified principal attribution — used in Article schema and About page
-  authorName: 'Richard B. Jamison',
-  authorTitle: 'Principal, Ohio Valley Land Partners',
-  authorUrl: 'https://ohiovalleylandpartners.com/about',
   // sameAs — populate as each account is created
   // TODO: Replace placeholder comments with real URLs
   // Set after signing up at clarity.microsoft.com (rbjpholdings@gmail.com)

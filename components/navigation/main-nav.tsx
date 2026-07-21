@@ -28,18 +28,18 @@ export function MainNav() {
   return (
     <header className="sticky top-0 z-50 w-full bg-forest border-b border-white/10 backdrop-blur-sm">
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8"
+        className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-6 lg:px-8 lg:py-3 xl:py-4"
         aria-label="Global"
       >
         {/* Logo */}
-        <div className="flex min-w-0 lg:flex-1">
+        <div className="flex min-w-0 shrink-0">
           <Link href="/" className="flex items-center">
             <Image
               src="/logo.png"
               alt="Ohio Valley Land Partners"
-              width={180}
-              height={72}
-              className="h-10 w-auto max-w-[140px] object-contain sm:h-12 sm:max-w-[180px]"
+              width={512}
+              height={341}
+              className="h-16 w-auto object-contain sm:h-20 lg:h-20 xl:h-28"
               priority
             />
           </Link>
@@ -49,24 +49,24 @@ export function MainNav() {
         <div className="flex shrink-0 lg:hidden">
           <button
             type="button"
-            className="relative z-10 inline-flex items-center justify-center rounded-lg p-2 text-white/70 hover:text-white hover:bg-white/10 transition-colors"
+            className="relative z-10 inline-flex items-center justify-center rounded-lg p-3 text-white/70 hover:text-white hover:bg-white/10 transition-colors"
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-main-menu"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <Menu className="h-6 w-6" />
+            <Menu className="h-7 w-7" />
           </button>
         </div>
 
         {/* Desktop nav links */}
-        <div className="hidden lg:flex lg:gap-x-8">
+        <div className="hidden lg:flex lg:gap-x-5 xl:gap-x-7">
           {navigation.map((item) => (
             <Link
               key={item.name}
               href={item.href}
               className={cn(
-                'text-sm font-medium transition-colors',
+                'whitespace-nowrap text-[15px] font-semibold transition-colors xl:text-[17px]',
                 pathname?.startsWith(item.href)
                   ? 'text-amber'
                   : 'text-white/70 hover:text-white'
@@ -78,18 +78,18 @@ export function MainNav() {
         </div>
 
         {/* Desktop CTAs */}
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-3">
+        <div className="hidden shrink-0 lg:flex lg:gap-x-3 xl:gap-x-4">
           <Link
             href="/#property-review"
             data-analytics-event="property_review_cta_click"
-            className="whitespace-nowrap rounded-lg bg-amber px-4 py-2 text-sm font-semibold text-forest hover:bg-amber/90 transition-colors"
+            className="whitespace-nowrap rounded-lg bg-amber px-4 py-2.5 text-sm font-semibold text-forest hover:bg-amber/90 transition-colors xl:px-5 xl:py-3 xl:text-base"
           >
             Start Property Review
           </Link>
           <a
             href="https://ovlp-portal.vercel.app"
             data-analytics-event="buyer_portal_click"
-            className="whitespace-nowrap rounded-lg border border-white/20 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
+            className="whitespace-nowrap rounded-lg border border-white/20 px-4 py-2.5 text-sm font-semibold text-white hover:bg-white/10 transition-colors xl:px-5 xl:py-3 xl:text-base"
           >
             Buyer Portal
           </a>
@@ -113,9 +113,9 @@ export function MainNav() {
               <Image
                 src="/logo.png"
                 alt="Ohio Valley Land Partners"
-                width={160}
-                height={64}
-                className="h-10 w-auto object-contain"
+                width={512}
+                height={341}
+                className="h-24 w-auto object-contain"
               />
             </Link>
           </div>
@@ -127,14 +127,14 @@ export function MainNav() {
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
                 className={cn(
-                  'rounded-lg px-4 py-3 text-base font-medium transition-colors',
+                  'rounded-lg px-4 py-3.5 text-lg font-semibold transition-colors',
                   pathname?.startsWith(item.href)
                     ? 'bg-white/10 text-amber'
                     : 'text-white/80 hover:bg-white/10 hover:text-white'
                 )}
               >
                 {item.name}
-                <div className="mt-0.5 text-xs font-normal text-white/40">{item.description}</div>
+                <div className="mt-1 text-sm font-normal text-white/45">{item.description}</div>
               </Link>
             ))}
           </div>
@@ -144,7 +144,7 @@ export function MainNav() {
               href="/#property-review"
               onClick={() => setMobileMenuOpen(false)}
               data-analytics-event="property_review_cta_click"
-              className="w-full rounded-lg bg-amber py-3 text-center text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
+              className="w-full rounded-lg bg-amber py-3.5 text-center text-base font-bold text-forest hover:bg-amber/90 transition-colors"
             >
               Start Property Review
             </Link>
@@ -152,7 +152,7 @@ export function MainNav() {
               href="https://ovlp-portal.vercel.app"
               onClick={() => setMobileMenuOpen(false)}
               data-analytics-event="buyer_portal_click"
-              className="w-full rounded-lg border border-white/20 py-3 text-center text-sm font-semibold text-white hover:bg-white/10 transition-colors"
+              className="w-full rounded-lg border border-white/20 py-3.5 text-center text-base font-semibold text-white hover:bg-white/10 transition-colors"
             >
               Buyer Portal
             </a>

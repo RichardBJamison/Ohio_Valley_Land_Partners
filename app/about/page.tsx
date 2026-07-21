@@ -102,18 +102,19 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 items-center">
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">
-                The people reviewing your property
+                A principal-led property review
               </h2>
               <div className="flex flex-col gap-5 text-muted-foreground leading-8">
                 <p>
-                  <strong className="text-foreground">Richard B. Jamison</strong><br />
-                  Principal, Ohio Valley Land Partners
+                  <strong className="text-foreground">Ohio Valley Land Partners</strong><br />
+                  Regional principal buyer
                 </p>
                 <p>
-                  Richard works directly on property review, acquisition strategy, seller
-                  communication, and the systems behind each transaction. The goal is not to
-                  pressure an owner into selling. It is to understand the property, explain whether
-                  it fits OVLP’s buying criteria, and create a clear path when both sides want to proceed.
+                  Property review, acquisition strategy, seller communication, and the systems
+                  behind each transaction stay close to the people responsible for the decision.
+                  The goal is not to pressure an owner into selling. It is to understand the
+                  property, explain whether it fits OVLP’s buying criteria, and create a clear path
+                  when both sides want to proceed.
                 </p>
                 <p>
                   Your property is not sent into a national call center or an anonymous offer system.

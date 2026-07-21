@@ -201,7 +201,7 @@ export default function LandPage() {
                     href={`tel:${siteConfig.phone.replace(/\D/g, '')}`}
                     className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-6 py-3 text-sm font-bold text-foreground hover:border-amber/50 transition-colors"
                   >
-                    Talk With Richard
+                    Talk With a Local Buyer
                   </a>
                 </div>
               </div>

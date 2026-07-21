@@ -71,11 +71,11 @@ const homepageFAQs = [
 
 const whatWeDo = [
   {
-    name: 'Richard B. Jamison',
-    description: 'Principal, Ohio Valley Land Partners. Richard works directly on property review, acquisition strategy, seller communication, and the systems behind each transaction.',
+    name: 'A principal-led review',
+    description: 'OVLP keeps property review, acquisition strategy, seller communication, and purchase decisions close to the people responsible for each transaction.',
     href: '/about',
     icon: TreePine,
-    tag: 'Principal',
+    tag: 'Direct Accountability',
   },
   {
     name: 'A property-specific review',
@@ -118,7 +118,7 @@ export default function Home() {
                 href={`tel:${siteConfig.phone.replace(/\D/g, '')}`}
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground hover:border-amber/40 transition-colors"
               >
-                Talk With Richard
+                Talk With a Local Buyer
               </a>
               <Link
                 href="/#property-review"
@@ -300,7 +300,7 @@ export default function Home() {
                   href={`tel:${siteConfig.phone.replace(/\D/g, '')}`}
                   className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-6 py-3 text-sm font-bold text-foreground hover:border-amber/50 transition-colors"
                 >
-                  Talk With Richard
+                  Talk With a Local Buyer
                 </a>
               </div>
             </div>

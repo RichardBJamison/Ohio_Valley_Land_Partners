@@ -1,0 +1,757 @@
+{
+  "auditedAt": "2026-07-21T16:36:19.291Z",
+  "origin": "https://e46f1652.ohio-valley-land-partners.pages.dev",
+  "mode": "preview",
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "counts": {
+    "sitemapUrls": 47,
+    "pages200": 47,
+    "redirects": 6,
+    "noindexPagesChecked": 5,
+    "assetsChecked": 33,
+    "formValidationEndpoints": 4
+  },
+  "pages": [
+    {
+      "pathname": "/",
+      "status": 200,
+      "durationMs": 135,
+      "canonical": "https://ohiovalleylandpartners.com/",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/ohio-valley-guides",
+      "status": 200,
+      "durationMs": 251,
+      "canonical": "https://ohiovalleylandpartners.com/ohio-valley-guides",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/ohio-valley-guides",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/blog",
+      "status": 200,
+      "durationMs": 196,
+      "canonical": "https://ohiovalleylandpartners.com/blog",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/land",
+      "status": 200,
+      "durationMs": 161,
+      "canonical": "https://ohiovalleylandpartners.com/land",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/land",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/commercial",
+      "status": 200,
+      "durationMs": 236,
+      "canonical": "https://ohiovalleylandpartners.com/commercial",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/commercial",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/development",
+      "status": 200,
+      "durationMs": 177,
+      "canonical": "https://ohiovalleylandpartners.com/development",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/development",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/community",
+      "status": 200,
+      "durationMs": 301,
+      "canonical": "https://ohiovalleylandpartners.com/community",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/community",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/about",
+      "status": 200,
+      "durationMs": 205,
+      "canonical": "https://ohiovalleylandpartners.com/about",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/about",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/contact",
+      "status": 200,
+      "durationMs": 149,
+      "canonical": "https://ohiovalleylandpartners.com/contact",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/contact",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/disclaimer",
+      "status": 200,
+      "durationMs": 154,
+      "canonical": "https://ohiovalleylandpartners.com/disclaimer",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/disclaimer",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/privacy",
+      "status": 200,
+      "durationMs": 148,
+      "canonical": "https://ohiovalleylandpartners.com/privacy",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/privacy",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/terms",
+      "status": 200,
+      "durationMs": 123,
+      "canonical": "https://ohiovalleylandpartners.com/terms",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/terms",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/land-scouts",
+      "status": 200,
+      "durationMs": 140,
+      "canonical": "https://ohiovalleylandpartners.com/land-scouts",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/land-scouts",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/properties",
+      "status": 200,
+      "durationMs": 150,
+      "canonical": "https://ohiovalleylandpartners.com/properties",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/properties",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/sell-land/franklin-county-oh",
+      "status": 200,
+      "durationMs": 184,
+      "canonical": "https://ohiovalleylandpartners.com/sell-land/franklin-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/sell-land/franklin-county-oh",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/sell-land/belmont-county-oh",
+      "status": 200,
+      "durationMs": 189,
+      "canonical": "https://ohiovalleylandpartners.com/sell-land/belmont-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/sell-land/belmont-county-oh",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/sell-land/jefferson-county-oh",
+      "status": 200,
+      "durationMs": 141,
+      "canonical": "https://ohiovalleylandpartners.com/sell-land/jefferson-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/sell-land/jefferson-county-oh",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/sell-land/columbiana-county-oh",
+      "status": 200,
+      "durationMs": 110,
+      "canonical": "https://ohiovalleylandpartners.com/sell-land/columbiana-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/sell-land/columbiana-county-oh",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/sell-land/harrison-county-oh",
+      "status": 200,
+      "durationMs": 220,
+      "canonical": "https://ohiovalleylandpartners.com/sell-land/harrison-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/sell-land/harrison-county-oh",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/sell-land/carroll-county-oh",
+      "status": 200,
+      "durationMs": 235,
+      "canonical": "https://ohiovalleylandpartners.com/sell-land/carroll-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/sell-land/carroll-county-oh",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/sell-land/ohio-county-wv",
+      "status": 200,
+      "durationMs": 145,
+      "canonical": "https://ohiovalleylandpartners.com/sell-land/ohio-county-wv",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/sell-land/ohio-county-wv",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/sell-land/marshall-county-wv",
+      "status": 200,
+      "durationMs": 234,
+      "canonical": "https://ohiovalleylandpartners.com/sell-land/marshall-county-wv",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/sell-land/marshall-county-wv",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/sell-land/brooke-county-wv",
+      "status": 200,
+      "durationMs": 176,
+      "canonical": "https://ohiovalleylandpartners.com/sell-land/brooke-county-wv",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/sell-land/brooke-county-wv",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/ohio-valley-guides/franklin-county-oh",
+      "status": 200,
+      "durationMs": 156,
+      "canonical": "https://ohiovalleylandpartners.com/ohio-valley-guides/franklin-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/ohio-valley-guides/franklin-county-oh",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/ohio-valley-guides/belmont-county-oh",
+      "status": 200,
+      "durationMs": 122,
+      "canonical": "https://ohiovalleylandpartners.com/ohio-valley-guides/belmont-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/ohio-valley-guides/belmont-county-oh",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/ohio-valley-guides/jefferson-county-oh",
+      "status": 200,
+      "durationMs": 158,
+      "canonical": "https://ohiovalleylandpartners.com/ohio-valley-guides/jefferson-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/ohio-valley-guides/jefferson-county-oh",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/ohio-valley-guides/columbiana-county-oh",
+      "status": 200,
+      "durationMs": 171,
+      "canonical": "https://ohiovalleylandpartners.com/ohio-valley-guides/columbiana-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/ohio-valley-guides/columbiana-county-oh",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/ohio-valley-guides/harrison-county-oh",
+      "status": 200,
+      "durationMs": 166,
+      "canonical": "https://ohiovalleylandpartners.com/ohio-valley-guides/harrison-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/ohio-valley-guides/harrison-county-oh",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/ohio-valley-guides/carroll-county-oh",
+      "status": 200,
+      "durationMs": 207,
+      "canonical": "https://ohiovalleylandpartners.com/ohio-valley-guides/carroll-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/ohio-valley-guides/carroll-county-oh",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/ohio-valley-guides/ohio-county-wv",
+      "status": 200,
+      "durationMs": 121,
+      "canonical": "https://ohiovalleylandpartners.com/ohio-valley-guides/ohio-county-wv",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/ohio-valley-guides/ohio-county-wv",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/ohio-valley-guides/marshall-county-wv",
+      "status": 200,
+      "durationMs": 170,
+      "canonical": "https://ohiovalleylandpartners.com/ohio-valley-guides/marshall-county-wv",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/ohio-valley-guides/marshall-county-wv",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/ohio-valley-guides/brooke-county-wv",
+      "status": 200,
+      "durationMs": 161,
+      "canonical": "https://ohiovalleylandpartners.com/ohio-valley-guides/brooke-county-wv",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/ohio-valley-guides/brooke-county-wv",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/ohio-valley-guides/geauga-county-oh",
+      "status": 200,
+      "durationMs": 177,
+      "canonical": "https://ohiovalleylandpartners.com/ohio-valley-guides/geauga-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/ohio-valley-guides/geauga-county-oh",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/ohio-valley-guides/delaware-county-oh",
+      "status": 200,
+      "durationMs": 169,
+      "canonical": "https://ohiovalleylandpartners.com/ohio-valley-guides/delaware-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/ohio-valley-guides/delaware-county-oh",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/blog/sell-inherited-land-ohio-probate",
+      "status": 200,
+      "durationMs": 205,
+      "canonical": "https://ohiovalleylandpartners.com/blog/sell-inherited-land-ohio-probate",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog/sell-inherited-land-ohio-probate",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/blog/cash-land-buyers-ohio-valley",
+      "status": 200,
+      "durationMs": 134,
+      "canonical": "https://ohiovalleylandpartners.com/blog/cash-land-buyers-ohio-valley",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog/cash-land-buyers-ohio-valley",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/blog/sell-land-back-taxes-ohio",
+      "status": 200,
+      "durationMs": 110,
+      "canonical": "https://ohiovalleylandpartners.com/blog/sell-land-back-taxes-ohio",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog/sell-land-back-taxes-ohio",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/blog/ohio-valley-land-market-2026",
+      "status": 200,
+      "durationMs": 128,
+      "canonical": "https://ohiovalleylandpartners.com/blog/ohio-valley-land-market-2026",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog/ohio-valley-land-market-2026",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/blog/land-near-intel-new-albany-ohio",
+      "status": 200,
+      "durationMs": 136,
+      "canonical": "https://ohiovalleylandpartners.com/blog/land-near-intel-new-albany-ohio",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog/land-near-intel-new-albany-ohio",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/blog/sell-land-belmont-county-ohio-fast",
+      "status": 200,
+      "durationMs": 105,
+      "canonical": "https://ohiovalleylandpartners.com/blog/sell-land-belmont-county-ohio-fast",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog/sell-land-belmont-county-ohio-fast",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/blog/sell-land-jefferson-county-ohio-steubenville",
+      "status": 200,
+      "durationMs": 156,
+      "canonical": "https://ohiovalleylandpartners.com/blog/sell-land-jefferson-county-ohio-steubenville",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog/sell-land-jefferson-county-ohio-steubenville",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/blog/sell-land-columbiana-county-ohio",
+      "status": 200,
+      "durationMs": 152,
+      "canonical": "https://ohiovalleylandpartners.com/blog/sell-land-columbiana-county-ohio",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog/sell-land-columbiana-county-ohio",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/blog/sell-land-ohio-county-west-virginia-wheeling",
+      "status": 200,
+      "durationMs": 108,
+      "canonical": "https://ohiovalleylandpartners.com/blog/sell-land-ohio-county-west-virginia-wheeling",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog/sell-land-ohio-county-west-virginia-wheeling",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/blog/sell-land-marshall-county-wv-moundsville",
+      "status": 200,
+      "durationMs": 106,
+      "canonical": "https://ohiovalleylandpartners.com/blog/sell-land-marshall-county-wv-moundsville",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog/sell-land-marshall-county-wv-moundsville",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/blog/what-to-do-with-land-you-dont-want",
+      "status": 200,
+      "durationMs": 164,
+      "canonical": "https://ohiovalleylandpartners.com/blog/what-to-do-with-land-you-dont-want",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog/what-to-do-with-land-you-dont-want",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/blog/brooke-harrison-carroll-county-land-buyers",
+      "status": 200,
+      "durationMs": 212,
+      "canonical": "https://ohiovalleylandpartners.com/blog/brooke-harrison-carroll-county-land-buyers",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog/brooke-harrison-carroll-county-land-buyers",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    },
+    {
+      "pathname": "/blog/brooke-county-wv-land-worth-2026",
+      "status": 200,
+      "durationMs": 202,
+      "canonical": "https://ohiovalleylandpartners.com/blog/brooke-county-wv-land-worth-2026",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog/brooke-county-wv-land-worth-2026",
+      "xRobotsTag": "noindex",
+      "contentLength": 0
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/index.html",
+      "status": 301,
+      "location": "/",
+      "targetStatus": 200,
+      "durationMs": 14
+    },
+    {
+      "source": "/blog/franklin-county-ohio-sell-vacant-land-2026",
+      "status": 301,
+      "location": "/ohio-valley-guides/franklin-county-oh",
+      "targetStatus": 200,
+      "durationMs": 16
+    },
+    {
+      "source": "/blog/sell-vacant-land-geauga-county-ohio-2026",
+      "status": 301,
+      "location": "/ohio-valley-guides/geauga-county-oh",
+      "targetStatus": 200,
+      "durationMs": 15
+    },
+    {
+      "source": "/blog/sell-vacant-land-delaware-county-ohio",
+      "status": 301,
+      "location": "/ohio-valley-guides/delaware-county-oh",
+      "targetStatus": 200,
+      "durationMs": 15
+    },
+    {
+      "source": "/sell-land",
+      "status": 301,
+      "location": "/ohio-valley-guides",
+      "targetStatus": 200,
+      "durationMs": 13
+    },
+    {
+      "source": "/land-secrets",
+      "status": 301,
+      "location": "/ohio-valley-guides",
+      "targetStatus": 200,
+      "durationMs": 13
+    }
+  ],
+  "noindexPages": [
+    {
+      "pathname": "/member-mailer",
+      "status": 200,
+      "metaRobots": "noindex, follow",
+      "headerRobots": "noindex, follow, noarchive"
+    },
+    {
+      "pathname": "/investor-portal",
+      "status": 200,
+      "metaRobots": "noindex, nofollow",
+      "headerRobots": "noindex, follow, noarchive"
+    },
+    {
+      "pathname": "/property-uploads",
+      "status": 200,
+      "metaRobots": "noindex, follow",
+      "headerRobots": "noindex, follow, noarchive"
+    },
+    {
+      "pathname": "/properties/belmont-45-raw",
+      "status": 200,
+      "metaRobots": "noindex, follow",
+      "headerRobots": "noindex, nofollow, noarchive, nosnippet"
+    },
+    {
+      "pathname": "/p/k7m2x9q4",
+      "status": 200,
+      "metaRobots": "noindex, nofollow",
+      "headerRobots": "noindex, nofollow, noarchive, nosnippet"
+    }
+  ],
+  "securityHeaders": {
+    "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com https://widgets.leadconnectorhq.com https://services.leadconnectorhq.com https://stcdn.leadconnectorhq.com https://*.leadconnectorhq.com https://www.googletagmanager.com https://www.clarity.ms https://static.cloudflareinsights.com; connect-src 'self' https://challenges.cloudflare.com https://ovlp-portal.vercel.app https://portal.ohiovalleylandpartners.com https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.google.com https://*.clarity.ms https://c.bing.com https://widgets.leadconnectorhq.com https://services.leadconnectorhq.com https://stcdn.leadconnectorhq.com https://services.msgsndr.com https://*.leadconnectorhq.com https://*.msgsndr.com https://cloudflareinsights.com; frame-src https://challenges.cloudflare.com https://widgets.leadconnectorhq.com https://services.leadconnectorhq.com https://*.leadconnectorhq.com https://*.msgsndr.com; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://stcdn.leadconnectorhq.com https://*.leadconnectorhq.com; font-src 'self' data: https: https://stcdn.leadconnectorhq.com",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY"
+  },
+  "assets": [
+    {
+      "pathname": "/_next/static/media/0484562807a97172-s.p.woff2",
+      "status": 200,
+      "cacheControl": "public, max-age=31536000, immutable",
+      "contentType": "font/woff2"
+    },
+    {
+      "pathname": "/_next/static/media/8888a3826f4a3af4-s.p.woff2",
+      "status": 200,
+      "cacheControl": "public, max-age=31536000, immutable",
+      "contentType": "font/woff2"
+    },
+    {
+      "pathname": "/_next/static/media/b957ea75a84b6ea7-s.p.woff2",
+      "status": 200,
+      "cacheControl": "public, max-age=31536000, immutable",
+      "contentType": "font/woff2"
+    },
+    {
+      "pathname": "/_next/static/media/eafabf029ad39a43-s.p.woff2",
+      "status": 200,
+      "cacheControl": "public, max-age=31536000, immutable",
+      "contentType": "font/woff2"
+    },
+    {
+      "pathname": "/logo.png",
+      "status": 200,
+      "cacheControl": "public, max-age=604800, stale-while-revalidate=86400",
+      "contentType": "image/png"
+    },
+    {
+      "pathname": "/_next/static/css/8a5c0db9de6ed8a8.css",
+      "status": 200,
+      "cacheControl": "public, max-age=31536000, immutable",
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "pathname": "/_next/static/chunks/webpack-1398c3e6ccf8a5e9.js",
+      "status": 200,
+      "cacheControl": "public, max-age=31536000, immutable",
+      "contentType": "application/javascript"
+    },
+    {
+      "pathname": "/_next/static/chunks/fd9d1056-f8ae2881b5839c93.js",
+      "status": 200,
+      "cacheControl": "public, max-age=31536000, immutable",
+      "contentType": "application/javascript"
+    },
+    {
+      "pathname": "/_next/static/chunks/472-549641ef9628d4c7.js",
+      "status": 200,
+      "cacheControl": "public, max-age=31536000, immutable",
+      "contentType": "application/javascript"
+    },
+    {
+      "pathname": "/_next/static/chunks/main-app-d678d9bb29621b5e.js",
+      "status": 200,
+      "cacheControl": "public, max-age=31536000, immutable",
+      "contentType": "application/javascript"
+    },
+    {
+      "pathname": "/_next/static/chunks/326-4262ea644f54fb46.js",
+      "status": 200,
+      "cacheControl": "public, max-age=31536000, immutable",
+      "contentType": "application/javascript"
+    },
+    {
+      "pathname": "/_next/static/chunks/259-155d300689cfb0fa.js",
+      "status": 200,
+      "cacheControl": "public, max-age=31536000, immutable",
+      "contentType": "application/javascript"
+    },
+    {
+      "pathname": "/_next/static/chunks/413-f429f80a7dca9001.js",
+      "status": 200,
+      "cacheControl": "public, max-age=31536000, immutable",
+      "contentType": "application/javascript"
+    },
+    {
+      "pathname": "/_next/static/chunks/118-d9cf67a0efe2f305.js",
+      "status": 200,
+      "cacheControl": "public, max-age=31536000, immutable",
+      "contentType": "application/javascript"
+    },
+    {
+      "pathname": "/_next/static/chunks/641-e300b11672870518.js",
+      "status": 200,
+      "cacheControl": "public, max-age=31536000, immutable",
+      "contentType": "application/javascript"
+    },
+    {
+      "pathname": "/_next/static/chunks/app/layout-59ad2d59b2ae3526.js",
+      "status": 200,
+      "cacheControl": "public, max-age=31536000, immutable",
+      "contentType": "application/javascript"
+    },
+    {
+      "pathname": "/_next/static/chunks/591-71e72e8abc01de94.js",
+      "status": 200,
+      "cacheControl": "public, max-age=31536000, immutable",
+      "contentType": "application/javascript"
+    },
+    {
+      "pathname": "/_next/static/chunks/589-543cc85fd616769a.js",
+      "status": 200,
+      "cacheControl": "public, max-age=31536000, immutable",
+      "contentType": "application/javascript"
+    },
+    {
+      "pathname": "/_next/static/chunks/app/page-ba8e2c2f19cd8007.js",
+      "status": 200,
+      "cacheControl": "public, max-age=31536000, immutable",
+      "contentType": "application/javascript"
+    },
+    {
+      "pathname": "/icon.png",
+      "status": 200,
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "contentType": "image/png"
+    },
+    {
+      "pathname": "/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js",
+      "status": 200,
+      "cacheControl": "public, max-age=31536000, immutable",
+      "contentType": "application/javascript"
+    },
+    {
+      "pathname": "/_next/static/chunks/app/land/page-026c9529e8785811.js",
+      "status": 200,
+      "cacheControl": "public, max-age=31536000, immutable",
+      "contentType": "application/javascript"
+    },
+    {
+      "pathname": "/community/hero-valley.jpg",
+      "status": 200,
+      "cacheControl": "public, max-age=2592000, stale-while-revalidate=604800",
+      "contentType": "image/jpeg"
+    },
+    {
+      "pathname": "/_next/static/chunks/app/community/page-4c1f5d219c15fdc9.js",
+      "status": 200,
+      "cacheControl": "public, max-age=31536000, immutable",
+      "contentType": "application/javascript"
+    },
+    {
+      "pathname": "/community/forest-arch.jpg",
+      "status": 200,
+      "cacheControl": "public, max-age=2592000, stale-while-revalidate=604800",
+      "contentType": "image/jpeg"
+    },
+    {
+      "pathname": "/community/partner-forest.jpg",
+      "status": 200,
+      "cacheControl": "public, max-age=2592000, stale-while-revalidate=604800",
+      "contentType": "image/jpeg"
+    },
+    {
+      "pathname": "/community/partner-community.jpg",
+      "status": 200,
+      "cacheControl": "public, max-age=2592000, stale-while-revalidate=604800",
+      "contentType": "image/jpeg"
+    },
+    {
+      "pathname": "/community/partner-urban.jpg",
+      "status": 200,
+      "cacheControl": "public, max-age=2592000, stale-while-revalidate=604800",
+      "contentType": "image/jpeg"
+    },
+    {
+      "pathname": "/community/ep-feature.jpg",
+      "status": 200,
+      "cacheControl": "public, max-age=2592000, stale-while-revalidate=604800",
+      "contentType": "image/jpeg"
+    },
+    {
+      "pathname": "/_next/static/chunks/app/blog/page-aaeacf18326fc0eb.js",
+      "status": 200,
+      "cacheControl": "public, max-age=31536000, immutable",
+      "contentType": "application/javascript"
+    },
+    {
+      "pathname": "/guides/atlas-hero.jpg",
+      "status": 200,
+      "cacheControl": "public, max-age=2592000, stale-while-revalidate=604800",
+      "contentType": "image/jpeg"
+    },
+    {
+      "pathname": "/_next/static/chunks/app/ohio-valley-guides/page-77cafd727a4db437.js",
+      "status": 200,
+      "cacheControl": "public, max-age=31536000, immutable",
+      "contentType": "application/javascript"
+    },
+    {
+      "pathname": "/guides/county-infill.jpg",
+      "status": 200,
+      "cacheControl": "public, max-age=2592000, stale-while-revalidate=604800",
+      "contentType": "image/jpeg"
+    }
+  ],
+  "formValidationResults": [
+    {
+      "pathname": "/api/seller",
+      "missingSecurityTokenStatus": 403
+    },
+    {
+      "pathname": "/api/contact",
+      "missingSecurityTokenStatus": 403
+    },
+    {
+      "pathname": "/api/investor-intake",
+      "missingSecurityTokenStatus": 403
+    },
+    {
+      "pathname": "/api/property-upload",
+      "missingSecurityTokenStatus": 403
+    }
+  ],
+  "foreignOriginStatus": 403,
+  "ghlWidgetBundleDetected": true,
+  "robots": {
+    "status": 200,
+    "text": "User-agent: *\nAllow: /\n\nSitemap: https://ohiovalleylandpartners.com/sitemap.xml\n"
+  },
+  "domainRedirects": [],
+  "trailingSlash": {
+    "status": 308,
+    "location": "/about"
+  },
+  "queryCanonical": "https://ohiovalleylandpartners.com/",
+  "missingRouteStatus": 404,
+  "indexNowKeyStatus": 200
+}

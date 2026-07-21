@@ -1,6 +1,19 @@
 # Ohio Valley Land Partners — Marketing Site Handoff
 
-*Last updated: 2026-07-20 · source: CODEX · Status: LIVE — conversion, Flip, SEO, analytics, form-hardening, and performance wave deployed*
+*Last updated: 2026-07-20 · source: CODEX · Status: LIVE — larger navigation and company-level attribution deployed*
+
+---
+
+## Header sizing and company attribution — LIVE (2026-07-20)
+
+- **Release commit:** `5c74e96`
+- **Cloudflare code deployment:** `2a6f8a88-5c3f-4fb3-b91b-bb8ca2ba4fad`
+- **Approved direction:** the local Chrome mockup was approved without further scaling changes and pushed exactly as reviewed.
+- **Header:** corrected the logo's intrinsic dimensions to its actual `512 × 341` ratio; increased responsive logo, desktop menu, CTA, mobile-menu, and footer-logo sizing inside the existing header/footer design.
+- **Attribution:** removed Richard/Jamison from every public page, CTA, article byline, crawler file, private preview, and structured-data payload. Articles now use Organization attribution; trust copy presents OVLP as a principal-led regional buyer with direct accountability.
+- **Parity verification:** the rendered `<header>` from localhost, the immutable deployment, and `ohiovalleylandpartners.com` is exactly 2,608 bytes with SHA-256 `fad9a27c7a2b94f6004fe17e0dcaa779f157c089ede9e59bdac87b1810bac402` on all three surfaces.
+- **Build verification:** TypeScript, changed-file ESLint, 63-page production build, 49-URL sitemap/schema/analytics audit, and generated-output personal-name scan passed.
+- **Preserved:** no CSS file, design system, color, font, photography, county URL, form integration, analytics integration, or mobile breakpoint changed. The user-owned untracked `mockups/county-flip-trick.html` remains untouched.
 
 ---
 

@@ -100,6 +100,7 @@ export async function sendNotification(env, options) {
         subject: cleanHeader(options.subject, 160),
         html,
         message: plainText(html),
+        status: 'pending',
         ...(uploaded.length ? { attachments: uploaded.map((file) => file.url) } : {}),
       }),
     });

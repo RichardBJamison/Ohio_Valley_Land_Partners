@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T16:05:37.817Z",
+  "generatedAt": "2026-07-21T16:34:22.197Z",
   "canonicalOrigin": "https://ohiovalleylandpartners.com",
   "publicRoutes": [
     {
@@ -24,7 +24,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 44
+      "internalLinkCount": 45
     },
     {
       "route": "/about",
@@ -45,7 +45,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 33
+      "internalLinkCount": 35
     },
     {
       "route": "/blog",
@@ -66,7 +66,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 48
+      "internalLinkCount": 50
     },
     {
       "route": "/blog/brooke-county-wv-land-worth-2026",
@@ -92,7 +92,7 @@
         "WebPage",
         "WebSite"
       ],
-      "internalLinkCount": 35
+      "internalLinkCount": 37
     },
     {
       "route": "/blog/brooke-harrison-carroll-county-land-buyers",
@@ -118,7 +118,7 @@
         "WebPage",
         "WebSite"
       ],
-      "internalLinkCount": 36
+      "internalLinkCount": 38
     },
     {
       "route": "/blog/cash-land-buyers-ohio-valley",
@@ -144,7 +144,7 @@
         "WebPage",
         "WebSite"
       ],
-      "internalLinkCount": 36
+      "internalLinkCount": 38
     },
     {
       "route": "/blog/land-near-intel-new-albany-ohio",
@@ -170,7 +170,7 @@
         "WebPage",
         "WebSite"
       ],
-      "internalLinkCount": 36
+      "internalLinkCount": 38
     },
     {
       "route": "/blog/ohio-valley-land-market-2026",
@@ -196,7 +196,7 @@
         "WebPage",
         "WebSite"
       ],
-      "internalLinkCount": 36
+      "internalLinkCount": 38
     },
     {
       "route": "/blog/sell-inherited-land-ohio-probate",
@@ -222,7 +222,7 @@
         "WebPage",
         "WebSite"
       ],
-      "internalLinkCount": 35
+      "internalLinkCount": 37
     },
     {
       "route": "/blog/sell-land-back-taxes-ohio",
@@ -248,7 +248,7 @@
         "WebPage",
         "WebSite"
       ],
-      "internalLinkCount": 36
+      "internalLinkCount": 38
     },
     {
       "route": "/blog/sell-land-belmont-county-ohio-fast",
@@ -274,7 +274,7 @@
         "WebPage",
         "WebSite"
       ],
-      "internalLinkCount": 37
+      "internalLinkCount": 39
     },
     {
       "route": "/blog/sell-land-columbiana-county-ohio",
@@ -300,7 +300,7 @@
         "WebPage",
         "WebSite"
       ],
-      "internalLinkCount": 37
+      "internalLinkCount": 39
     },
     {
       "route": "/blog/sell-land-jefferson-county-ohio-steubenville",
@@ -326,7 +326,7 @@
         "WebPage",
         "WebSite"
       ],
-      "internalLinkCount": 37
+      "internalLinkCount": 39
     },
     {
       "route": "/blog/sell-land-marshall-county-wv-moundsville",
@@ -352,7 +352,7 @@
         "WebPage",
         "WebSite"
       ],
-      "internalLinkCount": 37
+      "internalLinkCount": 39
     },
     {
       "route": "/blog/sell-land-ohio-county-west-virginia-wheeling",
@@ -378,7 +378,7 @@
         "WebPage",
         "WebSite"
       ],
-      "internalLinkCount": 37
+      "internalLinkCount": 39
     },
     {
       "route": "/blog/what-to-do-with-land-you-dont-want",
@@ -404,7 +404,7 @@
         "WebPage",
         "WebSite"
       ],
-      "internalLinkCount": 36
+      "internalLinkCount": 38
     },
     {
       "route": "/commercial",
@@ -427,7 +427,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 34
+      "internalLinkCount": 36
     },
     {
       "route": "/community",
@@ -436,8 +436,8 @@
       "inSitemap": true,
       "canonical": "https://ohiovalleylandpartners.com/community",
       "openGraphUrl": "https://ohiovalleylandpartners.com/community",
-      "title": "Community Commitment | Ohio Valley Land Partners",
-      "metaDescription": "Ohio Valley Land Partners is rooted in the Ohio Valley and has committed 5% of company profits to local community reinvestment as the business grows.",
+      "title": "Community — Ohio Valley Land Partners",
+      "metaDescription": "Ohio Valley Land Partners is rooted in the Ohio Valley — landowners, builders, conservation partners, and families rebuilding after disaster. One valley. One table.",
       "h1Count": 1,
       "schemaTypes": [
         "AdministrativeArea",
@@ -448,7 +448,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 41
+      "internalLinkCount": 43
     },
     {
       "route": "/contact",
@@ -469,7 +469,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 37
+      "internalLinkCount": 39
     },
     {
       "route": "/development",
@@ -479,7 +479,7 @@
       "canonical": "https://ohiovalleylandpartners.com/development",
       "openGraphUrl": "https://ohiovalleylandpartners.com/development",
       "title": "Residential Development | Ohio Valley Land Partners",
-      "metaDescription": "Learn how Ohio Valley Land Partners studies land-first residential development opportunities and regional community context.",
+      "metaDescription": "Explore long-term residential development opportunities, acquisition partnerships, and investor information from Ohio Valley Land Partners",
       "h1Count": 1,
       "schemaTypes": [
         "AdministrativeArea",
@@ -492,7 +492,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 34
+      "internalLinkCount": 36
     },
     {
       "route": "/disclaimer",
@@ -513,7 +513,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 33
+      "internalLinkCount": 35
     },
     {
       "route": "/investor-portal",
@@ -534,7 +534,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 34
+      "internalLinkCount": 36
     },
     {
       "route": "/land",
@@ -557,7 +557,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 42
+      "internalLinkCount": 44
     },
     {
       "route": "/land-scouts",
@@ -578,7 +578,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 33
+      "internalLinkCount": 35
     },
     {
       "route": "/member-mailer",
@@ -599,7 +599,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 39
+      "internalLinkCount": 41
     },
     {
       "route": "/ohio-valley-guides",
@@ -648,7 +648,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 36
+      "internalLinkCount": 38
     },
     {
       "route": "/ohio-valley-guides/brooke-county-wv",
@@ -674,7 +674,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 36
+      "internalLinkCount": 38
     },
     {
       "route": "/ohio-valley-guides/carroll-county-oh",
@@ -700,7 +700,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 36
+      "internalLinkCount": 38
     },
     {
       "route": "/ohio-valley-guides/columbiana-county-oh",
@@ -726,7 +726,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 36
+      "internalLinkCount": 38
     },
     {
       "route": "/ohio-valley-guides/delaware-county-oh",
@@ -752,7 +752,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 35
+      "internalLinkCount": 37
     },
     {
       "route": "/ohio-valley-guides/franklin-county-oh",
@@ -778,7 +778,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 35
+      "internalLinkCount": 37
     },
     {
       "route": "/ohio-valley-guides/geauga-county-oh",
@@ -804,7 +804,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 34
+      "internalLinkCount": 36
     },
     {
       "route": "/ohio-valley-guides/harrison-county-oh",
@@ -830,7 +830,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 36
+      "internalLinkCount": 38
     },
     {
       "route": "/ohio-valley-guides/jefferson-county-oh",
@@ -856,7 +856,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 36
+      "internalLinkCount": 38
     },
     {
       "route": "/ohio-valley-guides/marshall-county-wv",
@@ -882,7 +882,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 36
+      "internalLinkCount": 38
     },
     {
       "route": "/ohio-valley-guides/ohio-county-wv",
@@ -908,7 +908,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 36
+      "internalLinkCount": 38
     },
     {
       "route": "/p/k7m2x9q4",
@@ -950,7 +950,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 33
+      "internalLinkCount": 35
     },
     {
       "route": "/properties",
@@ -973,7 +973,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 36
+      "internalLinkCount": 37
     },
     {
       "route": "/properties/belmont-45-raw",
@@ -996,7 +996,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 35
+      "internalLinkCount": 37
     },
     {
       "route": "/properties/columbiana-residential-dev",
@@ -1019,7 +1019,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 35
+      "internalLinkCount": 37
     },
     {
       "route": "/properties/harrison-energy",
@@ -1042,7 +1042,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 35
+      "internalLinkCount": 37
     },
     {
       "route": "/properties/jefferson-commercial-site",
@@ -1065,7 +1065,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 35
+      "internalLinkCount": 37
     },
     {
       "route": "/properties/marshall-wholesale",
@@ -1088,7 +1088,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 35
+      "internalLinkCount": 37
     },
     {
       "route": "/properties/ohio-county-industrial",
@@ -1111,7 +1111,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 35
+      "internalLinkCount": 37
     },
     {
       "route": "/property-uploads",
@@ -1132,7 +1132,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 37
+      "internalLinkCount": 39
     },
     {
       "route": "/sell-land/belmont-county-oh",
@@ -1158,7 +1158,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 37
+      "internalLinkCount": 39
     },
     {
       "route": "/sell-land/brooke-county-wv",
@@ -1184,7 +1184,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 38
+      "internalLinkCount": 40
     },
     {
       "route": "/sell-land/carroll-county-oh",
@@ -1210,7 +1210,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 37
+      "internalLinkCount": 39
     },
     {
       "route": "/sell-land/columbiana-county-oh",
@@ -1236,7 +1236,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 37
+      "internalLinkCount": 39
     },
     {
       "route": "/sell-land/franklin-county-oh",
@@ -1262,7 +1262,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 35
+      "internalLinkCount": 37
     },
     {
       "route": "/sell-land/harrison-county-oh",
@@ -1288,7 +1288,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 37
+      "internalLinkCount": 39
     },
     {
       "route": "/sell-land/jefferson-county-oh",
@@ -1314,7 +1314,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 37
+      "internalLinkCount": 39
     },
     {
       "route": "/sell-land/marshall-county-wv",
@@ -1340,7 +1340,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 37
+      "internalLinkCount": 39
     },
     {
       "route": "/sell-land/ohio-county-wv",
@@ -1366,7 +1366,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 37
+      "internalLinkCount": 39
     },
     {
       "route": "/terms",
@@ -1387,7 +1387,7 @@
         "Service",
         "WebSite"
       ],
-      "internalLinkCount": 33
+      "internalLinkCount": 35
     }
   ],
   "sitemapRoutes": [

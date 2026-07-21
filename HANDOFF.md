@@ -1,6 +1,20 @@
 # Ohio Valley Land Partners — Marketing Site Handoff
 
-*Last updated: 2026-07-20 · source: CODEX · Status: LIVE — larger navigation and company-level attribution deployed*
+*Last updated: 2026-07-20 · source: CODEX · Status: LIVE — approved Flip motion systems deployed*
+
+---
+
+## Approved Flip motion systems — LIVE (2026-07-20)
+
+- **Release commit:** `7cdc9eb`
+- **Code-payload Cloudflare deployment:** `c86c9631-55ca-450a-ac0f-42ec38e3c08c`
+- **Homepage FAQs:** the sequence now leads by one card and gives the final FAQ its own full card-height cue, preventing the last cards from resolving together.
+- **Direct-accountability pair:** the two existing white cards use the recorded Sulieman three-second pair turn to the same words on meadow-green reverse faces.
+- **Five-step process:** desktop uses the approved Resonant center-screen sticky scroll scrub. The full green row must be visible before `0.1` begins; `0.1` and `0.2` are complete when the row reaches viewport center; continued user scroll turns `0.3`–`0.5` while the row remains centered; the row releases only after `0.5` completes.
+- **No scroll trap:** the process program uses CSS sticky positioning and scroll-derived rotation only. It does not change `html`/`body` overflow, block input, or use an automatic completion timer.
+- **Accessibility/mobile:** below the desktop breakpoint, on short viewports where the row cannot fit, and with reduced motion, the complete white detail cards remain immediately readable without a sticky runway.
+- **Verification:** changed-file ESLint, TypeScript validation, 63-page production build, deterministic cue-state assertion, 49-URL generated-site/schema/analytics audit, immutable-deployment checks, and live production marker checks passed.
+- **Preserved:** no CSS file, URL, form/CRM route, analytics event, design token, font, photograph, logo, header/footer component, or mobile breakpoint changed. The user-owned untracked `mockups/county-flip-trick.html` remains untouched.
 
 ---
 
@@ -24,7 +38,7 @@
 - **Cloudflare deployment:** `4bfcbee7-8e6b-4548-87e7-c70b0f2acf43` from source `d4703bc`
 - **Scope shipped:** seller clarity, Property Review terminology, consistent first-step form language, principal trust, seller empathy, five-step process, FAQ quality, county acquisition/guide intent separation, risky-claim cleanup, GA4 conversion events, schema/canonical cleanup, upload hardening, and asset/cache optimization
 - **Navigation:** Introductions was removed from desktop/mobile primary navigation and remains available in the footer. Existing portal access remains intact.
-- **Flip programs:** nine county links use the recorded county scroll scrub; eight homepage FAQs use the lag-two sequence; four trust cards use the Sulieman random-pair three-second beat. Reverse faces use OVLP meadow green. Reduced-motion, focus, click, and FAQ access remain intact.
+- **Flip programs:** nine county links use the recorded county scroll scrub; eight homepage FAQs use the lead-one sequence with a distinct final cue; four trust cards and the two direct-accountability cards use the Sulieman random-pair three-second beat; the five-step land process uses the center-screen sticky scroll scrub. Reverse faces use OVLP meadow green except the process cards, whose approved green fronts reveal white detail backs. Reduced-motion, focus, click, and FAQ access remain intact.
 - **Preserved:** every existing county URL, forms/API endpoints, Resend routing, GHL A2P widget, GA4 ID `G-7FQDXC8DVC`, logo design, colors, typography, imagery, existing animation language, breakpoints, and shared design system. No CSS files changed.
 - **Verification:** production build passed for 63 pages; generated-site audit passed with 59 HTML pages, 49 indexable sitemap URLs, 9 acquisition pages, 9 county guides, zero schema/canonical/metadata errors, and every required analytics event present. Form-origin/validation/upload/security smoke tests passed. All 29 sampled live routes/assets returned HTTP 200 after edge propagation.
 - **Production payload:** new hero copy and all three Flip markers confirmed live; acquisition/guide/article titles and canonicals confirmed; optimized `logo.png` is 81,402 bytes; security and cache headers confirmed; IndexNow accepted the 49-URL submission workflow without an error response.

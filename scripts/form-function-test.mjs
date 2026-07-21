@@ -28,29 +28,25 @@ assert.equal(result.response.status, 403, 'foreign-origin submission should be r
 result = await guardFormRequest({ request: request(validBody), env: { TURNSTILE_SECRET_KEY: 'configured' } });
 assert.equal(result.response.status, 403, 'configured Turnstile should require a token');
 
-const keyPair = await crypto.subtle.generateKey(
-  { name: 'RSASSA-PKCS1-v1_5', modulusLength: 2048, publicExponent: new Uint8Array([1, 0, 1]), hash: 'SHA-256' },
-  true,
-  ['sign', 'verify'],
-);
-const privateKey = Buffer.from(await crypto.subtle.exportKey('pkcs8', keyPair.privateKey));
-const privatePem = [
-  '-----BEGIN PRIVATE KEY-----',
-  ...privateKey.toString('base64').match(/.{1,64}/g),
-  '-----END PRIVATE KEY-----',
-].join('\n');
-
 const requests = [];
 const originalFetch = globalThis.fetch;
 globalThis.fetch = async (url, options = {}) => {
   requests.push({ url: String(url), options });
-  if (String(url).includes('oauth2.googleapis.com/token')) {
-    return Response.json({ access_token: 'qa-google-token', expires_in: 3600 });
+  if (String(url).includes('services.leadconnectorhq.com/medias/upload-file')) {
+    assert.equal(options.body.get('hosted'), 'false');
+    assert.equal(options.body.get('altId'), 'qa-location');
+    assert.equal(options.body.get('altType'), 'location');
+    assert.equal(options.body.get('file').name, 'qa-properties.csv');
+    return Response.json({ fileId: 'qa-file-id', url: 'https://storage.example.invalid/qa-properties.csv' }, { status: 201 });
   }
-  if (String(url).includes('gmail.googleapis.com')) {
+  if (String(url).includes('services.leadconnectorhq.com/conversations/messages')) {
     const payload = JSON.parse(options.body);
-    assert.match(payload.raw, /^[A-Za-z0-9_-]+$/, 'Gmail raw message must be base64url encoded');
-    return Response.json({ id: 'qa-message-id' });
+    assert.equal(payload.type, 'Email');
+    assert.equal(payload.contactId, 'iEWFMH1a30jMEB65nzW2');
+    assert.equal(payload.locationId, 'qa-location');
+    assert.equal(payload.emailTo, 'info@ohiovalleylandpartners.com');
+    assert.deepEqual(payload.attachments, ['https://storage.example.invalid/qa-properties.csv']);
+    return Response.json({ messageId: 'qa-message-id', conversationId: 'qa-conversation-id' }, { status: 201 });
   }
   if (String(url).includes('services.leadconnectorhq.com/contacts/upsert')) {
     const payload = JSON.parse(options.body);
@@ -62,10 +58,6 @@ globalThis.fetch = async (url, options = {}) => {
 };
 
 const env = {
-  GOOGLE_SERVICE_ACCOUNT_JSON: JSON.stringify({
-    client_email: 'qa-service-account@example.invalid',
-    private_key: privatePem,
-  }),
   GHL_API_TOKEN: 'qa-ghl-token',
   GHL_LOCATION_ID: 'qa-location',
 };
@@ -80,9 +72,15 @@ await sendNotification(env, {
   subject: 'OVLP Website QA',
   replyTo: 'qa@example.com',
   html: '<p>Delivery test</p>',
+  attachments: [{
+    filename: 'qa-properties.csv',
+    type: 'text/csv',
+    content: Buffer.from('parcel_id,address\nQA-1,123 Test St\n').toString('base64'),
+  }],
 });
 globalThis.fetch = originalFetch;
 
 assert.equal(requests.filter((entry) => entry.url.includes('contacts/upsert')).length, 1);
-assert.equal(requests.filter((entry) => entry.url.includes('messages/send')).length, 1);
-console.log(JSON.stringify({ passed: true, checks: 9 }, null, 2));
+assert.equal(requests.filter((entry) => entry.url.includes('medias/upload-file')).length, 1);
+assert.equal(requests.filter((entry) => entry.url.includes('conversations/messages')).length, 1);
+console.log(JSON.stringify({ passed: true, checks: 12 }, null, 2));

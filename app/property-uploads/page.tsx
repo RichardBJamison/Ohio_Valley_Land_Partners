@@ -3,9 +3,13 @@ import { FileSpreadsheet, Download, Upload, CheckCircle } from 'lucide-react';
 import { PropertyUploadForm } from '@/components/forms/property-upload-form';
 
 export const metadata: Metadata = {
-  title: 'Property Uploads — Ohio Valley Builders Network',
+  title: 'Builders Network Property Uploads',
   description:
     'Upload your property inventory spreadsheet. List the parcels you want to sell through the Ohio Valley Land Partners buyer network.',
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 const requiredColumns = [

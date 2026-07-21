@@ -40,16 +40,16 @@
 - /blog/sell-vacant-land-delaware-county-ohio: Selling vacant land in Delaware County, Ohio
 - /blog/sell-land-back-taxes-ohio: Questions to discuss with licensed professionals when taxes are delinquent
 - /blog/land-near-intel-new-albany-ohio: Selling land near Intel New Albany semiconductor campus
-- /blog/sell-land-belmont-county-ohio-fast: Belmont County acquisition notes
-- /blog/sell-land-jefferson-county-ohio-steubenville: Selling land in Jefferson County (Steubenville area)
-- /blog/sell-land-columbiana-county-ohio: Selling land in Columbiana County, Ohio
-- /blog/sell-land-ohio-county-west-virginia-wheeling: Selling land in Ohio County, West Virginia (Wheeling)
-- /blog/sell-land-marshall-county-wv-moundsville: Selling land in Marshall County, WV (Moundsville)
+- /blog/sell-land-belmont-county-ohio-fast: Property factors buyers may review in Belmont County, Ohio
+- /blog/sell-land-jefferson-county-ohio-steubenville: Property factors to review in Jefferson County, Ohio
+- /blog/sell-land-columbiana-county-ohio: Property factors to review in Columbiana County, Ohio
+- /blog/sell-land-ohio-county-west-virginia-wheeling: Property factors to review in Ohio County, West Virginia
+- /blog/sell-land-marshall-county-wv-moundsville: Property factors to review in Marshall County, West Virginia
 - /blog/what-to-do-with-land-you-dont-want: What to do with land you inherited or don't want
-- /blog/brooke-harrison-carroll-county-land-buyers: Direct land buyers in Brooke, Harrison, and Carroll counties
-- /blog/franklin-county-ohio-sell-vacant-land-2026: Franklin County campaign notes
-- /blog/brooke-county-wv-land-worth-2026: Property factors buyers may consider in Brooke County
-- /blog/sell-vacant-land-geauga-county-ohio-2026: Selling vacant land in Geauga County, Ohio — Chesterland, Chardon, western townships (active campaign)
+- /blog/brooke-harrison-carroll-county-land-buyers: Land conditions in Brooke, Harrison, and Carroll counties
+- /blog/franklin-county-ohio-sell-vacant-land-2026: Questions Franklin County vacant-land owners should review
+- /blog/brooke-county-wv-land-worth-2026: Property factors buyers may review in Brooke County, West Virginia
+- /blog/sell-vacant-land-geauga-county-ohio-2026: Vacant-land questions for Geauga County owners in Chesterland, Chardon, and western townships
 
 ## Service Area
 Ohio counties: Belmont, Jefferson, Columbiana, Harrison, Carroll

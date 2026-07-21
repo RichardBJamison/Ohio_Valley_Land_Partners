@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useCallback, useState, useRef } from 'react';
+import { TurnstileWidget } from '@/components/TurnstileWidget';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -15,6 +16,8 @@ export function PropertyUploadForm() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
   const [dragOver, setDragOver] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState('');
+  const onTurnstileExpire = useCallback(() => setTurnstileToken(''), []);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const ACCEPTED = '.csv,.xlsx,.xls';
@@ -24,10 +27,18 @@ export function PropertyUploadForm() {
     const ext = f.name.split('.').pop()?.toLowerCase();
     if (!['csv', 'xlsx', 'xls'].includes(ext || '')) {
       setError('Please upload a .csv, .xlsx, or .xls file.');
+      trackConversionEvent('form_error', {
+        form_name: 'property_upload_form',
+        error_type: 'validation',
+      });
       return;
     }
     if (f.size > 10 * 1024 * 1024) {
       setError('File must be under 10 MB.');
+      trackConversionEvent('form_error', {
+        form_name: 'property_upload_form',
+        error_type: 'validation',
+      });
       return;
     }
     setError('');
@@ -72,6 +83,7 @@ export function PropertyUploadForm() {
           email: uploaderEmail.trim(),
           fileName: file.name,
           fileData: base64,
+          turnstileToken,
         }),
       });
       if (!res.ok) throw new Error('Upload failed');
@@ -184,7 +196,9 @@ export function PropertyUploadForm() {
         )}
       </div>
 
-      {error && <p className="text-sm text-red-500">{error}</p>}
+      <TurnstileWidget onToken={setTurnstileToken} onExpire={onTurnstileExpire} />
+
+      {error && <p className="text-sm text-red-500" role="alert">{error}</p>}
 
       <Button type="submit" size="lg" className="w-full h-12 font-bold" disabled={loading}>
         {loading ? (

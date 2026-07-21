@@ -26,13 +26,13 @@ export function countySellMetaDescription(
   slug?: string,
 ): string {
   const region = slug === 'franklin-county-oh' ? 'Columbus and Central Ohio' : `${countyName}, ${state}`;
-  return `Ohio Valley Land Partners reviews vacant, inherited, tax-burdened, and difficult-to-manage property in ${region} for possible direct purchase. No obligation; not every property receives a proposal.`;
+  return `Explore a direct land sale in ${region}. OVLP reviews each property for possible purchase. No obligation; not every parcel receives a proposal.`;
 }
 
 export const homepageSeoMeta = {
   title: 'Sell Land in the Ohio Valley | Direct Property Review',
   description:
-    'Explore a direct sale with Ohio Valley Land Partners. We review vacant, inherited, tax-burdened, and difficult-to-manage property for possible direct purchase, with no obligation to sell.',
+    'Explore a direct land sale with Ohio Valley Land Partners. We review vacant, inherited, tax-burdened, and difficult-to-manage property with no obligation.',
   keywords: [
     'sell land Ohio Valley',
     'direct land buyer Ohio',

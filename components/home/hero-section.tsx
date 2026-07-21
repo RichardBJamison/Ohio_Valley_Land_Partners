@@ -39,9 +39,9 @@ const sellerTrustPoints = [
 ];
 
 const buyerTrustPoints = [
-  'First access to land in current acquisition areas',
+  'Direct notice of matching land opportunities',
   'Hunting, farm, development & investment parcels',
-  'No membership fees — ever',
+  'Property criteria reviewed by the OVLP team',
 ];
 
 type Tab = 'sell' | 'buy';
@@ -65,7 +65,7 @@ export function HeroSection() {
 
             {/* Serif italic label — Mynd style */}
             <p className="heading-serif text-amber text-2xl mb-4">
-              {activeTab === 'sell' ? 'Ohio Valley. Local. Intentional. Fair.' : 'Buy before it hits the market.'}
+              {activeTab === 'sell' ? 'Ohio Valley. Local. Intentional. Fair.' : 'Ohio Valley opportunities for active buyers.'}
             </p>
 
             {activeTab === 'sell' ? (
@@ -95,7 +95,7 @@ export function HeroSection() {
                   <span className="block text-amber mt-1">in the Ohio Valley.</span>
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-white/70">
-                  Join our active builders network and get first access to off-market land deals —
+                  Join our active builders network and hear directly about potential land opportunities —
                   hunting tracts, farm ground, development sites, and investment parcels
                   across the Ohio Valley. Inventory and active focus vary by county.
                 </p>

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { HeroSection } from '@/components/home/hero-section';
 import { CountyFlipGrid, HomepageFAQFlipList, TrustFlipGrid } from '@/components/home/flip-groups';
-import { LocalBusinessSchema, FAQSchema } from '@/components/seo/json-ld';
+import { FAQSchema } from '@/components/seo/json-ld';
 import { TreePine, MapPin, ArrowRight, Target } from 'lucide-react';
 import Link from 'next/link';
 import { defaultOgImages, siteConfig } from '@/lib/seo-config';
@@ -12,7 +12,7 @@ import { communityGiving, faqFraming, sellerPositioning } from '@/lib/public-cop
 import { homepageSeoMeta } from '@/lib/seo-meta';
 
 export const metadata: Metadata = {
-  title: homepageSeoMeta.title,
+  title: { absolute: homepageSeoMeta.title },
   description: homepageSeoMeta.description,
   keywords: [...homepageSeoMeta.keywords],
   alternates: {
@@ -89,7 +89,6 @@ const whatWeDo = [
 export default function Home() {
   return (
     <>
-      <LocalBusinessSchema />
       <FAQSchema faqs={homepageFAQs} />
 
       <HeroSection />

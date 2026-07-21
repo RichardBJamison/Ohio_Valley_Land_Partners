@@ -6,7 +6,6 @@ import { ArticleSchema, BreadcrumbSchema } from '@/components/seo/json-ld';
 import { defaultOgImages, siteConfig } from '@/lib/seo-config';
 import { Badge } from '@/components/ui/badge';
 import { LegalDisclaimer } from '@/components/legal-disclaimer';
-import { publicBlogSummary } from '@/lib/public-copy';
 import { Calendar, Clock, ArrowLeft, ArrowRight } from 'lucide-react';
 
 interface Props {
@@ -22,8 +21,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {};
   const url = `${siteConfig.url}/blog/${post.slug}`;
   return {
-    title: post.title,
-    description: publicBlogSummary(post.category),
+    title: { absolute: post.title },
+    description: post.metaDescription,
     keywords: post.keywords,
     alternates: {
       canonical: url,
@@ -59,7 +58,7 @@ export default function BlogPostPage({ params }: Props) {
       />
       <ArticleSchema
         headline={post.title}
-        description={publicBlogSummary(post.category)}
+        description={post.metaDescription}
         datePublished={post.datePublished}
         dateModified={post.dateModified}
         slug={post.slug}

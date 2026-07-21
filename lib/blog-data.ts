@@ -20,12 +20,12 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: 'sell-inherited-land-ohio-probate',
-    title: 'Inherited Land in Ohio: Questions to Discuss With Your Professionals',
+    title: 'Inherited Land in Ohio: Questions for Your Professional Team',
     metaDescription:
-      'General background on inherited Ohio land, ownership records, and questions to raise with an estate attorney, title company, tax professional, or licensed real estate professional.',
+      'Questions to raise with an estate attorney, title company, tax professional, or real estate professional when reviewing inherited land in Ohio.',
     category: 'Seller Guides',
     datePublished: '2026-03-01',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-20',
     readingTime: '10 min read',
     excerpt:
       'Inherited land can involve estate, title, tax, and family questions. This overview identifies topics to discuss with independent licensed professionals.',
@@ -58,10 +58,10 @@ export const blogPosts: BlogPost[] = [
     slug: 'cash-land-buyers-ohio-valley',
     title: 'Understanding Direct Land Buyers in the Ohio Valley',
     metaDescription:
-      'What does a direct land purchase inquiry look like? OVLP\'s role as a principal buyer, review process, and questions owners may wish to ask their own professionals.',
+      'Learn how direct land purchase inquiries work, OVLP’s role as a principal buyer, and questions owners may wish to ask independent professionals.',
     category: 'Seller Guides',
     datePublished: '2026-03-05',
-    dateModified: '2026-03-14',
+    dateModified: '2026-07-20',
     readingTime: '5 min read',
     excerpt:
       'A direct buyer is one possible path for a landowner. This article explains OVLP’s role as a principal buyer and suggests questions owners may wish to ask.',
@@ -92,12 +92,12 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'sell-vacant-land-delaware-county-ohio',
-    title: 'Delaware County, Ohio Land: General Market Observations',
+    title: 'Delaware County, Ohio Land: Property Factors to Review',
     metaDescription:
-      'Delaware County, Ohio land: general 2026 market observations, property factors buyers may review, and how OVLP considers direct acquisition inquiries.',
+      'A general guide to access, zoning, utilities, site conditions, and other property factors buyers may review in Delaware County, Ohio.',
     category: 'County Guides',
     datePublished: '2026-03-08',
-    dateModified: '2026-03-14',
+    dateModified: '2026-07-20',
     readingTime: '5 min read',
     excerpt:
       'A general look at property characteristics and development activity that may influence buyer interest in Delaware County.',
@@ -130,10 +130,10 @@ export const blogPosts: BlogPost[] = [
     slug: 'sell-land-back-taxes-ohio',
     title: 'Ohio Land With Delinquent Taxes: Questions to Ask',
     metaDescription:
-      'Owe back property taxes on Ohio land? You have more options than you think. Here\'s how to sell — even with a tax lien — and what happens if you do nothing.',
+      'Learn which tax, title, and legal questions Ohio landowners may need to investigate when property taxes are delinquent.',
     category: 'Seller Guides',
     datePublished: '2026-03-10',
-    dateModified: '2026-03-14',
+    dateModified: '2026-07-20',
     readingTime: '6 min read',
     excerpt:
       'Delinquent taxes can affect title, timing, and proceeds. This overview identifies records and professionals an owner may wish to consult.',
@@ -164,10 +164,10 @@ export const blogPosts: BlogPost[] = [
     slug: 'ohio-valley-land-market-2026',
     title: 'Ohio Valley Land Market Guide',
     metaDescription:
-      'An observational guide to the property factors Ohio Valley Land Partners reviews across varied regional land markets. General context, not a formal market report or appraisal.',
+      'An observational guide to the factors OVLP reviews across varied Ohio Valley land markets. General context, not a formal market report or appraisal.',
     category: 'Market Reports',
     datePublished: '2026-03-12',
-    dateModified: '2026-03-14',
+    dateModified: '2026-07-20',
     readingTime: '7 min read',
     excerpt:
       'Land conditions vary across the Ohio Valley. This guide explains the property-specific factors OVLP reviews without presenting a formal market report or appraisal.',
@@ -193,15 +193,15 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'land-near-intel-new-albany-ohio',
-    title: 'Land Near New Albany’s Intel Development: Regional Observations',
+    title: 'Land Near New Albany’s Intel Development: Owner Questions',
     metaDescription:
-      'Intel\'s New Albany campus is reshaping the Central Ohio land market. Here\'s what it means for sellers near the Silicon Heartland — and which corridors are getting the most attention.',
+      'A general guide to zoning, access, utilities, public plans, and other property-specific factors that may affect land near New Albany.',
     category: 'Market Reports',
     datePublished: '2026-03-14',
-    dateModified: '2026-03-14',
+    dateModified: '2026-07-20',
     readingTime: '6 min read',
     excerpt:
-      'The Intel New Albany plant is the biggest economic catalyst in Ohio in decades. Here\'s how it\'s moving land values in the surrounding counties — and what to do if you own property nearby.',
+      'A general look at public plans and property-specific questions owners may wish to investigate near the New Albany development area.',
     keywords: [
       'land near Intel plant New Albany Ohio',
       'Silicon Heartland real estate',
@@ -224,15 +224,15 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'sell-land-belmont-county-ohio-fast',
-    title: 'Belmont County, Ohio Land: Acquisition Notes for 2026',
+    title: 'Belmont County, Ohio Land: Property Factors Buyers Review',
     metaDescription:
-      'Belmont County, Ohio land: acquisition notes, property factors buyers may review, and how OVLP considers direct purchase inquiries as a principal buyer.',
+      'A general guide to access, terrain, utilities, title, mineral interests, and other factors buyers may review in Belmont County, Ohio.',
     category: 'County Guides',
     datePublished: '2026-03-21',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-20',
     readingTime: '6 min read',
     excerpt:
-      "Belmont County land owners have more options than they think. Here\'s how direct purchase inquiries work — and what to watch out for.",
+      'A general look at access, terrain, recorded interests, and other property-specific factors buyers may review in Belmont County.',
     keywords: [
       'sell land Belmont County Ohio',
       'Belmont County land buyer',
@@ -261,15 +261,15 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'sell-land-jefferson-county-ohio-steubenville',
-    title: 'Jefferson County, Ohio Land: Acquisition Notes',
+    title: 'Jefferson County, Ohio Land: Property Factors to Review',
     metaDescription:
-      'Jefferson County, Ohio land sellers: get a property-specific proposal after review. We buy vacant lots, farm ground, river frontage, and inherited parcels in Steubenville and surrounding townships.',
+      'A general guide to access, utilities, site conditions, title, and other property factors buyers may review in Jefferson County, Ohio.',
     category: 'County Guides',
     datePublished: '2026-03-22',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-20',
     readingTime: '5 min read',
     excerpt:
-      "Jefferson County land has unique characteristics — Ohio River frontage, former industrial sites, and rural townships. Here\'s what drives value and how direct purchase inquiries work.",
+      'General county context and property-specific questions involving access, site conditions, title, and surrounding land uses.',
     keywords: [
       'sell land Jefferson County Ohio',
       'Steubenville land buyer',
@@ -298,12 +298,12 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'sell-land-columbiana-county-ohio',
-    title: 'Columbiana County, Ohio Land: Acquisition Notes',
+    title: 'Columbiana County, Ohio Land: Property Factors to Review',
     metaDescription:
-      'Selling land in Columbiana County, Ohio? We buy vacant parcels, farm ground, and inherited property throughout Lisbon, Salem, and surrounding townships. property-specific proposal after review.',
+      'A general guide to access, utilities, terrain, title, and other property factors buyers may review in Columbiana County, Ohio.',
     category: 'County Guides',
     datePublished: '2026-03-23',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-20',
     readingTime: '5 min read',
     excerpt:
       'Columbiana County landowners: general market observations and property factors that may influence buyer interest — not sale strategy advice.',
@@ -335,12 +335,12 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'sell-land-ohio-county-west-virginia-wheeling',
-    title: 'Ohio County, West Virginia Land: Acquisition Notes',
+    title: 'Ohio County, West Virginia Land: Property Factors to Review',
     metaDescription:
-      'Selling land in Ohio County, WV near Wheeling? We buy vacant lots, rural parcels, and inherited land throughout Ohio County. property-specific proposal after review. principal-buyer inquiry.',
+      'A general guide to access, utilities, terrain, title, and other property factors buyers may review in Ohio County, West Virginia.',
     category: 'County Guides',
     datePublished: '2026-03-24',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-20',
     readingTime: '5 min read',
     excerpt:
       'Ohio County, West Virginia land: general market observations for 2026 and how OVLP reviews direct acquisition inquiries.',
@@ -372,15 +372,15 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'sell-land-marshall-county-wv-moundsville',
-    title: 'Marshall County, West Virginia Land: Acquisition Notes',
+    title: 'Marshall County, West Virginia Land: Property Factors to Review',
     metaDescription:
-      'Selling land in Marshall County, West Virginia? We buy rural parcels, inherited property, and vacant lots near Moundsville. property-specific proposal after review. principal-buyer inquiry.',
+      'A general guide to access, terrain, utilities, title, and other property factors buyers may review in Marshall County, West Virginia.',
     category: 'County Guides',
     datePublished: '2026-03-25',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-20',
     readingTime: '5 min read',
     excerpt:
-      'Marshall County, WV has one of the most active land markets in the northern West Virginia panhandle. Here is what is driving demand and how to sell your parcel.',
+      'General county context and property-specific questions involving river corridors, rural terrain, access, utilities, and recorded interests.',
     keywords: [
       'sell land Marshall County WV',
       'Moundsville WV land buyer',
@@ -411,13 +411,13 @@ export const blogPosts: BlogPost[] = [
     slug: 'what-to-do-with-land-you-dont-want',
     title: 'Unused Land: Questions and Possible Paths to Explore',
     metaDescription:
-      "Inherited land you don't want? Out-of-state parcel draining your wallet in taxes? Here's a clear breakdown of every option — sell, donate, lease, or walk away.",
+      'A practical overview of questions to consider when inherited, out-of-state, tax-burdened, or otherwise unused land becomes difficult to manage.',
     category: 'Seller Guides',
     datePublished: '2026-03-26',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-20',
     readingTime: '7 min read',
     excerpt:
-      "Owning land you don\'t want is more common than people realize. Here\'s every realistic option — including the ones most sellers don\'t know about.",
+      'A practical overview of records, goals, and independent professional perspectives that may help an owner compare possible paths.',
     keywords: [
       'what to do with land you dont want',
       'unwanted land options',
@@ -445,12 +445,12 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'franklin-county-ohio-sell-vacant-land-2026',
-    title: 'Franklin County, Ohio Vacant Land: 2026 Campaign Notes',
+    title: 'Franklin County, Ohio Vacant Land: What Owners Should Review',
     metaDescription:
-      'Franklin County, Ohio vacant land notes for 2026. Property-specific review from a regional principal buyer considering inherited lots, tax-burdened parcels, and access-limited land.',
+      'A general guide to access, utilities, zoning, taxes, title, and other questions that may matter when reviewing vacant land in Franklin County, Ohio.',
     category: 'County Guides',
     datePublished: '2026-05-20',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-20',
     readingTime: '7 min read',
     excerpt:
       'Franklin County landowners: from inherited lots to tax-delinquent parcels — how OVLP handles a direct property review.',
@@ -482,12 +482,12 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'brooke-harrison-carroll-county-land-buyers',
-    title: 'Direct Land Buyers in Brooke, Harrison, and Carroll Counties',
+    title: 'Land Conditions in Brooke, Harrison, and Carroll Counties',
     metaDescription:
-      'Brooke, Harrison, and Carroll county land: general market observations and how OVLP reviews direct acquisition inquiries as a principal buyer.',
+      'A regional comparison of access, terrain, utilities, title, and other property factors across Brooke, Harrison, and Carroll counties.',
     category: 'County Guides',
     datePublished: '2026-03-27',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-20',
     readingTime: '6 min read',
     excerpt:
       'General observations about three rural county markets and how OVLP reviews direct acquisition inquiries.',
@@ -511,12 +511,12 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'brooke-county-wv-land-worth-2026',
-    title: 'Brooke County, WV Land: Factors Buyers May Consider in 2026',
+    title: 'Brooke County, West Virginia Land: Property Factors to Review',
     metaDescription:
-      'Brooke County, WV land in 2026: market trends, property factors buyers may consider, and how OVLP reviews direct acquisition inquiries.',
+      'A general guide to access, terrain, utilities, title, and other property factors buyers may review in Brooke County, West Virginia.',
     category: 'County Guides',
     datePublished: '2026-06-18',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-20',
     readingTime: '6 min read',
     excerpt:
       'Location, access, utilities, use, title, and other property-specific facts may affect buyer interest in Brooke County.',
@@ -542,15 +542,15 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'sell-vacant-land-geauga-county-ohio-2026',
-    title: 'Geauga County, Ohio Vacant Land: 2026 Campaign Notes',
+    title: 'Geauga County, Ohio Vacant Land: What Owners Should Review',
     metaDescription:
-      'Geauga County, Ohio vacant land notes for Chesterland, Chardon, Bainbridge, and western townships. Property-specific review from a regional principal buyer.',
+      'A general guide to access, zoning, utilities, title, and other property questions for vacant land in Geauga County, Ohio.',
     category: 'County Guides',
     datePublished: '2026-06-19',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-20',
     readingTime: '9 min read',
     excerpt:
-      'Geauga County landowners in Chesterland, Chardon, and western townships — general notes from OVLP’s acquisition campaign and the parcel characteristics our team reviews.',
+      'General notes for Geauga County owners about the parcel characteristics OVLP reviews within its current acquisition area.',
     keywords: [
       'sell vacant land Geauga County Ohio',
       'direct land buyer Geauga County',
@@ -561,8 +561,8 @@ export const blogPosts: BlogPost[] = [
       'sell land Chardon Ohio',
     ],
     body: `
-<h2>About the western Geauga campaign</h2>
-<p>Ohio Valley Land Partners is reviewing vacant lots and other land in portions of western and central Geauga County. Campaign coverage and acquisition criteria may change, and not every submitted property will fit our plans.</p>
+<h2>About the Geauga County acquisition focus</h2>
+<p>Ohio Valley Land Partners is reviewing vacant lots and other land in portions of western and central Geauga County. Acquisition coverage and criteria may change, and not every submitted property will fit our plans.</p>
 <h2>Property facts our team may review</h2>
 <ul>
   <li>Public parcel and tax records</li>

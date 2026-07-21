@@ -28,9 +28,9 @@ export function checkOrigin(request) {
   return [...ALLOWED_ORIGINS].some((allowed) => referer.startsWith(`${allowed}/`));
 }
 
-export async function readJsonBody(request) {
+export async function readJsonBody(request, maxBodyBytes = MAX_BODY_BYTES) {
   const raw = await request.text();
-  if (raw.length > MAX_BODY_BYTES) {
+  if (raw.length > maxBodyBytes) {
     throw new Error('Payload too large');
   }
   return JSON.parse(raw);
@@ -60,7 +60,7 @@ export function clientIp(request) {
   );
 }
 
-export async function guardFormRequest(context) {
+export async function guardFormRequest(context, options = {}) {
   const { request, env } = context;
 
   if (request.method !== 'POST') {
@@ -73,7 +73,7 @@ export async function guardFormRequest(context) {
 
   let body;
   try {
-    body = await readJsonBody(request);
+    body = await readJsonBody(request, options.maxBodyBytes);
   } catch {
     return { ok: false, response: jsonResponse({ error: 'Invalid request' }, 400) };
   }

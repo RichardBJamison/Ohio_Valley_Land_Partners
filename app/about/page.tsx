@@ -6,9 +6,9 @@ import { communityGiving } from '@/lib/public-copy';
 import { siteConfig } from '@/lib/seo-config';
 
 export const metadata: Metadata = {
-  title: 'About Us — Ohio Valley Land Partners',
+  title: 'About',
   description:
-    'Ohio Valley Land Partners is a regional principal land buyer focused on direct acquisition inquiries, property-specific review, and a forward-looking community-reinvestment commitment.',
+    'Meet the people behind Ohio Valley Land Partners, a regional principal buyer focused on property-specific review, direct communication, and local reinvestment.',
   alternates: {
     canonical: `${siteConfig.url}/about`,
   },

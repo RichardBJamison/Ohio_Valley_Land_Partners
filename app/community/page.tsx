@@ -3,9 +3,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { communityGiving } from '@/lib/public-copy';
+import { siteConfig } from '@/lib/seo-config';
 
 export const metadata: Metadata = {
-  title: 'Community — Ohio Valley Land Partners',
+  title: 'Community Commitment',
   description:
     'Ohio Valley Land Partners is rooted in the Ohio Valley and has committed 5% of company profits to local community reinvestment as the business grows.',
   keywords: [
@@ -16,6 +17,9 @@ export const metadata: Metadata = {
     'COCIC Franklin County Land Bank',
     'Ohio Valley builders network',
   ],
+  alternates: {
+    canonical: `${siteConfig.url}/community`,
+  },
 };
 
 const COUNTY_PILLS = [

@@ -1,30 +1,48 @@
+import { escapeHtml, guardFormRequest, jsonResponse } from '../_utils.js';
+
+const MAX_FILE_BYTES = 10 * 1024 * 1024;
+const MAX_REQUEST_BYTES = 15 * 1024 * 1024;
+const MIME_BY_EXTENSION = {
+  csv: 'text/csv',
+  xlsx: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+  xls: 'application/vnd.ms-excel',
+};
+
+function decodedBase64Bytes(value) {
+  const padding = value.endsWith('==') ? 2 : value.endsWith('=') ? 1 : 0;
+  return Math.floor((value.length * 3) / 4) - padding;
+}
+
 export async function onRequestPost(context) {
   try {
-    const body = await context.request.json();
-    const { name, email, fileName, fileData } = body;
+    const guard = await guardFormRequest(context, { maxBodyBytes: MAX_REQUEST_BYTES });
+    if (!guard.ok) return guard.response;
+
+    const { name, email, fileName, fileData } = guard.body;
 
     if (!name?.trim() || !email?.trim()) {
-      return new Response(JSON.stringify({ error: 'Name and email are required' }), {
-        status: 400,
-        headers: { 'Content-Type': 'application/json' },
-      });
+      return jsonResponse({ error: 'Name and email are required' }, 400);
     }
 
-    if (!fileData || !fileName) {
-      return new Response(JSON.stringify({ error: 'File is required' }), {
-        status: 400,
-        headers: { 'Content-Type': 'application/json' },
-      });
+    if (typeof fileData !== 'string' || typeof fileName !== 'string') {
+      return jsonResponse({ error: 'File is required' }, 400);
     }
 
-    // Determine MIME type from extension
-    const ext = fileName.split('.').pop()?.toLowerCase();
-    const mimeMap = {
-      csv: 'text/csv',
-      xlsx: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-      xls: 'application/vnd.ms-excel',
-    };
-    const contentType = mimeMap[ext] || 'application/octet-stream';
+    const safeFileName = fileName.split(/[\\/]/).pop()?.slice(0, 180) ?? '';
+    const extension = safeFileName.split('.').pop()?.toLowerCase();
+    const contentType = extension ? MIME_BY_EXTENSION[extension] : undefined;
+    const validBase64 = fileData.length > 0 && /^[A-Za-z0-9+/]+={0,2}$/.test(fileData);
+
+    if (!safeFileName || !contentType || !validBase64) {
+      return jsonResponse({ error: 'Only CSV, XLSX, and XLS files are accepted' }, 400);
+    }
+
+    if (decodedBase64Bytes(fileData) > MAX_FILE_BYTES) {
+      return jsonResponse({ error: 'File must be 10 MB or smaller' }, 413);
+    }
+
+    const safeName = String(name).trim().replace(/[\r\n]+/g, ' ').slice(0, 80);
+    const safeEmail = String(email).trim().replace(/[\r\n]+/g, ' ').slice(0, 254);
 
     const res = await fetch('https://api.resend.com/emails', {
       method: 'POST',
@@ -35,18 +53,18 @@ export async function onRequestPost(context) {
       body: JSON.stringify({
         from: 'OVLP Website <noreply@ohiovalleylandpartners.com>',
         to: 'info@ohiovalleylandpartners.com',
-        subject: `Property Upload — ${name.trim()}`,
+        subject: `Property Upload — ${safeName}`,
         html: `
           <h2>New Property Upload</h2>
-          <p><strong>From:</strong> ${name.trim()}</p>
-          <p><strong>Email:</strong> ${email.trim()}</p>
-          <p><strong>File:</strong> ${fileName}</p>
+          <p><strong>From:</strong> ${escapeHtml(safeName)}</p>
+          <p><strong>Email:</strong> ${escapeHtml(safeEmail)}</p>
+          <p><strong>File:</strong> ${escapeHtml(safeFileName)}</p>
           <p><strong>Source:</strong> Builders Network — Property Uploads page</p>
           <p>The spreadsheet is attached below.</p>
         `,
         attachments: [
           {
-            filename: fileName,
+            filename: safeFileName,
             content: fileData,
             type: contentType,
           },
@@ -57,21 +75,12 @@ export async function onRequestPost(context) {
     if (!res.ok) {
       const err = await res.text();
       console.error('Resend error:', err);
-      return new Response(JSON.stringify({ error: 'Failed to submit' }), {
-        status: 500,
-        headers: { 'Content-Type': 'application/json' },
-      });
+      return jsonResponse({ error: 'Failed to submit' }, 500);
     }
 
-    return new Response(JSON.stringify({ success: true }), {
-      status: 201,
-      headers: { 'Content-Type': 'application/json' },
-    });
+    return jsonResponse({ success: true }, 201);
   } catch (err) {
     console.error('Property upload error:', err);
-    return new Response(JSON.stringify({ error: 'Internal server error' }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json' },
-    });
+    return jsonResponse({ error: 'Internal server error' }, 500);
   }
 }

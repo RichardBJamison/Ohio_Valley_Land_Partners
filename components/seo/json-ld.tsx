@@ -1,49 +1,7 @@
 import { siteConfig } from '@/lib/seo-config';
 
-interface LocalBusinessSchemaProps {
-  name?: string;
-  description?: string;
-}
-
-export function LocalBusinessSchema({
-  name = siteConfig.name,
-  description = siteConfig.description,
-}: LocalBusinessSchemaProps) {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    '@id': siteConfig.url,
-    name,
-    description,
-    url: siteConfig.url,
-    telephone: siteConfig.phone,
-    email: siteConfig.email,
-    address: {
-      '@type': 'PostalAddress',
-      ...siteConfig.address,
-    },
-    areaServed: siteConfig.serviceArea.map((area) => ({
-      '@type': 'AdministrativeArea',
-      name: area,
-    })),
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 39.9612,
-      longitude: -83.0007,
-    },
-    hasMap: 'https://maps.google.com/?q=2025+Riverside+Drive+STE+35682+Columbus+OH+43221',
-    ...(siteConfig.sameAs.length > 0 && { sameAs: siteConfig.sameAs }),
-  };
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
-}
-
 interface RealEstateListingSchemaProps {
+  url: string;
   name: string;
   description: string;
   price: number;
@@ -59,6 +17,7 @@ interface RealEstateListingSchemaProps {
 }
 
 export function RealEstateListingSchema({
+  url,
   name,
   description,
   price,
@@ -72,7 +31,7 @@ export function RealEstateListingSchema({
     '@type': 'RealEstateListing',
     name,
     description,
-    url: typeof window !== 'undefined' ? window.location.href : siteConfig.url,
+    url,
     offers: {
       '@type': 'Offer',
       price,
@@ -109,7 +68,9 @@ export function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: item.url,
+      item: item.url.startsWith('http')
+        ? item.url
+        : `${siteConfig.url}${item.url === '/' ? '' : item.url}`,
     })),
   };
 
@@ -167,7 +128,7 @@ export function ArticleSchema({
   datePublished,
   dateModified,
   slug,
-  image,
+  image = siteConfig.ogImage,
 }: ArticleSchemaProps) {
   const pageUrl = slug
     ? `${siteConfig.url}/blog/${slug}`
@@ -204,14 +165,12 @@ export function ArticleSchema({
     },
     datePublished,
     dateModified: dateModified || datePublished,
-    ...(image && {
-      image: {
-        '@type': 'ImageObject',
-        url: image,
-        width: 1200,
-        height: 630,
-      },
-    }),
+    image: {
+      '@type': 'ImageObject',
+      url: image,
+      width: 1200,
+      height: 630,
+    },
     speakable: {
       '@type': 'SpeakableSpecification',
       cssSelector: ['h1', '.article-intro', '.article-summary'],
@@ -249,7 +208,7 @@ export function OrganizationSchema() {
       telephone: siteConfig.phone,
       email: siteConfig.email,
       contactType: 'Customer Service',
-      areaServed: 'US',
+      areaServed: siteConfig.serviceArea,
       availableLanguage: 'English',
     },
     areaServed: siteConfig.serviceArea.map((area) => ({
@@ -340,14 +299,6 @@ export function WebSiteSchema() {
     publisher: {
       '@type': 'Organization',
       '@id': `${siteConfig.url}#organization`,
-    },
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${siteConfig.url}/blog?q={search_term_string}`,
-      },
-      'query-input': 'required name=search_term_string',
     },
   };
 

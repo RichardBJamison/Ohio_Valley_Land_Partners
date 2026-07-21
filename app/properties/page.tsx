@@ -1,13 +1,17 @@
 import type { Metadata } from 'next';
-import { BreadcrumbSchema, OrganizationSchema } from '@/components/seo/json-ld';
+import { BreadcrumbSchema } from '@/components/seo/json-ld';
 import { Bell, MapPin, ArrowRight, TreePine } from 'lucide-react';
 import Link from 'next/link';
 import { InvestorIntakeForm } from '@/components/forms/investor-intake-form';
+import { siteConfig } from '@/lib/seo-config';
 
 export const metadata: Metadata = {
-  title: 'Buy Land — Ohio Valley Land Partners',
-  description: 'Join the OVLP buyer network and share your property criteria. Inventory and acquisition focus vary by county, with published acquisition areas concentrated in Ohio and West Virginia.',
+  title: { absolute: 'Buy Land in the Ohio Valley | Buyer Network' },
+  description: 'Join the OVLP buyer network and share the counties, acreage, use, and budget that fit your buying criteria. Inventory varies across the Ohio Valley.',
   keywords: 'buy land Ohio Valley, off-market land deals Ohio, hunting land Ohio, farm ground Ohio West Virginia, land buyer network',
+  alternates: {
+    canonical: `${siteConfig.url}/properties`,
+  },
 };
 
 const regions = [
@@ -20,7 +24,6 @@ export default function PropertiesPage() {
   return (
     <>
       <BreadcrumbSchema items={[{ name: 'Home', url: '/' }, { name: 'Buy Land', url: '/properties' }]} />
-      <OrganizationSchema />
 
       <div className="min-h-screen bg-background">
 

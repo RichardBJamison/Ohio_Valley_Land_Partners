@@ -20,9 +20,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const url = `${siteConfig.url}/ohio-valley-guides/${slug}`;
   const guideTitle = `${county.name}, ${county.state} Land Market and Seller Guide`;
+  const guideDescription = `${county.name}, ${county.state} land context, local geography, parcel considerations, and seller guidance. General information—not an appraisal or value opinion.`;
   return {
-    title: guideTitle,
-    description: `Land market context, parcel considerations, local geography, and seller education for ${county.name}, ${county.state}. General information, not a formal appraisal or market-value opinion.`,
+    title: { absolute: guideTitle },
+    description: guideDescription,
     keywords: [
       `${county.name} ${county.state} land market guide`,
       `${county.name} parcel information`,
@@ -33,7 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     openGraph: {
       title: guideTitle,
-      description: `Land market context, parcel considerations, local geography, and seller education for ${county.name}, ${county.state}.`,
+      description: guideDescription,
       url,
       type: 'website',
       images: defaultOgImages,

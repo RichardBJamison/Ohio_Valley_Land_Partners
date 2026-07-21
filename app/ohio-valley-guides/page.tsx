@@ -7,7 +7,7 @@ import { BreadcrumbSchema } from '@/components/seo/json-ld';
 import { LegalDisclaimer } from '@/components/legal-disclaimer';
 
 export const metadata: Metadata = {
-  title: silos.guides.title,
+  title: { absolute: silos.guides.title },
   description: silos.guides.description,
   keywords: silos.guides.keywords,
   alternates: {

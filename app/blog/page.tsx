@@ -6,7 +6,7 @@ import { Calendar, Clock, ArrowRight, BookOpen } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { LegalDisclaimer } from '@/components/legal-disclaimer';
 export const metadata: Metadata = {
-  title: 'Blog — Ohio Valley Land Topics & Market Observations',
+  title: { absolute: 'Ohio Valley Land Topics & Market Observations' },
   description:
     'General educational articles about land ownership, direct-sale inquiries, and regional market observations from Ohio Valley Land Partners.',
   keywords: [
@@ -71,7 +71,7 @@ export default function BlogPage() {
             <div className="flex items-center gap-3 mb-4">
               <Badge>{featured.category}</Badge>
               <span className="text-sm text-muted-foreground">
-                {campaignPost ? 'Campaign Feature' : 'Featured'}
+                {campaignPost ? 'Acquisition Focus' : 'Featured'}
               </span>
             </div>
             <h2 className="text-2xl font-bold text-foreground group-hover:text-amber transition-colors sm:text-3xl mb-4">

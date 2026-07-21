@@ -3,7 +3,6 @@ Allow: /
 Disallow: /api/
 Disallow: /investor-portal/
 Disallow: /p/
-Disallow: /_next/
 Crawl-delay: 2
 
 User-agent: Googlebot
@@ -34,4 +33,3 @@ User-agent: Bingbot
 Allow: /
 
 Sitemap: https://ohiovalleylandpartners.com/sitemap.xml
-Sitemap: https://ohiovalleylandpartners.com/llms.txt

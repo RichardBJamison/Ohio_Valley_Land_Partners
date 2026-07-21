@@ -2,11 +2,15 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Handshake, MapPin, Users, FileText } from 'lucide-react';
 import { LegalDisclaimer } from '@/components/legal-disclaimer';
+import { siteConfig } from '@/lib/seo-config';
 
 export const metadata: Metadata = {
-  title: 'Introductions & Local Partnerships — Ohio Valley Land Partners',
+  title: 'Introductions & Local Partnerships',
   description:
     'Learn how landowners, professionals, and community members can introduce property opportunities to Ohio Valley Land Partners for direct acquisition review.',
+  alternates: {
+    canonical: `${siteConfig.url}/land-scouts`,
+  },
 };
 
 const partnerTypes = [

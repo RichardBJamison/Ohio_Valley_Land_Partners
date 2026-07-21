@@ -4,7 +4,7 @@ import { countySellPages, getCountySellPage } from '@/lib/county-sell-data';
 import { getBlogPost } from '@/lib/blog-data';
 import { defaultOgImages, siteConfig } from '@/lib/seo-config';
 import { countySubheadline, faqFraming, sellerPositioning, softenCountyFaq } from '@/lib/public-copy';
-import { BreadcrumbSchema, FAQSchema, LocalBusinessSchema } from '@/components/seo/json-ld';
+import { BreadcrumbSchema, FAQSchema } from '@/components/seo/json-ld';
 import { LegalDisclaimer } from '@/components/legal-disclaimer';
 import { SellerForm } from '@/components/forms/seller-form';
 import { CheckCircle, MapPin, ChevronRight, BookOpen, ExternalLink } from 'lucide-react';
@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!county) return {};
   const url = `${siteConfig.url}/sell-land/${county.slug}`;
   return {
-    title: county.metaTitle,
+    title: { absolute: county.metaTitle },
     description: county.metaDescription,
     keywords: county.keywords,
     alternates: {
@@ -56,10 +56,6 @@ export default function CountySellPage({ params }: Props) {
           { name: 'Sell Land', url: `${siteConfig.url}/land` },
           { name: `${county.name}, ${county.stateAbbr}`, url: `${siteConfig.url}/sell-land/${county.slug}` },
         ]}
-      />
-      <LocalBusinessSchema
-        name={`Ohio Valley Land Partners — ${county.name}, ${county.stateAbbr}`}
-        description={county.metaDescription}
       />
       <FAQSchema faqs={faqs} />
 

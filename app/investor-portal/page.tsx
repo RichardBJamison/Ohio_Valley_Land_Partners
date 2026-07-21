@@ -6,7 +6,7 @@ import { PortalLoginForm } from './PortalLoginForm';
 export const metadata: Metadata = {
   title: 'Investor Portal — Join the Ohio Valley Land Deal List',
   description:
-    'Get first access to off-market land deals across the Ohio Valley. Join our buyer network — hunting tracts, farm ground, development sites, and investment parcels.',
+    'Join the Ohio Valley Land Partners buyer network and share the counties, acreage, and property types that match your current buying criteria.',
   robots: {
     index: false,
     follow: false,
@@ -17,27 +17,27 @@ export const metadata: Metadata = {
 const benefits = [
   {
     icon: Bell,
-    title: 'First Access',
+    title: 'Direct Updates',
     description:
-      'Deals go to our buyer list before they hit any public marketplace. You see them first.',
+      'When an opportunity matches your stated criteria, OVLP may contact you directly through the buyer network.',
   },
   {
     icon: MapPin,
-    title: 'Hyper-Local',
+    title: 'Regional Focus',
     description:
-      'We only work in the Ohio Valley — Belmont, Jefferson, Columbiana, Harrison, Carroll (OH) and Ohio, Marshall, Brooke (WV).',
+      'Acquisition and inventory focus varies by county across the Ohio Valley.',
   },
   {
     icon: TrendingUp,
-    title: 'All Use Cases',
+    title: 'Property Types',
     description:
-      'Hunting and recreational tracts, farm ground, residential development sites, commercial parcels — we source all of it.',
+      'Network interests may include recreational tracts, farm ground, development sites, and commercial parcels.',
   },
   {
     icon: Users,
-    title: 'No Fees, Ever',
+    title: 'Clear Criteria',
     description:
-      'Joining the buyer network costs nothing. We make our margin on the buy side. Your cost is zero.',
+      'Tell us the counties, acreage, intended use, and budget range that fit your current buying plans.',
   },
 ];
 
@@ -55,9 +55,9 @@ export default function InvestorPortal() {
               <span className="block text-amber mt-1">Deal List</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              We're building the Ohio Valley's go-to network for off-market land deals.
-              Tell us what you're looking for and we'll contact you directly when a matching
-              parcel becomes available. No spam. No fees. Just deals.
+              We’re building a direct network for Ohio Valley land opportunities.
+              Tell us what you’re looking for, and we may contact you when a parcel matches
+              your stated criteria and the opportunity is ready to share.
             </p>
           </div>
 
@@ -101,8 +101,8 @@ export default function InvestorPortal() {
           {/* Honest disclaimer */}
           <p className="mt-10 text-center text-xs text-muted-foreground max-w-xl mx-auto">
             Ohio Valley Land Partners operates as a principal buyer — not a licensed real estate
-            agent or broker. Deal flow is growing. Joining the list now ensures you're first
-            in line when parcels matching your criteria become available.
+            agent or broker. Inventory and deal flow vary. Joining the list gives OVLP permission
+            to contact you when an opportunity appears to match your stated criteria.
           </p>
         </div>
       </section>

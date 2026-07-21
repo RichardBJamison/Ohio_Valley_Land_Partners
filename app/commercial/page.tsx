@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { silos } from '@/lib/seo-config';
+import { silos, siteConfig } from '@/lib/seo-config';
 import { ArrowRight, Building2, MapPin, Phone } from 'lucide-react';
 import Link from 'next/link';
 import { BreadcrumbSchema } from '@/components/seo/json-ld';
@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: silos.commercial.title,
   description: silos.commercial.description,
   keywords: silos.commercial.keywords,
+  alternates: {
+    canonical: `${siteConfig.url}${silos.commercial.path}`,
+  },
 };
 
 export default function CommercialPage() {

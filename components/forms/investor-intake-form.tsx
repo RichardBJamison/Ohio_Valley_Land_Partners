@@ -9,18 +9,6 @@ import { Label } from '@/components/ui/label';
 import { CheckCircle, Loader2 } from 'lucide-react';
 import { trackConversionEvent } from '@/components/analytics/conversion-tracker';
 
-const counties = [
-  'Franklin County, OH',
-  'Belmont County, OH',
-  'Jefferson County, OH',
-  'Columbiana County, OH',
-  'Harrison County, OH',
-  'Carroll County, OH',
-  'Ohio County, WV',
-  'Marshall County, WV',
-  'Brooke County, WV',
-];
-
 const useCases = [
   'Hunting / Recreation',
   'Farming / Agriculture',
@@ -188,7 +176,7 @@ export function InvestorIntakeForm() {
             id="inv-budget"
             value={form.budget}
             onChange={(e) => setForm((f) => ({ ...f, budget: e.target.value }))}
-            className="flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-render"
+            className="flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
           >
             <option value="">Select...</option>
             {budgetRanges.map((b) => <option key={b} value={b}>{b}</option>)}
@@ -198,7 +186,7 @@ export function InvestorIntakeForm() {
 
       <TurnstileWidget onToken={setTurnstileToken} onExpire={onTurnstileExpire} />
 
-      {error && <p className="text-sm text-red-500">{error}</p>}
+      {error && <p className="text-sm text-red-500" role="alert">{error}</p>}
 
       <Button type="submit" size="lg" className="w-full h-12 font-bold" disabled={loading}>
         {loading ? (

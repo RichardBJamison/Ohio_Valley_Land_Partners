@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { silos } from '@/lib/seo-config';
+import { silos, siteConfig } from '@/lib/seo-config';
 import { ArrowRight, Home, Users, TreePine } from 'lucide-react';
 import Link from 'next/link';
 import { BreadcrumbSchema } from '@/components/seo/json-ld';
@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: silos.development.title,
   description: silos.development.description,
   keywords: silos.development.keywords,
+  alternates: {
+    canonical: `${siteConfig.url}${silos.development.path}`,
+  },
 };
 
 export default function DevelopmentPage() {

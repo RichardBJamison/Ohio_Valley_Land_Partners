@@ -4,7 +4,7 @@ import { ArrowRight, CalendarDays, Download, FileText, Mail } from 'lucide-react
 import { currentMemberMailer } from '@/lib/member-mailer';
 
 export const metadata: Metadata = {
-  title: 'Weekly Deal Mailer | OVLP Builders Network',
+  title: 'Builders Network Weekly Deal Mailer',
   description:
     'View the current Ohio Valley Land Partners weekly land opportunity mailer and join the OVLP Builders Network.',
   alternates: {

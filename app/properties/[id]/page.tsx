@@ -11,8 +11,12 @@ interface Props {
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Ohio Valley Land — Join the Buyer Network',
-    description: 'Get first access to off-market land deals in the Ohio Valley. Join our buyer network — no fees, no spam, just deals.',
+    title: 'Buyer Network',
+    description: 'Join the Ohio Valley Land Partners buyer network and share the counties, acreage, and property types that match your buying criteria.',
+    robots: {
+      index: false,
+      follow: true,
+    },
   };
 }
 
@@ -43,15 +47,15 @@ export default async function PropertyPage() {
                 </div>
                 <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl leading-tight">
                   Ohio Valley Land Deals
-                  <span className="block text-amber mt-1">Go to Our List First.</span>
+                  <span className="block text-amber mt-1">Shared With Matching Buyers.</span>
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                  We don't list properties publicly. When we acquire a parcel that's ready to sell,
-                  buyers on our list get a direct call — before anything hits the open market.
+                  We don’t list every property publicly. When a parcel is ready to share,
+                  OVLP may contact buyers whose stated criteria appear to match.
                 </p>
                 <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                  Tell us what you're looking for — acreage, county, use case — and we'll reach
-                  out when we have a match. No spam. No fees. Just deals.
+                  Tell us what you’re looking for — acreage, county, and intended use — so we can
+                  understand which opportunities may be relevant to you.
                 </p>
                 <div className="mt-8">
                   <Link
@@ -67,7 +71,7 @@ export default async function PropertyPage() {
                 <div className="mb-6 text-center">
                   <h2 className="text-xl font-bold text-foreground">Join the Deal List</h2>
                   <p className="text-sm text-muted-foreground mt-1">
-                    Tell us what you want. We call when it's available.
+                    Tell us what fits. We’ll reach out when there may be a match.
                   </p>
                 </div>
                 <InvestorIntakeForm />

@@ -6,13 +6,13 @@ import { communityGiving } from '@/lib/public-copy';
 import { siteConfig } from '@/lib/seo-config';
 
 export const metadata: Metadata = {
-  title: 'Community Commitment',
+  title: { absolute: 'Community — Ohio Valley Land Partners' },
   description:
-    'Ohio Valley Land Partners is rooted in the Ohio Valley and has committed 5% of company profits to local community reinvestment as the business grows.',
+    'Ohio Valley Land Partners is rooted in the Ohio Valley — landowners, builders, conservation partners, and families rebuilding after disaster. One valley. One table.',
   keywords: [
     'Ohio Valley community',
     'Ohio land buyer local',
-    'Arc of Appalachia conservation',
+    'Arc of Appalachia partner',
     'East Palestine land buyer',
     'COCIC Franklin County Land Bank',
     'Ohio Valley builders network',
@@ -31,9 +31,9 @@ const COUNTY_PILLS = [
 ];
 
 const HERO_STATS = [
-  { num: '9', label: 'County Pages', sub: 'Published acquisition areas in Ohio & West Virginia' },
-  { num: 'Regional', label: 'Land Context', sub: 'County and parcel facts vary' },
-  { num: 'Direct', label: 'Principal Buyer', sub: 'Property-specific decisions and communication' },
+  { num: '9', label: 'Active Counties', sub: 'Ohio & West Virginia campaigns' },
+  { num: '1.77M+', label: 'Valley Acres', sub: 'The landscape we know and work in' },
+  { num: 'Local', label: 'Not a Land Grab', sub: 'Intentional buyer, not an algorithm' },
 ];
 
 const PILLARS = [
@@ -51,13 +51,13 @@ const PILLARS = [
   },
   {
     icon: '🏘️',
-    title: 'The Organizations',
+    title: 'The Partners',
     description:
-      'Organizations already doing stewardship, recovery, and stabilization in the counties where we work.',
+      'Organizations already doing stewardship, recovery, and stabilization — we stand with them because we work in the same counties.',
   },
 ];
 
-const COMMUNITY_ORGANIZATIONS = [
+const PARTNERS = [
   {
     tag: 'Conservation',
     name: 'Arc of Appalachia',
@@ -142,7 +142,7 @@ export default function CommunityPage() {
               </h1>
               <p className="mt-6 text-base sm:text-lg text-white/80 leading-relaxed max-w-lg">
                 OVLP isn&apos;t a buyer that happens to operate here — we&apos;re rooted in these counties.
-                Landowners, builders, conservation work, and families rebuilding after disaster.
+                Landowners, builders, conservation partners, families rebuilding after disaster.
                 One valley. One table.
               </p>
 
@@ -188,7 +188,7 @@ export default function CommunityPage() {
 
       {/* County ribbon */}
       <div className="bg-forest text-white/90 text-center px-6 py-4 border-b border-white/10">
-        <p className="text-sm font-medium">Published county areas in Ohio and West Virginia</p>
+        <p className="text-sm font-medium">Active across the Ohio Valley</p>
         <div className="flex flex-wrap justify-center gap-2.5 mt-2.5">
           {COUNTY_PILLS.map((county) => (
             <span
@@ -206,10 +206,10 @@ export default function CommunityPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <p className="heading-serif text-amber text-2xl mb-3">What community means here</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Land. People. Community.</h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Land. People. Partners.</h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              This page is not a giving report. It explains the counties, families, and kinds of
-              regional work that provide context for OVLP’s forward-looking commitment.
+              Community on this page isn&apos;t a giving report — it&apos;s the counties, the families,
+              and the organizations doing real work alongside us.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -231,16 +231,16 @@ export default function CommunityPage() {
       <section className="py-20 sm:py-24 bg-card">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
-            <p className="heading-serif text-amber text-2xl mb-3">Where local work is happening</p>
+            <p className="heading-serif text-amber text-2xl mb-3">Where we show up</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight">
               Same counties.
               <br />
-              Shared responsibility.
+              Same obligation.
             </h2>
             <p className="mt-5 text-muted-foreground leading-relaxed">
-              Franklin County land banking. Columbiana County recovery. Appalachian conservation.
-              The organizations below illustrate work happening across the region; inclusion does
-              not claim a partnership, completed contribution, or announced recipient.
+              Franklin County infill. Columbiana County recovery. Belmont timber and watershed.
+              When we close a deal in a county, we&apos;re already connected to the people and organizations
+              doing the hardest work there.
             </p>
           </div>
           <div className="rounded-3xl border border-border bg-muted p-8 shadow-sm">
@@ -259,21 +259,19 @@ export default function CommunityPage() {
         </div>
       </section>
 
-      {/* Regional organizations — informational, not claimed recipients */}
+      {/* Partners */}
       <section className="py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <p className="heading-serif text-amber text-2xl mb-3">Regional work we pay attention to</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Organizations doing real work.</h2>
+            <p className="heading-serif text-amber text-2xl mb-3">Organizations we stand with</p>
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Real partners. Real work.</h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              Stewardship, recovery, and land banking in the same broader region. OVLP’s 5%
-              commitment is forward-looking; these examples do not identify recipients. Verified
-              distributions will be documented as they occur.
+              Stewardship, recovery, and land banking — in the same counties where we buy and close.
             </p>
           </div>
 
           <div className="flex flex-col gap-8">
-            {COMMUNITY_ORGANIZATIONS.map((partner, i) => (
+            {PARTNERS.map((partner, i) => (
               <article
                 key={partner.name}
                 className={`grid grid-cols-1 lg:grid-cols-2 rounded-3xl overflow-hidden border border-border bg-card shadow-sm min-h-[320px] ${
@@ -333,8 +331,8 @@ export default function CommunityPage() {
             <p className="heading-serif text-[#e8c47a] text-xl mb-3">Personal to us</p>
             <h2 className="text-2xl sm:text-3xl font-extrabold">Why East Palestine Matters</h2>
             <p className="mt-4 text-sm sm:text-base text-white/80 leading-relaxed">
-              Columbiana County is one of our published acquisition areas. Families and public
-              agencies continue to navigate the long-term questions following the 2023 derailment.
+              Columbiana County is one of our core markets. Families there are still living with contaminated
+              soil, water, and air — some selling to relocate, others staying to rebuild.
             </p>
             <p className="mt-3 text-sm sm:text-base text-white/80 leading-relaxed">
               They deserve a buyer who understands what happened — not one treating it as just another deal.
@@ -363,22 +361,22 @@ export default function CommunityPage() {
           <div className="rounded-3xl bg-muted p-10 flex flex-col justify-center">
             <h3 className="text-xl sm:text-2xl font-extrabold">Own land in the Ohio Valley?</h3>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-              Start with the address. OVLP reviews each property directly and explains whether it
-              appears to fit our current acquisition criteria.
+              Direct buyer. No agents. No runaround. We know these counties because we work them every day —
+              not because a spreadsheet told us to.
             </p>
             <Link
               href="/#property-review"
               data-analytics-event="property_review_cta_click"
               className="mt-6 inline-flex w-fit items-center gap-2 rounded-lg bg-amber px-5 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
             >
-              Start My Property Review <ArrowRight className="h-4 w-4" />
+              Request Property Review <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
           <div className="rounded-3xl bg-forest p-10 flex flex-col justify-center text-white">
             <h3 className="text-xl sm:text-2xl font-extrabold">Build or develop here?</h3>
             <p className="mt-4 text-sm text-white/75 leading-relaxed">
-              The Builders Network lets members share their criteria so OVLP can contact them when
-              matching inventory becomes available.
+              The Builders Network gives members first look at off-market parcels across the valley —
+              before they go anywhere public.
             </p>
             <Link
               href="/investor-portal"

@@ -144,7 +144,14 @@ export default function LandPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="text-center mb-14">
               <h2 className="text-3xl font-bold text-foreground">How It Works</h2>
-              <p className="mt-4 text-muted-foreground">Five clear steps, with no obligation to accept a proposal.</p>
+              <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-muted-foreground sm:text-lg">
+                These five steps turn an unfamiliar land decision into a clear, property-specific
+                conversation. You share the address; OVLP reviews available tax, access, title,
+                zoning, surrounding activity, and possible-use information; then we speak with you
+                before deciding whether a written proposal makes sense. If the parcel fits our
+                current buying criteria, we explain the proposed next step clearly. You remain free
+                to ask questions, compare your options, and decide without pressure or obligation.
+              </p>
             </div>
             <ProcessFlipGrid steps={process} />
           </div>

@@ -13,6 +13,7 @@ import { siteConfig } from '@/lib/seo-config';
 import Script from 'next/script';
 import { GhlBubbleOnly } from '@/components/ghl-bubble-only';
 import { GhlChatEmbed } from '@/components/ghl-chat-embed';
+import { AmbientCursor } from '@/components/ambient-cursor';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -132,6 +133,7 @@ export default function RootLayout({
         <PublicOnly>
           <Footer />
           <MobileStickyCta />
+          <AmbientCursor />
           {/* GHL LeadConnector — public pages only; marker div for A2P scanner; script loads post-hydration. */}
           <GhlChatEmbed />
           <GhlBubbleOnly />

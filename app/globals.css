@@ -150,6 +150,90 @@
   animation: float 4s ease-in-out infinite;
 }
 
+/* Fine-pointer ambient cursor — Resonant behavior in OVLP gold. */
+.ambient-cursor {
+  --cursor-accent: #c8963a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--cursor-accent);
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform;
+  transition: opacity 180ms ease;
+}
+
+.ambient-cursor::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--cursor-accent);
+  content: "";
+  opacity: 0.2;
+  transform: translate(-50%, -50%);
+  transition: width 160ms ease, height 160ms ease, opacity 160ms ease;
+}
+
+.ambient-cursor svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 36px;
+  height: 36px;
+  overflow: visible;
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.ambient-cursor circle {
+  fill: none;
+  stroke: var(--cursor-accent);
+  stroke-width: 1;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  opacity: 0.9;
+  transition: stroke-dashoffset 120ms linear;
+}
+
+.ambient-cursor.is-visible {
+  opacity: 1;
+}
+
+.ambient-cursor.is-paused {
+  opacity: 0 !important;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.ambient-cursor.is-interactive::after {
+  width: 34px;
+  height: 34px;
+  opacity: 0.14;
+}
+
+.ambient-cursor.is-interactive circle {
+  opacity: 1;
+}
+
+@media (hover: hover) and (pointer: fine) and (min-width: 992px) {
+  .ambient-cursor {
+    display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-cursor {
+    display: none !important;
+  }
+}
+
 /* ===== ARCHED IMAGE FRAMES — Mynd-style ===== */
 .arch-frame {
   border-radius: 50% 50% 0 0 / 60% 60% 0 0;

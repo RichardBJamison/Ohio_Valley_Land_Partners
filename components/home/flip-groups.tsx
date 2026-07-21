@@ -637,7 +637,7 @@ export function ProcessFlipGrid({ steps }: { steps: ProcessItem[] }) {
         ))}
       </div>
 
-      <div ref={runwayRef} className="relative hidden h-[300vh] lg:block">
+      <div ref={runwayRef} className="relative -mt-[18vh] hidden h-[300vh] lg:block">
         <div ref={shellRef} className="sticky top-0 flex h-screen items-center">
           <div
             ref={rowRef}

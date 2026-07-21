@@ -62,7 +62,7 @@ export const silos = {
   development: {
     title: 'Residential Development',
     path: '/development',
-    description: 'Long-term residential development projects and investor relations',
+    description: 'Explore long-term residential development opportunities, acquisition partnerships, and investor information from Ohio Valley Land Partners',
     keywords: 'residential development, investor relations, long-term projects, Ohio Valley',
   },
   guides: {

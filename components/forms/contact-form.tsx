@@ -42,6 +42,8 @@ interface ContactFormProps {
 }
 
 export function ContactForm({ defaultLeadType = 'inquiry' }: ContactFormProps) {
+  const [startedAt] = useState(() => Date.now());
+  const [website, setWebsite] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [turnstileToken, setTurnstileToken] = useState('');
   const onTurnstileExpire = useCallback(() => setTurnstileToken(''), []);
@@ -68,6 +70,8 @@ export function ContactForm({ defaultLeadType = 'inquiry' }: ContactFormProps) {
           ...values,
           source: 'website',
           turnstileToken,
+          startedAt,
+          website,
         }),
       });
 
@@ -109,6 +113,16 @@ export function ContactForm({ defaultLeadType = 'inquiry' }: ContactFormProps) {
         className="space-y-6"
         data-analytics-form="contact_form"
       >
+        <input
+          type="text"
+          name="website"
+          value={website}
+          onChange={(event) => setWebsite(event.target.value)}
+          className="hidden"
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+        />
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           <FormField
             control={form.control}

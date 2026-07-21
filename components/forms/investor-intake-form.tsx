@@ -34,6 +34,8 @@ const acreageRanges = [
 ];
 
 export function InvestorIntakeForm() {
+  const [startedAt] = useState(() => Date.now());
+  const [website, setWebsite] = useState('');
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -68,7 +70,7 @@ export function InvestorIntakeForm() {
         .split(/[\n,]+/)
         .map((c) => c.trim())
         .filter(Boolean);
-      const payload = { ...form, counties: countiesArray, turnstileToken };
+      const payload = { ...form, counties: countiesArray, turnstileToken, startedAt, website };
       const res = await fetch('/api/investor-intake', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -106,6 +108,16 @@ export function InvestorIntakeForm() {
       className="flex flex-col gap-5"
       data-analytics-form="builders_network_form"
     >
+      <input
+        type="text"
+        name="website"
+        value={website}
+        onChange={(event) => setWebsite(event.target.value)}
+        className="hidden"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+      />
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div className="flex flex-col gap-1.5">
           <Label htmlFor="inv-name">Full Name</Label>

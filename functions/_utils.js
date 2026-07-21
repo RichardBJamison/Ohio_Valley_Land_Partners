@@ -37,7 +37,7 @@ export async function readJsonBody(request, maxBodyBytes = MAX_BODY_BYTES) {
 }
 
 export async function verifyTurnstile(token, secret, ip) {
-  if (!secret) return true;
+  if (!secret) return null;
   if (!token) return false;
 
   const body = new URLSearchParams({ secret, response: token });
@@ -78,8 +78,14 @@ export async function guardFormRequest(context, options = {}) {
     return { ok: false, response: jsonResponse({ error: 'Invalid request' }, 400) };
   }
 
+  const startedAt = Number(body.startedAt);
+  const elapsedMs = Date.now() - startedAt;
+  if (body.website || !Number.isFinite(startedAt) || elapsedMs < 1500 || elapsedMs > 2 * 60 * 60 * 1000) {
+    return { ok: false, response: jsonResponse({ error: 'Security check failed' }, 403) };
+  }
+
   const turnstileOk = await verifyTurnstile(body.turnstileToken, env.TURNSTILE_SECRET_KEY, clientIp(request));
-  if (!turnstileOk) {
+  if (turnstileOk === false) {
     return { ok: false, response: jsonResponse({ error: 'Security check failed' }, 403) };
   }
 

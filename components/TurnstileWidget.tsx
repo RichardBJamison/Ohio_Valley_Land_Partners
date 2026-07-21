@@ -32,6 +32,8 @@ export function TurnstileWidget({ onToken, onExpire }: Props) {
       widgetId.current = window.turnstile.render(ref.current, {
         sitekey: siteKey,
         theme: 'light',
+        appearance: 'interaction-only',
+        action: 'form_submission',
         callback: onToken,
         'expired-callback': onExpire,
       });

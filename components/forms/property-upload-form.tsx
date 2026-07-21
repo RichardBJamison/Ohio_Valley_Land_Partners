@@ -9,6 +9,8 @@ import { CheckCircle, Upload, FileSpreadsheet, Download, Loader2, X } from 'luci
 import { trackConversionEvent } from '@/components/analytics/conversion-tracker';
 
 export function PropertyUploadForm() {
+  const [startedAt] = useState(() => Date.now());
+  const [website, setWebsite] = useState('');
   const [file, setFile] = useState<File | null>(null);
   const [uploaderName, setUploaderName] = useState('');
   const [uploaderEmail, setUploaderEmail] = useState('');
@@ -84,6 +86,8 @@ export function PropertyUploadForm() {
           fileName: file.name,
           fileData: base64,
           turnstileToken,
+          startedAt,
+          website,
         }),
       });
       if (!res.ok) throw new Error('Upload failed');
@@ -118,6 +122,16 @@ export function PropertyUploadForm() {
       className="flex flex-col gap-6"
       data-analytics-form="property_upload_form"
     >
+      <input
+        type="text"
+        name="website"
+        value={website}
+        onChange={(event) => setWebsite(event.target.value)}
+        className="hidden"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+      />
       {/* Uploader info */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div className="flex flex-col gap-1.5">

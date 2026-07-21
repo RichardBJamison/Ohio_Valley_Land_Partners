@@ -1,4 +1,5 @@
 import { escapeHtml, guardFormRequest, jsonResponse } from '../_utils.js';
+import { sendNotification, upsertCrmContact } from '../_delivery.js';
 
 const MAX_FILE_BYTES = 10 * 1024 * 1024;
 const MAX_REQUEST_BYTES = 15 * 1024 * 1024;
@@ -44,39 +45,25 @@ export async function onRequestPost(context) {
     const safeName = String(name).trim().replace(/[\r\n]+/g, ' ').slice(0, 80);
     const safeEmail = String(email).trim().replace(/[\r\n]+/g, ' ').slice(0, 254);
 
-    const res = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${context.env.RESEND_API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        from: 'OVLP Website <noreply@ohiovalleylandpartners.com>',
-        to: 'info@ohiovalleylandpartners.com',
-        subject: `Property Upload — ${safeName}`,
-        html: `
-          <h2>New Property Upload</h2>
-          <p><strong>From:</strong> ${escapeHtml(safeName)}</p>
-          <p><strong>Email:</strong> ${escapeHtml(safeEmail)}</p>
-          <p><strong>File:</strong> ${escapeHtml(safeFileName)}</p>
-          <p><strong>Source:</strong> Builders Network — Property Uploads page</p>
-          <p>The spreadsheet is attached below.</p>
-        `,
-        attachments: [
-          {
-            filename: safeFileName,
-            content: fileData,
-            type: contentType,
-          },
-        ],
-      }),
+    await upsertCrmContact(context.env, {
+      name: safeName,
+      email: safeEmail,
+      source: 'OVLP Website — Property Upload',
+      tags: ['property-upload', 'builders-network'],
     });
-
-    if (!res.ok) {
-      const err = await res.text();
-      console.error('Resend error:', err);
-      return jsonResponse({ error: 'Failed to submit' }, 500);
-    }
+    await sendNotification(context.env, {
+      subject: `Property Upload — ${safeName}`,
+      replyTo: safeEmail,
+      html: `
+        <h2>New Property Upload</h2>
+        <p><strong>From:</strong> ${escapeHtml(safeName)}</p>
+        <p><strong>Email:</strong> ${escapeHtml(safeEmail)}</p>
+        <p><strong>File:</strong> ${escapeHtml(safeFileName)}</p>
+        <p><strong>Source:</strong> Builders Network — Property Uploads page</p>
+        <p>The spreadsheet is attached below.</p>
+      `,
+      attachments: [{ filename: safeFileName, content: fileData, type: contentType }],
+    });
 
     return jsonResponse({ success: true }, 201);
   } catch (err) {

@@ -161,9 +161,18 @@ Object.entries(securityHeaders).forEach(([name, value]) => {
   assert(Boolean(value), 'Missing security header: ' + name);
 });
 assert(homeHtml.includes('G-7FQDXC8DVC'), 'GA4 measurement ID is missing from homepage');
-assert(homeHtml.includes('widgets.leadconnectorhq.com'), 'GHL widget loader is missing from homepage');
 assert(homeHtml.includes('tel:'), 'Phone fallback link is missing from homepage');
 assert(homeHtml.includes('mailto:'), 'Email fallback link is missing from shared page output');
+
+const homeScriptPaths = [...homeHtml.matchAll(/<script[^>]+src="([^"]+)"/gi)]
+  .map((match) => localPath(match[1], '/'))
+  .filter(Boolean);
+const homeScriptBodies = await mapLimit(homeScriptPaths, 6, async (pathname) => {
+  const { response } = await request(pathname);
+  return response.status === 200 ? response.text() : '';
+});
+const ghlWidgetBundleDetected = homeScriptBodies.some((body) => body.includes('widgets.leadconnectorhq.com'));
+assert(ghlWidgetBundleDetected, 'GHL widget loader is missing from the shipped client bundle');
 
 const assets = new Set();
 for (const pathname of ['/', '/land', '/community', '/blog', '/ohio-valley-guides']) {
@@ -249,6 +258,7 @@ const report = {
   assets: assetResults,
   formValidationResults,
   foreignOriginStatus: badOrigin.response.status,
+  ghlWidgetBundleDetected,
   robots: {
     status: robotsResult.response.status,
     text: robotsText,

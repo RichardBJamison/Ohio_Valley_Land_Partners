@@ -1,22 +1,22 @@
 # Ohio Valley Land Partners — Marketing Site Handoff
 
-*Last updated: 2026-06-21 · source: GROK · Status: LIVE — weekend copy pass deployed (`6700b42`)*
+*Last updated: 2026-07-20 · source: CODEX · Status: LIVE — conversion, Flip, SEO, analytics, form-hardening, and performance wave deployed*
 
 ---
 
-## Conversion-copy mockup — LOCAL REVIEW (2026-07-20)
+## Conversion and Flip release — LIVE (2026-07-20)
 
-- **Branch:** `codex/ovlp-conversion-copy-mockup`
-- **Worktree:** `/Users/macbook15/Me-Nexus/working/ovlp-conversion-copy-mockup`
-- **Local preview:** `http://127.0.0.1:8894/?v=20260720-flips-v1`
-- **Production:** unchanged; nothing pushed or deployed
-- **Scope:** seller clarity, Property Review terminology, form-language consistency, principal trust, seller empathy, five-step process, FAQ quality, county acquisition/guide intent separation, risky-claim cleanup, and GA4 conversion events
-- **Preserved:** county URLs, canonicals, sitemap, forms/API endpoints, Resend routing, GHL A2P widget, GA4, logo, colors, typography, imagery, animations, breakpoints, and shared design system
-- **Verification:** `tsc --noEmit` passed; production build passed for 63 pages; ESLint passed for every changed TS/TSX file; 9 acquisition pages and 9 county guides generated; key local URLs return HTTP 200
-- **Visual-review note:** the cache-busted mockup is open in Chrome. The Chrome review connection did not attach despite extension/native-host checks passing, so interactive automated visual QA was not substituted with another browser.
-- **Visual-review iteration:** Removed Introductions from the desktop and mobile header while retaining its footer link; kept the header CTAs on one line; and balanced the proof row as Direct / Ohio Valley / Your Choice / Principal-Led, with a small bullseye on the final item.
-- **Flip-program iteration:** Reused Richard’s recorded `rotateX` motion: the nine county links follow the county scroll scrub, the eight homepage FAQs follow the lag-two reading order, and the four final trust cards use the Sulieman random-pair three-second beat. Reverse faces use OVLP meadow green; links, FAQ answers, wording, and reduced-motion access remain intact.
-- **Pickup:** Richard reviews the Chrome mockup. Only after explicit approval should this branch be pushed, merged, or deployed.
+- **Production branch:** `main`
+- **Release commits:** `3dd4430` (seller clarity), `d16c34f` (header/proof balance), `c42aa29` (Flip programs), `d4703bc` (SEO/forms/performance audit)
+- **Cloudflare deployment:** `4bfcbee7-8e6b-4548-87e7-c70b0f2acf43` from source `d4703bc`
+- **Scope shipped:** seller clarity, Property Review terminology, consistent first-step form language, principal trust, seller empathy, five-step process, FAQ quality, county acquisition/guide intent separation, risky-claim cleanup, GA4 conversion events, schema/canonical cleanup, upload hardening, and asset/cache optimization
+- **Navigation:** Introductions was removed from desktop/mobile primary navigation and remains available in the footer. Existing portal access remains intact.
+- **Flip programs:** nine county links use the recorded county scroll scrub; eight homepage FAQs use the lag-two sequence; four trust cards use the Sulieman random-pair three-second beat. Reverse faces use OVLP meadow green. Reduced-motion, focus, click, and FAQ access remain intact.
+- **Preserved:** every existing county URL, forms/API endpoints, Resend routing, GHL A2P widget, GA4 ID `G-7FQDXC8DVC`, logo design, colors, typography, imagery, existing animation language, breakpoints, and shared design system. No CSS files changed.
+- **Verification:** production build passed for 63 pages; generated-site audit passed with 59 HTML pages, 49 indexable sitemap URLs, 9 acquisition pages, 9 county guides, zero schema/canonical/metadata errors, and every required analytics event present. Form-origin/validation/upload/security smoke tests passed. All 29 sampled live routes/assets returned HTTP 200 after edge propagation.
+- **Production payload:** new hero copy and all three Flip markers confirmed live; acquisition/guide/article titles and canonicals confirmed; optimized `logo.png` is 81,402 bytes; security and cache headers confirmed; IndexNow accepted the 49-URL submission workflow without an error response.
+- **Visual QA note:** Richard reviewed and approved the cache-busted Chrome mockup before release. Automated Chrome attachment did not connect in the original restricted desktop chat despite the extension/native-host installation checking clean, so no substitute browser automation was used.
+- **Preserved local work:** untracked `mockups/county-flip-trick.html` remains untouched and uncommitted in the canonical worktree.
 
 ---
 

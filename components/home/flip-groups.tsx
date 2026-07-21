@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { CSSProperties, SyntheticEvent } from 'react';
 import Link from 'next/link';
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ArrowRight, ChevronDown, MapPin, TreePine } from 'lucide-react';
 
 type CountyItem = {
   slug: string;
@@ -20,6 +20,20 @@ type TrustItem = {
   label: string;
   value: string;
   sub: string;
+};
+
+export type AccountabilityItem = {
+  name: string;
+  description: string;
+  href: string;
+  icon: 'tree' | 'map';
+  tag: string;
+};
+
+export type ProcessItem = {
+  step: string;
+  title: string;
+  description: string;
 };
 
 const FLIP_TRANSITION = 'transform 550ms cubic-bezier(0.2, 0.8, 0.2, 1)';
@@ -210,24 +224,35 @@ export function HomepageFAQFlipList({ faqs }: { faqs: FAQItem[] }) {
     }
 
     let frame = 0;
-    const lag = 2;
+    const sequenceLead = 1;
 
     const update = () => {
       frame = 0;
       const items = itemRefs.current;
       const count = faqs.length;
       const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+      const firstItem = items[0];
       const lastItem = items[count - 1];
-      if (!lastItem) return;
+      if (!firstItem || !lastItem) return;
 
-      const crossedViewportBottom = (element: HTMLElement | null) =>
-        Boolean(element && element.getBoundingClientRect().top <= viewportHeight);
+      const firstRect = firstItem.getBoundingClientRect();
+      const lastRect = lastItem.getBoundingClientRect();
+      const sequenceStep =
+        count > 1
+          ? Math.max(1, (lastRect.top - firstRect.top) / (count - 1))
+          : Math.max(1, lastRect.height);
+
+      const crossedViewportCue = (element: HTMLElement | null, cueOffset = 0) =>
+        Boolean(element && element.getBoundingClientRect().top <= viewportHeight - cueOffset);
 
       const next = faqs.map((_, index) => {
-        const triggerIndex = index + lag;
-        if (triggerIndex < count) return crossedViewportBottom(items[triggerIndex]);
-        if (index === count - 1) return crossedViewportBottom(items[index]);
-        return crossedViewportBottom(lastItem);
+        const triggerIndex = index + sequenceLead;
+        if (triggerIndex < count) return crossedViewportCue(items[triggerIndex]);
+
+        // Continue the cadence past the final card instead of collapsing the
+        // remaining flips onto one shared viewport-bottom trigger.
+        const overflowSteps = triggerIndex - (count - 1);
+        return crossedViewportCue(lastItem, sequenceStep * overflowSteps);
       });
 
       setAutoFlipped((current) => {
@@ -257,7 +282,7 @@ export function HomepageFAQFlipList({ faqs }: { faqs: FAQItem[] }) {
   };
 
   return (
-    <dl className="flex flex-col gap-4 [perspective:1200px]" data-flip-program="faq-lag-two">
+    <dl className="flex flex-col gap-4 [perspective:1200px]" data-flip-program="faq-lead-one">
       {faqs.map((faq, index) => {
         const flipped = !reducedMotion && autoFlipped[index] && !manualFront.has(index);
 
@@ -319,9 +344,9 @@ export function HomepageFAQFlipList({ faqs }: { faqs: FAQItem[] }) {
   );
 }
 
-export function TrustFlipGrid({ items }: { items: TrustItem[] }) {
+function useRandomPairFlip(itemCount: number) {
   const rootRef = useRef<HTMLDivElement>(null);
-  const [flipped, setFlipped] = useState<boolean[]>(() => items.map(() => false));
+  const [flipped, setFlipped] = useState<boolean[]>(() => Array(itemCount).fill(false));
   const [inView, setInView] = useState(false);
   const reducedMotion = useReducedMotion();
 
@@ -339,27 +364,326 @@ export function TrustFlipGrid({ items }: { items: TrustItem[] }) {
 
   useEffect(() => {
     if (reducedMotion) {
-      setFlipped(items.map(() => false));
+      setFlipped(Array(itemCount).fill(false));
       return;
     }
-    if (!inView || items.length < 2) return;
+    if (!inView || itemCount < 1) return;
 
     const flipRandomPair = () => {
       if (document.hidden) return;
 
-      const indexes = items.map((_, index) => index);
+      const indexes = Array.from({ length: itemCount }, (_, index) => index);
       for (let index = indexes.length - 1; index > 0; index -= 1) {
         const swapIndex = Math.floor(Math.random() * (index + 1));
         [indexes[index], indexes[swapIndex]] = [indexes[swapIndex], indexes[index]];
       }
-      const selected = new Set(indexes.slice(0, 2));
+      const selected = new Set(indexes.slice(0, Math.min(2, itemCount)));
 
-      setFlipped((current) => current.map((value, index) => (selected.has(index) ? !value : value)));
+      setFlipped((current) =>
+        Array.from({ length: itemCount }, (_, index) =>
+          selected.has(index) ? !current[index] : Boolean(current[index]),
+        ),
+      );
     };
 
     const timer = window.setInterval(flipRandomPair, 3000);
     return () => window.clearInterval(timer);
-  }, [inView, items, reducedMotion]);
+  }, [inView, itemCount, reducedMotion]);
+
+  return { flipped, reducedMotion, rootRef };
+}
+
+export function AccountabilityFlipGrid({ items }: { items: AccountabilityItem[] }) {
+  const { flipped, reducedMotion, rootRef } = useRandomPairFlip(items.length);
+  const icons = { tree: TreePine, map: MapPin };
+
+  return (
+    <div
+      ref={rootRef}
+      className="mx-auto mt-16 max-w-4xl grid grid-cols-1 gap-8 sm:grid-cols-2"
+      role="list"
+      data-flip-program="sulieman-random-pair"
+    >
+      {items.map((item, index) => {
+        const Icon = icons[item.icon];
+        const showingBack = !reducedMotion && flipped[index];
+
+        const face = (back: boolean) => (
+          <div
+            className={`group relative col-start-1 row-start-1 flex flex-col gap-6 rounded-2xl border p-8 transition-shadow hover:shadow-lg ${
+              back
+                ? 'border-forest/20 bg-meadow shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)]'
+                : 'border-border bg-card hover:border-amber/40'
+            }`}
+            style={{
+              ...(back ? backFaceStyle : faceStyle),
+              pointerEvents: showingBack === back ? 'auto' : 'none',
+            }}
+            aria-hidden={showingBack !== back}
+          >
+            <div className="flex items-center justify-between">
+              <div
+                className={`flex h-12 w-12 items-center justify-center rounded-lg transition-colors ${
+                  back
+                    ? 'bg-white/10 text-amber group-hover:bg-amber group-hover:text-forest'
+                    : 'bg-amber/10 text-amber group-hover:bg-amber group-hover:text-forest'
+                }`}
+              >
+                <Icon className="h-6 w-6" />
+              </div>
+              <span
+                className={`rounded-full border px-3 py-1 text-xs font-semibold ${
+                  back ? 'border-amber/40 text-amber' : 'border-amber/20 text-amber/70'
+                }`}
+              >
+                {item.tag}
+              </span>
+            </div>
+            <div>
+              <h3
+                className={`text-xl font-semibold transition-colors group-hover:text-amber ${
+                  back ? 'text-white' : 'text-foreground'
+                }`}
+              >
+                <Link href={item.href} tabIndex={showingBack === back ? 0 : -1}>
+                  <span className="absolute inset-0" />
+                  {item.name}
+                </Link>
+              </h3>
+              <p className={`mt-3 text-sm leading-6 ${back ? 'text-white/75' : 'text-muted-foreground'}`}>
+                {item.description}
+              </p>
+            </div>
+            <div className="mt-auto">
+              <Link
+                href={item.href}
+                tabIndex={showingBack === back ? 0 : -1}
+                className={`text-sm font-semibold transition-colors ${
+                  back ? 'text-amber hover:text-amber/80' : 'text-meadow hover:text-meadow/80'
+                }`}
+              >
+                Learn more &rarr;
+              </Link>
+            </div>
+          </div>
+        );
+
+        return (
+          <article
+            key={item.name}
+            className="relative [perspective:1000px]"
+            role="listitem"
+            aria-label={`${item.name}. ${item.description}`}
+          >
+            <div
+              className="grid h-full [transform-style:preserve-3d]"
+              style={{
+                transform: showingBack ? 'rotateX(180deg)' : 'rotateX(0deg)',
+                transition: 'transform 650ms cubic-bezier(0.4, 0.1, 0.2, 1)',
+              }}
+            >
+              {face(false)}
+              {face(true)}
+            </div>
+          </article>
+        );
+      })}
+    </div>
+  );
+}
+
+export function ProcessFlipGrid({ steps }: { steps: ProcessItem[] }) {
+  const runwayRef = useRef<HTMLDivElement>(null);
+  const shellRef = useRef<HTMLDivElement>(null);
+  const rowRef = useRef<HTMLDivElement>(null);
+  const innerRefs = useRef<Array<HTMLDivElement | null>>([]);
+  const reducedMotion = useReducedMotion();
+
+  useEffect(() => {
+    const runway = runwayRef.current;
+    const shell = shellRef.current;
+    const row = rowRef.current;
+    const inners = innerRefs.current;
+    const count = steps.length;
+    if (!runway || !shell || !row || !count || inners.length !== count || inners.some((inner) => !inner)) {
+      return;
+    }
+
+    const cards = Array.from(row.querySelectorAll<HTMLElement>('[data-process-card]'));
+    const simpleFaces = Array.from(row.querySelectorAll<HTMLElement>('[data-process-simple-face]'));
+    const detailFaces = Array.from(row.querySelectorAll<HTMLElement>('[data-process-detail-face]'));
+    const allComplete = Array(count).fill(1) as number[];
+    let frame = 0;
+    let staticLayout = false;
+
+    const clamp = (value: number, minimum: number, maximum: number) =>
+      Math.max(minimum, Math.min(maximum, value));
+
+    const localFlip = (progress: number, start: number, end: number) => {
+      if (progress <= start) return 0;
+      if (progress >= end) return 1;
+      return (progress - start) / (end - start);
+    };
+
+    const applyAmounts = (next: number[]) => {
+      next.forEach((amount, index) => {
+        const inner = inners[index];
+        const card = cards[index];
+        const simpleFace = simpleFaces[index];
+        const detailFace = detailFaces[index];
+        if (!inner || !card) return;
+
+        inner.style.transform = `rotateX(${amount * 180}deg)`;
+        card.dataset.flipState = amount >= 0.98 ? 'complete' : amount > 0.02 ? 'turning' : 'waiting';
+        simpleFace?.setAttribute('aria-hidden', amount > 0.5 ? 'true' : 'false');
+        detailFace?.setAttribute('aria-hidden', amount > 0.5 ? 'false' : 'true');
+      });
+    };
+
+    const applyStaticLayout = () => {
+      if (!staticLayout) {
+        staticLayout = true;
+        runway.style.height = 'auto';
+        shell.style.position = 'relative';
+        shell.style.height = 'auto';
+      }
+      applyAmounts(allComplete);
+    };
+
+    const applyScrollLayout = () => {
+      if (!staticLayout) return;
+      staticLayout = false;
+      runway.style.removeProperty('height');
+      shell.style.removeProperty('position');
+      shell.style.removeProperty('height');
+    };
+
+    const update = () => {
+      frame = 0;
+      const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+      if (reducedMotion || window.innerWidth < 1024) {
+        applyStaticLayout();
+        return;
+      }
+
+      applyScrollLayout();
+      const rowHeight = row.getBoundingClientRect().height;
+      if (rowHeight > viewportHeight * 0.9) {
+        applyStaticLayout();
+        return;
+      }
+
+      const scrollY = window.scrollY || window.pageYOffset || 0;
+      const runwayRect = runway.getBoundingClientRect();
+      const runwayTop = runwayRect.top + scrollY;
+
+      // Before the sticky phase, the row travels from fully visible at the
+      // viewport bottom to centered. Card 0.2 completes exactly at center.
+      const approachDistance = Math.max(1, (viewportHeight - rowHeight) * 0.5);
+      const fullyVisibleScroll = runwayTop - approachDistance;
+      const approachProgress = clamp((scrollY - fullyVisibleScroll) / approachDistance, 0, 1);
+
+      // Once centered, the sticky runway holds the row while continued scroll
+      // scrubs cards 0.3–0.5 in reading order, then releases after 0.5.
+      const pinnedDistance = Math.max(1, runwayRect.height - viewportHeight);
+      const pinnedProgress = clamp((scrollY - runwayTop) / pinnedDistance, 0, 1);
+
+      applyAmounts([
+        localFlip(approachProgress, 0, 0.72),
+        localFlip(approachProgress, 0.28, 1),
+        localFlip(pinnedProgress, 0.04, 0.32),
+        localFlip(pinnedProgress, 0.36, 0.64),
+        localFlip(pinnedProgress, 0.68, 0.96),
+      ]);
+    };
+
+    const scheduleUpdate = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(update);
+    };
+
+    window.addEventListener('scroll', scheduleUpdate, { passive: true });
+    window.addEventListener('resize', scheduleUpdate, { passive: true });
+    scheduleUpdate();
+
+    return () => {
+      if (frame) window.cancelAnimationFrame(frame);
+      window.removeEventListener('scroll', scheduleUpdate);
+      window.removeEventListener('resize', scheduleUpdate);
+      runway.style.removeProperty('height');
+      shell.style.removeProperty('position');
+      shell.style.removeProperty('height');
+    };
+  }, [reducedMotion, steps.length]);
+
+  const detailContent = (step: ProcessItem) => (
+    <>
+      <div className="mb-6 text-5xl font-black text-amber/15">{step.step}</div>
+      <h3 className="mb-3 text-lg font-bold text-foreground">{step.title}</h3>
+      <p className="text-sm leading-relaxed text-muted-foreground">{step.description}</p>
+    </>
+  );
+
+  return (
+    <>
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:hidden" role="list">
+        {steps.map((step) => (
+          <article key={step.step} className="h-full" role="listitem">
+            <div className="h-full rounded-2xl border border-border bg-background p-8">
+              {detailContent(step)}
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div ref={runwayRef} className="relative hidden h-[300vh] lg:block">
+        <div ref={shellRef} className="sticky top-0 flex h-screen items-center">
+          <div
+            ref={rowRef}
+            className="grid w-full grid-cols-5 gap-8 [perspective:1400px]"
+            role="list"
+            data-flip-program="resonant-sticky-scroll-scrub"
+          >
+            {steps.map((step, index) => (
+              <article key={step.step} className="relative h-full [perspective:1000px]" role="listitem">
+                <div data-process-card className="relative grid h-full" data-flip-state="waiting">
+                  <div
+                    ref={(element) => {
+                      innerRefs.current[index] = element;
+                    }}
+                    className="grid h-full [transform-style:preserve-3d] [will-change:transform]"
+                  >
+                    <div
+                      data-process-simple-face
+                      className="col-start-1 row-start-1 flex min-h-[300px] flex-col items-center justify-center rounded-2xl border border-forest/20 bg-meadow p-8 text-center shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)]"
+                      style={faceStyle}
+                      aria-hidden="false"
+                    >
+                      <div className="text-5xl font-black text-amber">{step.step}</div>
+                      <h3 className="mt-6 text-xl font-bold leading-tight text-white">{step.title}</h3>
+                    </div>
+                    <div
+                      data-process-detail-face
+                      className="col-start-1 row-start-1 min-h-[300px] rounded-2xl border border-border bg-background p-8"
+                      style={backFaceStyle}
+                      aria-hidden="true"
+                    >
+                      {detailContent(step)}
+                    </div>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export function TrustFlipGrid({ items }: { items: TrustItem[] }) {
+  const { flipped, reducedMotion, rootRef } = useRandomPairFlip(items.length);
 
   return (
     <div

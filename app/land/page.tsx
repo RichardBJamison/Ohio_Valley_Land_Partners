@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
 import { silos, siteConfig } from '@/lib/seo-config';
-import { ArrowRight, MapPin, Clock, DollarSign, ShieldCheck, TreePine } from 'lucide-react';
+import { ArrowRight, MapPin, ShieldCheck, TreePine } from 'lucide-react';
 import Link from 'next/link';
 import { BreadcrumbSchema } from '@/components/seo/json-ld';
 import { SellerForm } from '@/components/forms/seller-form';
 import { LegalDisclaimer } from '@/components/legal-disclaimer';
 import { sellerPositioning } from '@/lib/public-copy';
+import { ProcessFlipGrid } from '@/components/home/flip-groups';
+import type { ProcessItem } from '@/components/home/flip-groups';
 
 export const metadata: Metadata = {
   title: silos.land.title,
@@ -28,36 +30,31 @@ const counties = [
   { label: 'Brooke County, WV', slug: 'brooke-county-wv' },
 ];
 
-const process = [
+const process: ProcessItem[] = [
   {
-    step: '01',
-    title: 'Share the property',
+    step: '0.1',
+    title: 'Share the Property',
     description: 'Send the property address and the best email to reach you. A parcel number is helpful later, but it is not required to begin.',
-    icon: MapPin,
   },
   {
-    step: '02',
-    title: 'We review the parcel',
+    step: '0.2',
+    title: 'We Review the Parcel',
     description: 'OVLP examines available property, tax, access, title, zoning, surrounding-market, and possible-use information.',
-    icon: Clock,
   },
   {
-    step: '03',
-    title: 'We speak with you',
+    step: '0.3',
+    title: 'We Speak With You',
     description: 'We ask any necessary questions and explain whether the property appears to fit our current acquisition criteria.',
-    icon: TreePine,
   },
   {
-    step: '04',
-    title: 'You may receive a written proposal',
+    step: '0.4',
+    title: 'You May Receive a Written Proposal',
     description: 'When the property fits and the information supports a purchase, OVLP may present a direct written proposal.',
-    icon: DollarSign,
   },
   {
-    step: '05',
-    title: 'You decide',
+    step: '0.5',
+    title: 'You Decide',
     description: 'There is no obligation to accept. If both sides proceed, the transaction moves through title review and closing.',
-    icon: ShieldCheck,
   },
 ];
 
@@ -149,21 +146,7 @@ export default function LandPage() {
               <h2 className="text-3xl font-bold text-foreground">How It Works</h2>
               <p className="mt-4 text-muted-foreground">Five clear steps, with no obligation to accept a proposal.</p>
             </div>
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
-              {process.map((step) => {
-                const Icon = step.icon;
-                return (
-                  <div key={step.step} className="relative rounded-2xl border border-border bg-background p-8">
-                    <div className="text-5xl font-black text-amber/15 mb-4">{step.step}</div>
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber/10 text-amber mb-4">
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <h3 className="text-lg font-bold text-foreground mb-3">{step.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
-                  </div>
-                );
-              })}
-            </div>
+            <ProcessFlipGrid steps={process} />
           </div>
         </section>
 

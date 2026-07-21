@@ -1,8 +1,14 @@
 import type { Metadata } from 'next';
 import { HeroSection } from '@/components/home/hero-section';
-import { CountyFlipGrid, HomepageFAQFlipList, TrustFlipGrid } from '@/components/home/flip-groups';
+import {
+  AccountabilityFlipGrid,
+  CountyFlipGrid,
+  HomepageFAQFlipList,
+  TrustFlipGrid,
+} from '@/components/home/flip-groups';
+import type { AccountabilityItem } from '@/components/home/flip-groups';
 import { FAQSchema } from '@/components/seo/json-ld';
-import { TreePine, MapPin, ArrowRight, Target } from 'lucide-react';
+import { ArrowRight, Target } from 'lucide-react';
 import Link from 'next/link';
 import { defaultOgImages, siteConfig } from '@/lib/seo-config';
 import { countySellPages } from '@/lib/county-sell-data';
@@ -69,19 +75,19 @@ const homepageFAQs = [
   },
 ];
 
-const whatWeDo = [
+const whatWeDo: AccountabilityItem[] = [
   {
     name: 'A principal-led review',
     description: 'OVLP keeps property review, acquisition strategy, seller communication, and purchase decisions close to the people responsible for each transaction.',
     href: '/about',
-    icon: TreePine,
+    icon: 'tree',
     tag: 'Direct Accountability',
   },
   {
     name: 'A property-specific review',
     description: 'The goal is to understand the parcel, explain whether it fits OVLP’s buying criteria, and create a clear path when both sides want to proceed.',
     href: '/land#how-it-works',
-    icon: MapPin,
+    icon: 'map',
     tag: 'Direct Process',
   },
 ];
@@ -204,45 +210,7 @@ export default function Home() {
               property information, and communicates with owners throughout the process.
             </p>
           </div>
-          <div className="mx-auto mt-16 max-w-4xl grid grid-cols-1 gap-8 sm:grid-cols-2">
-            {whatWeDo.map((item) => {
-              const Icon = item.icon;
-              return (
-                <article
-                  key={item.name}
-                  className="group relative flex flex-col gap-6 rounded-2xl border border-border bg-card p-8 hover:border-amber/40 transition-all hover:shadow-lg"
-                >
-                  <div className="flex items-center justify-between">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-amber/10 text-amber group-hover:bg-amber group-hover:text-forest transition-colors">
-                      <Icon className="h-6 w-6" />
-                    </div>
-                    <span className="text-xs font-semibold text-amber/70 border border-amber/20 rounded-full px-3 py-1">
-                      {item.tag}
-                    </span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground group-hover:text-amber transition-colors">
-                      <Link href={item.href}>
-                        <span className="absolute inset-0" />
-                        {item.name}
-                      </Link>
-                    </h3>
-                    <p className="mt-3 text-sm leading-6 text-muted-foreground">
-                      {item.description}
-                    </p>
-                  </div>
-                  <div className="mt-auto">
-                    <Link
-                      href={item.href}
-                      className="text-sm font-semibold text-meadow hover:text-meadow/80 transition-colors"
-                    >
-                      Learn more &rarr;
-                    </Link>
-                  </div>
-                </article>
-              );
-            })}
-          </div>
+          <AccountabilityFlipGrid items={whatWeDo} />
         </div>
       </section>
 

@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${siteConfig.url}/land-scouts`,
   },
+  openGraph: {
+    url: `${siteConfig.url}/land-scouts`,
+  },
 };
 
 const partnerTypes = [

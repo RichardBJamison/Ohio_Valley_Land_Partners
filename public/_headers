@@ -2,6 +2,21 @@
   X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
   Referrer-Policy: no-referrer
 
+/investor-portal
+  X-Robots-Tag: noindex, follow, noarchive
+
+/property-uploads
+  X-Robots-Tag: noindex, follow, noarchive
+
+/member-mailer
+  X-Robots-Tag: noindex, follow, noarchive
+
+/properties/*
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
+
+/api/*
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
+
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
@@ -18,3 +33,12 @@
 
 /logo.png
   Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/og.jpg
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=604800
+
+/community/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=604800
+
+/guides/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=604800

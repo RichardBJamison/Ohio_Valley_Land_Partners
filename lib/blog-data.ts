@@ -550,7 +550,7 @@ export const blogPosts: BlogPost[] = [
     dateModified: '2026-07-20',
     readingTime: '9 min read',
     excerpt:
-      'General notes for Geauga County owners about the parcel characteristics OVLP reviews within its current acquisition area.',
+      'General notes for Geauga County owners about access, zoning, utilities, title, and other property-specific questions.',
     keywords: [
       'sell vacant land Geauga County Ohio',
       'direct land buyer Geauga County',
@@ -581,15 +581,35 @@ export const blogPosts: BlogPost[] = [
   },
 ];
 
-/** Active outbound campaign — featured on blog hub and homepage. */
-export const campaignFeaturedSlug = 'sell-vacant-land-geauga-county-ohio-2026';
+/** Source cards retained on the blog hub while dated county URLs consolidate. */
+export const featuredCountyGuideSourceSlug = 'sell-vacant-land-geauga-county-ohio-2026';
+
+export const blogRedirects = {
+  'franklin-county-ohio-sell-vacant-land-2026': '/ohio-valley-guides/franklin-county-oh',
+  'sell-vacant-land-geauga-county-ohio-2026': '/ohio-valley-guides/geauga-county-oh',
+  'sell-vacant-land-delaware-county-ohio': '/ohio-valley-guides/delaware-county-oh',
+} as const;
+
+export type RedirectedBlogSlug = keyof typeof blogRedirects;
+
+export const indexableBlogPosts = blogPosts.filter(
+  (post) => !(post.slug in blogRedirects),
+);
+
+export function isRedirectedBlogSlug(slug: string): slug is RedirectedBlogSlug {
+  return slug in blogRedirects;
+}
+
+export function getBlogDestination(slug: string): string {
+  return isRedirectedBlogSlug(slug) ? blogRedirects[slug] : `/blog/${slug}`;
+}
 
 export function getBlogPost(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);
 }
 
 export function getBlogPostsByCategory(category: string): BlogPost[] {
-  return blogPosts.filter((p) => p.category === category);
+  return indexableBlogPosts.filter((p) => p.category === category);
 }
 
 export const blogCategories = Array.from(new Set(blogPosts.map((p) => p.category)));

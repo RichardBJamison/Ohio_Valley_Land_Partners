@@ -1,6 +1,6 @@
 # Google Search Console — Request indexing (URL Inspection → Request indexing)
 # Sitemap: https://ohiovalleylandpartners.com/sitemap.xml
-# Updated: 2026-07-03 (post P2 deploy — og:image, www redirect, perf)
+# Updated: 2026-07-21 (technical SEO hardening and county-intent consolidation)
 
 # Tier 1 — money pages (request first)
 https://ohiovalleylandpartners.com
@@ -22,9 +22,10 @@ https://ohiovalleylandpartners.com/community
 https://ohiovalleylandpartners.com/blog
 https://ohiovalleylandpartners.com/land
 
-# Tier 3 — high-intent blog posts
-https://ohiovalleylandpartners.com/blog/franklin-county-ohio-sell-vacant-land-2026
-https://ohiovalleylandpartners.com/blog/sell-vacant-land-geauga-county-ohio-2026
+# Tier 3 — county guides and high-intent seller resources
+https://ohiovalleylandpartners.com/ohio-valley-guides/franklin-county-oh
+https://ohiovalleylandpartners.com/ohio-valley-guides/geauga-county-oh
+https://ohiovalleylandpartners.com/ohio-valley-guides/delaware-county-oh
 https://ohiovalleylandpartners.com/blog/sell-inherited-land-ohio-probate
 https://ohiovalleylandpartners.com/blog/sell-land-back-taxes-ohio
 https://ohiovalleylandpartners.com/blog/sell-land-belmont-county-ohio-fast

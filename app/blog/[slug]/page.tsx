@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { blogPosts, getBlogPost } from '@/lib/blog-data';
+import { getBlogPost, indexableBlogPosts } from '@/lib/blog-data';
 import { ArticleSchema, BreadcrumbSchema } from '@/components/seo/json-ld';
 import { defaultOgImages, siteConfig } from '@/lib/seo-config';
 import { Badge } from '@/components/ui/badge';
@@ -13,7 +13,7 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
+  return indexableBlogPosts.map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {};
   const url = `${siteConfig.url}/blog/${post.slug}`;
   return {
-    title: { absolute: post.title },
+    title: { absolute: `${post.title} | OVLP` },
     description: post.metaDescription,
     keywords: post.keywords,
     alternates: {
@@ -43,9 +43,11 @@ export default function BlogPostPage({ params }: Props) {
   const post = getBlogPost(params.slug);
   if (!post) notFound();
 
-  const currentIndex = blogPosts.findIndex((p) => p.slug === post.slug);
-  const prevPost = currentIndex > 0 ? blogPosts[currentIndex - 1] : null;
-  const nextPost = currentIndex < blogPosts.length - 1 ? blogPosts[currentIndex + 1] : null;
+  const currentIndex = indexableBlogPosts.findIndex((p) => p.slug === post.slug);
+  const prevPost = currentIndex > 0 ? indexableBlogPosts[currentIndex - 1] : null;
+  const nextPost = currentIndex < indexableBlogPosts.length - 1
+    ? indexableBlogPosts[currentIndex + 1]
+    : null;
 
   return (
     <>

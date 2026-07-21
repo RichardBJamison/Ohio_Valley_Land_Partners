@@ -18,7 +18,7 @@ const footerNavigation = {
     href: state.href,
   })),
   campaigns: [
-    { name: 'Geauga County, OH', href: '/blog/sell-vacant-land-geauga-county-ohio-2026' },
+    { name: 'Geauga County, OH', href: '/ohio-valley-guides/geauga-county-oh' },
     { name: 'Franklin County, OH', href: '/sell-land/franklin-county-oh' },
   ],
   company: [
@@ -131,7 +131,7 @@ export function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-6">Acquisition Areas</h3>
+                <h3 className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-6">County Pages</h3>
                 <ul role="list" className="space-y-4 mb-8">
                   {footerNavigation.campaigns.map((item) => (
                     <li key={item.name}>

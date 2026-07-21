@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
-# Notify Bing/Yandex of ALL sitemap URLs via IndexNow after deploy.
+# Notify IndexNow only about URLs changed by a release.
 # Key file: https://ohiovalleylandpartners.com/97803ac8eb1a4fb997336648f3d7eb26.txt
+# Usage: ./scripts/indexnow-notify.sh URL [URL ...]
+#        ./scripts/indexnow-notify.sh --sitemap  # intentional full resubmission
 
 set -euo pipefail
 
@@ -9,8 +11,27 @@ KEY="97803ac8eb1a4fb997336648f3d7eb26"
 KEY_LOCATION="${SITE}/${KEY}.txt"
 SITEMAP="${SITE}/sitemap.xml"
 
-echo "Fetching URLs from ${SITEMAP}..."
-URLS=$(curl -sS "${SITEMAP}" | sed -n 's:.*<loc>\([^<]*\)</loc>.*:\1:p')
+if [ "$#" -eq 0 ]; then
+  echo "Usage: $0 URL [URL ...]" >&2
+  echo "       $0 --sitemap" >&2
+  exit 64
+fi
+
+if [ "$1" = "--sitemap" ]; then
+  echo "Fetching URLs from ${SITEMAP}..."
+  URLS=$(curl -sS "${SITEMAP}" | sed -n 's:.*<loc>\([^<]*\)</loc>.*:\1:p')
+else
+  for url in "$@"; do
+    case "$url" in
+      "${SITE}"|"${SITE}"/*) ;;
+      *)
+        echo "ERROR: Refusing non-canonical URL: ${url}" >&2
+        exit 64
+        ;;
+    esac
+  done
+  URLS=$(printf '%s\n' "$@" | awk '!seen[$0]++')
+fi
 
 if [ -z "${URLS}" ]; then
   echo "ERROR: No URLs found in sitemap" >&2
@@ -18,7 +39,7 @@ if [ -z "${URLS}" ]; then
 fi
 
 COUNT=$(echo "${URLS}" | wc -l | tr -d ' ')
-echo "Submitting ${COUNT} URLs to IndexNow..."
+echo "Submitting ${COUNT} changed URLs to IndexNow..."
 
 # IndexNow accepts max 10,000 URLs per request; batch in chunks of 100
 BATCH=()

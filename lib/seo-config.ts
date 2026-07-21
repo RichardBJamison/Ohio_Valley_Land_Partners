@@ -62,11 +62,11 @@ export const silos = {
   development: {
     title: 'Residential Development',
     path: '/development',
-    description: 'Long-term residential development projects and investor relations',
+    description: 'Learn how Ohio Valley Land Partners studies land-first residential development opportunities and regional community context.',
     keywords: 'residential development, investor relations, long-term projects, Ohio Valley',
   },
   guides: {
-    title: 'Ohio Valley Land Market & Seller Guides',
+    title: 'Ohio Valley Land Market & Seller Guides | OVLP',
     path: '/ohio-valley-guides',
     description: 'County-by-county land market context, seller education, and property considerations across the Ohio Valley',
     keywords: 'Ohio Valley real estate, Franklin County land, county guides, local land context',

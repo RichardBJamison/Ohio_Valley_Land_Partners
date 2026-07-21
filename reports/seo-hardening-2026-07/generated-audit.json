@@ -1,0 +1,1681 @@
+{
+  "generatedAt": "2026-07-21T06:51:43.176Z",
+  "baseUrl": "https://ohiovalleylandpartners.com",
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "counts": {
+    "generatedRoutes": 57,
+    "indexableRoutes": 47,
+    "noindexRoutes": 10,
+    "sitemapUrls": 47,
+    "redirects": 7,
+    "functionRoutes": 4,
+    "brokenInternalLinks": 0,
+    "redirectingInternalLinks": 0,
+    "brokenAssets": 0
+  },
+  "sitemap": [
+    {
+      "url": "https://ohiovalleylandpartners.com/",
+      "lastModified": "2026-07-21"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/ohio-valley-guides",
+      "lastModified": "2026-07-21"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/blog",
+      "lastModified": "2026-07-21"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/land",
+      "lastModified": "2026-07-21"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/commercial",
+      "lastModified": "2026-07-21"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/development",
+      "lastModified": "2026-07-21"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/community",
+      "lastModified": "2026-07-21"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/about",
+      "lastModified": "2026-07-21"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/contact",
+      "lastModified": "2026-07-21"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/disclaimer",
+      "lastModified": "2026-07-21"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/privacy",
+      "lastModified": "2026-07-21"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/terms",
+      "lastModified": "2026-07-21"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/land-scouts",
+      "lastModified": "2026-07-21"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/properties",
+      "lastModified": "2026-07-21"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/sell-land/franklin-county-oh",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/sell-land/belmont-county-oh",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/sell-land/jefferson-county-oh",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/sell-land/columbiana-county-oh",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/sell-land/harrison-county-oh",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/sell-land/carroll-county-oh",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/sell-land/ohio-county-wv",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/sell-land/marshall-county-wv",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/sell-land/brooke-county-wv",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/ohio-valley-guides/franklin-county-oh",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/ohio-valley-guides/belmont-county-oh",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/ohio-valley-guides/jefferson-county-oh",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/ohio-valley-guides/columbiana-county-oh",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/ohio-valley-guides/harrison-county-oh",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/ohio-valley-guides/carroll-county-oh",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/ohio-valley-guides/ohio-county-wv",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/ohio-valley-guides/marshall-county-wv",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/ohio-valley-guides/brooke-county-wv",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/ohio-valley-guides/geauga-county-oh",
+      "lastModified": "2026-07-21"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/ohio-valley-guides/delaware-county-oh",
+      "lastModified": "2026-07-21"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/blog/sell-inherited-land-ohio-probate",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/blog/cash-land-buyers-ohio-valley",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/blog/sell-land-back-taxes-ohio",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/blog/ohio-valley-land-market-2026",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/blog/land-near-intel-new-albany-ohio",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/blog/sell-land-belmont-county-ohio-fast",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/blog/sell-land-jefferson-county-ohio-steubenville",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/blog/sell-land-columbiana-county-ohio",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/blog/sell-land-ohio-county-west-virginia-wheeling",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/blog/sell-land-marshall-county-wv-moundsville",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/blog/what-to-do-with-land-you-dont-want",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/blog/brooke-harrison-carroll-county-land-buyers",
+      "lastModified": "2026-07-20"
+    },
+    {
+      "url": "https://ohiovalleylandpartners.com/blog/brooke-county-wv-land-worth-2026",
+      "lastModified": "2026-07-20"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "https://www.ohiovalleylandpartners.com/*",
+      "destination": "https://ohiovalleylandpartners.com/:splat",
+      "status": 301
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "status": 301
+    },
+    {
+      "source": "/blog/franklin-county-ohio-sell-vacant-land-2026",
+      "destination": "/ohio-valley-guides/franklin-county-oh",
+      "status": 301
+    },
+    {
+      "source": "/blog/sell-vacant-land-geauga-county-ohio-2026",
+      "destination": "/ohio-valley-guides/geauga-county-oh",
+      "status": 301
+    },
+    {
+      "source": "/blog/sell-vacant-land-delaware-county-ohio",
+      "destination": "/ohio-valley-guides/delaware-county-oh",
+      "status": 301
+    },
+    {
+      "source": "/sell-land",
+      "destination": "/ohio-valley-guides",
+      "status": 301
+    },
+    {
+      "source": "/land-secrets",
+      "destination": "/ohio-valley-guides",
+      "status": 301
+    }
+  ],
+  "functionRoutes": [
+    "/api/contact",
+    "/api/investor-intake",
+    "/api/property-upload",
+    "/api/seller"
+  ],
+  "routeInventory": [
+    {
+      "route": "/",
+      "outputFile": "out/index.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/",
+      "title": "Sell Land in the Ohio Valley | Ohio Valley Land Partners",
+      "metaDescription": "Explore a direct land sale with Ohio Valley Land Partners. We review vacant, inherited, tax-burdened, and difficult-to-manage property with no obligation.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Answer",
+        "ContactPoint",
+        "FAQPage",
+        "ImageObject",
+        "Organization",
+        "PostalAddress",
+        "Question",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 44
+    },
+    {
+      "route": "/about",
+      "outputFile": "out/about.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/about",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/about",
+      "title": "About Ohio Valley Land Partners | Regional Land Buyer",
+      "metaDescription": "Meet the people behind Ohio Valley Land Partners, a regional principal buyer focused on property-specific review, direct communication, and local reinvestment.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "ContactPoint",
+        "ImageObject",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 33
+    },
+    {
+      "route": "/blog",
+      "outputFile": "out/blog.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/blog",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog",
+      "title": "Ohio Valley Land Topics & Market Observations | OVLP",
+      "metaDescription": "General educational articles about land ownership, direct-sale inquiries, and regional market observations from Ohio Valley Land Partners.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "ContactPoint",
+        "ImageObject",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 48
+    },
+    {
+      "route": "/blog/brooke-county-wv-land-worth-2026",
+      "outputFile": "out/blog/brooke-county-wv-land-worth-2026.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/blog/brooke-county-wv-land-worth-2026",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog/brooke-county-wv-land-worth-2026",
+      "title": "Brooke County, West Virginia Land: Property Factors to Review | OVLP",
+      "metaDescription": "A general guide to access, terrain, utilities, title, and other property factors buyers may review in Brooke County, West Virginia.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Article",
+        "BreadcrumbList",
+        "ContactPoint",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "SpeakableSpecification",
+        "WebPage",
+        "WebSite"
+      ],
+      "internalLinkCount": 35
+    },
+    {
+      "route": "/blog/brooke-harrison-carroll-county-land-buyers",
+      "outputFile": "out/blog/brooke-harrison-carroll-county-land-buyers.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/blog/brooke-harrison-carroll-county-land-buyers",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog/brooke-harrison-carroll-county-land-buyers",
+      "title": "Land Conditions in Brooke, Harrison, and Carroll Counties | OVLP",
+      "metaDescription": "A regional comparison of access, terrain, utilities, title, and other property factors across Brooke, Harrison, and Carroll counties.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Article",
+        "BreadcrumbList",
+        "ContactPoint",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "SpeakableSpecification",
+        "WebPage",
+        "WebSite"
+      ],
+      "internalLinkCount": 36
+    },
+    {
+      "route": "/blog/cash-land-buyers-ohio-valley",
+      "outputFile": "out/blog/cash-land-buyers-ohio-valley.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/blog/cash-land-buyers-ohio-valley",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog/cash-land-buyers-ohio-valley",
+      "title": "Understanding Direct Land Buyers in the Ohio Valley | OVLP",
+      "metaDescription": "Learn how direct land purchase inquiries work, OVLP’s role as a principal buyer, and questions owners may wish to ask independent professionals.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Article",
+        "BreadcrumbList",
+        "ContactPoint",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "SpeakableSpecification",
+        "WebPage",
+        "WebSite"
+      ],
+      "internalLinkCount": 36
+    },
+    {
+      "route": "/blog/land-near-intel-new-albany-ohio",
+      "outputFile": "out/blog/land-near-intel-new-albany-ohio.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/blog/land-near-intel-new-albany-ohio",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog/land-near-intel-new-albany-ohio",
+      "title": "Land Near New Albany’s Intel Development: Owner Questions | OVLP",
+      "metaDescription": "A general guide to zoning, access, utilities, public plans, and other property-specific factors that may affect land near New Albany.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Article",
+        "BreadcrumbList",
+        "ContactPoint",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "SpeakableSpecification",
+        "WebPage",
+        "WebSite"
+      ],
+      "internalLinkCount": 36
+    },
+    {
+      "route": "/blog/ohio-valley-land-market-2026",
+      "outputFile": "out/blog/ohio-valley-land-market-2026.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/blog/ohio-valley-land-market-2026",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog/ohio-valley-land-market-2026",
+      "title": "Ohio Valley Land Market Guide | OVLP",
+      "metaDescription": "An observational guide to the factors OVLP reviews across varied Ohio Valley land markets. General context, not a formal market report or appraisal.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Article",
+        "BreadcrumbList",
+        "ContactPoint",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "SpeakableSpecification",
+        "WebPage",
+        "WebSite"
+      ],
+      "internalLinkCount": 36
+    },
+    {
+      "route": "/blog/sell-inherited-land-ohio-probate",
+      "outputFile": "out/blog/sell-inherited-land-ohio-probate.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/blog/sell-inherited-land-ohio-probate",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog/sell-inherited-land-ohio-probate",
+      "title": "Inherited Land in Ohio: Questions for Your Professional Team | OVLP",
+      "metaDescription": "Questions to raise with an estate attorney, title company, tax professional, or real estate professional when reviewing inherited land in Ohio.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Article",
+        "BreadcrumbList",
+        "ContactPoint",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "SpeakableSpecification",
+        "WebPage",
+        "WebSite"
+      ],
+      "internalLinkCount": 35
+    },
+    {
+      "route": "/blog/sell-land-back-taxes-ohio",
+      "outputFile": "out/blog/sell-land-back-taxes-ohio.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/blog/sell-land-back-taxes-ohio",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog/sell-land-back-taxes-ohio",
+      "title": "Ohio Land With Delinquent Taxes: Questions to Ask | OVLP",
+      "metaDescription": "Learn which tax, title, and legal questions Ohio landowners may need to investigate when property taxes are delinquent.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Article",
+        "BreadcrumbList",
+        "ContactPoint",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "SpeakableSpecification",
+        "WebPage",
+        "WebSite"
+      ],
+      "internalLinkCount": 36
+    },
+    {
+      "route": "/blog/sell-land-belmont-county-ohio-fast",
+      "outputFile": "out/blog/sell-land-belmont-county-ohio-fast.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/blog/sell-land-belmont-county-ohio-fast",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog/sell-land-belmont-county-ohio-fast",
+      "title": "Belmont County, Ohio Land: Property Factors Buyers Review | OVLP",
+      "metaDescription": "A general guide to access, terrain, utilities, title, mineral interests, and other factors buyers may review in Belmont County, Ohio.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Article",
+        "BreadcrumbList",
+        "ContactPoint",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "SpeakableSpecification",
+        "WebPage",
+        "WebSite"
+      ],
+      "internalLinkCount": 37
+    },
+    {
+      "route": "/blog/sell-land-columbiana-county-ohio",
+      "outputFile": "out/blog/sell-land-columbiana-county-ohio.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/blog/sell-land-columbiana-county-ohio",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog/sell-land-columbiana-county-ohio",
+      "title": "Columbiana County, Ohio Land: Property Factors to Review | OVLP",
+      "metaDescription": "A general guide to access, utilities, terrain, title, and other property factors buyers may review in Columbiana County, Ohio.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Article",
+        "BreadcrumbList",
+        "ContactPoint",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "SpeakableSpecification",
+        "WebPage",
+        "WebSite"
+      ],
+      "internalLinkCount": 37
+    },
+    {
+      "route": "/blog/sell-land-jefferson-county-ohio-steubenville",
+      "outputFile": "out/blog/sell-land-jefferson-county-ohio-steubenville.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/blog/sell-land-jefferson-county-ohio-steubenville",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog/sell-land-jefferson-county-ohio-steubenville",
+      "title": "Jefferson County, Ohio Land: Property Factors to Review | OVLP",
+      "metaDescription": "A general guide to access, utilities, site conditions, title, and other property factors buyers may review in Jefferson County, Ohio.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Article",
+        "BreadcrumbList",
+        "ContactPoint",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "SpeakableSpecification",
+        "WebPage",
+        "WebSite"
+      ],
+      "internalLinkCount": 37
+    },
+    {
+      "route": "/blog/sell-land-marshall-county-wv-moundsville",
+      "outputFile": "out/blog/sell-land-marshall-county-wv-moundsville.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/blog/sell-land-marshall-county-wv-moundsville",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog/sell-land-marshall-county-wv-moundsville",
+      "title": "Marshall County, West Virginia Land: Property Factors to Review | OVLP",
+      "metaDescription": "A general guide to access, terrain, utilities, title, and other property factors buyers may review in Marshall County, West Virginia.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Article",
+        "BreadcrumbList",
+        "ContactPoint",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "SpeakableSpecification",
+        "WebPage",
+        "WebSite"
+      ],
+      "internalLinkCount": 37
+    },
+    {
+      "route": "/blog/sell-land-ohio-county-west-virginia-wheeling",
+      "outputFile": "out/blog/sell-land-ohio-county-west-virginia-wheeling.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/blog/sell-land-ohio-county-west-virginia-wheeling",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog/sell-land-ohio-county-west-virginia-wheeling",
+      "title": "Ohio County, West Virginia Land: Property Factors to Review | OVLP",
+      "metaDescription": "A general guide to access, utilities, terrain, title, and other property factors buyers may review in Ohio County, West Virginia.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Article",
+        "BreadcrumbList",
+        "ContactPoint",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "SpeakableSpecification",
+        "WebPage",
+        "WebSite"
+      ],
+      "internalLinkCount": 37
+    },
+    {
+      "route": "/blog/what-to-do-with-land-you-dont-want",
+      "outputFile": "out/blog/what-to-do-with-land-you-dont-want.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/blog/what-to-do-with-land-you-dont-want",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/blog/what-to-do-with-land-you-dont-want",
+      "title": "Unused Land: Questions and Possible Paths to Explore | OVLP",
+      "metaDescription": "A practical overview of questions to consider when inherited, out-of-state, tax-burdened, or otherwise unused land becomes difficult to manage.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Article",
+        "BreadcrumbList",
+        "ContactPoint",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "SpeakableSpecification",
+        "WebPage",
+        "WebSite"
+      ],
+      "internalLinkCount": 36
+    },
+    {
+      "route": "/commercial",
+      "outputFile": "out/commercial.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/commercial",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/commercial",
+      "title": "Commercial Real Estate | Ohio Valley Land Partners",
+      "metaDescription": "Industrial and retail development opportunities across the Ohio Valley region",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "BreadcrumbList",
+        "ContactPoint",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 34
+    },
+    {
+      "route": "/community",
+      "outputFile": "out/community.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/community",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/community",
+      "title": "Community Commitment | Ohio Valley Land Partners",
+      "metaDescription": "Ohio Valley Land Partners is rooted in the Ohio Valley and has committed 5% of company profits to local community reinvestment as the business grows.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "ContactPoint",
+        "ImageObject",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 41
+    },
+    {
+      "route": "/contact",
+      "outputFile": "out/contact.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/contact",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/contact",
+      "title": "Contact Us | Ohio Valley Land Partners",
+      "metaDescription": "Get in touch with Ohio Valley Land Partners. Contact our team for inquiries about selling land, joining our buyer network, or Land Scout partnerships.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "ContactPoint",
+        "ImageObject",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 37
+    },
+    {
+      "route": "/development",
+      "outputFile": "out/development.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/development",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/development",
+      "title": "Residential Development | Ohio Valley Land Partners",
+      "metaDescription": "Learn how Ohio Valley Land Partners studies land-first residential development opportunities and regional community context.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "BreadcrumbList",
+        "ContactPoint",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 34
+    },
+    {
+      "route": "/disclaimer",
+      "outputFile": "out/disclaimer.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/disclaimer",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/disclaimer",
+      "title": "Legal Disclaimer | Ohio Valley Land Partners",
+      "metaDescription": "Legal disclaimer for Ohio Valley Land Partners. Educational content, principal buyer status, and limitations of liability.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "ContactPoint",
+        "ImageObject",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 33
+    },
+    {
+      "route": "/investor-portal",
+      "outputFile": "out/investor-portal.html",
+      "indexable": false,
+      "inSitemap": false,
+      "canonical": null,
+      "openGraphUrl": "https://ohiovalleylandpartners.com/",
+      "title": "Investor Portal — Join the Ohio Valley Land Deal List | Ohio Valley Land Partners",
+      "metaDescription": "Join the Ohio Valley Land Partners buyer network and share the counties, acreage, and property types that match your current buying criteria.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "ContactPoint",
+        "ImageObject",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 34
+    },
+    {
+      "route": "/land",
+      "outputFile": "out/land.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/land",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/land",
+      "title": "Sell Land Directly in the Ohio Valley | OVLP",
+      "metaDescription": "Start a direct property review with a regional principal buyer serving the Ohio Valley",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "BreadcrumbList",
+        "ContactPoint",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 42
+    },
+    {
+      "route": "/land-scouts",
+      "outputFile": "out/land-scouts.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/land-scouts",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/land-scouts",
+      "title": "Introductions & Local Partnerships | Ohio Valley Land Partners",
+      "metaDescription": "Learn how landowners, professionals, and community members can introduce property opportunities to Ohio Valley Land Partners for direct acquisition review.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "ContactPoint",
+        "ImageObject",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 33
+    },
+    {
+      "route": "/member-mailer",
+      "outputFile": "out/member-mailer.html",
+      "indexable": false,
+      "inSitemap": false,
+      "canonical": "https://ohiovalleylandpartners.com/member-mailer",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/member-mailer",
+      "title": "Builders Network Weekly Deal Mailer | Ohio Valley Land Partners",
+      "metaDescription": "View the current Ohio Valley Land Partners weekly land opportunity mailer and join the OVLP Builders Network.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "ContactPoint",
+        "ImageObject",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 39
+    },
+    {
+      "route": "/ohio-valley-guides",
+      "outputFile": "out/ohio-valley-guides.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/ohio-valley-guides",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/ohio-valley-guides",
+      "title": "Ohio Valley Land Market & Seller Guides | OVLP",
+      "metaDescription": "County-by-county land market context, seller education, and property considerations across the Ohio Valley",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "BreadcrumbList",
+        "ContactPoint",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 47
+    },
+    {
+      "route": "/ohio-valley-guides/belmont-county-oh",
+      "outputFile": "out/ohio-valley-guides/belmont-county-oh.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/ohio-valley-guides/belmont-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/ohio-valley-guides/belmont-county-oh",
+      "title": "Belmont County, OH Land Market and Seller Guide | OVLP",
+      "metaDescription": "Belmont County, OH land context, local geography, parcel considerations, and seller guidance. General information—not an appraisal or value opinion.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Answer",
+        "BreadcrumbList",
+        "ContactPoint",
+        "FAQPage",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Question",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 36
+    },
+    {
+      "route": "/ohio-valley-guides/brooke-county-wv",
+      "outputFile": "out/ohio-valley-guides/brooke-county-wv.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/ohio-valley-guides/brooke-county-wv",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/ohio-valley-guides/brooke-county-wv",
+      "title": "Brooke County, WV Land Market and Seller Guide | OVLP",
+      "metaDescription": "Brooke County, WV land context, local geography, parcel considerations, and seller guidance. General information—not an appraisal or value opinion.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Answer",
+        "BreadcrumbList",
+        "ContactPoint",
+        "FAQPage",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Question",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 36
+    },
+    {
+      "route": "/ohio-valley-guides/carroll-county-oh",
+      "outputFile": "out/ohio-valley-guides/carroll-county-oh.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/ohio-valley-guides/carroll-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/ohio-valley-guides/carroll-county-oh",
+      "title": "Carroll County, OH Land Market and Seller Guide | OVLP",
+      "metaDescription": "Carroll County, OH land context, local geography, parcel considerations, and seller guidance. General information—not an appraisal or value opinion.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Answer",
+        "BreadcrumbList",
+        "ContactPoint",
+        "FAQPage",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Question",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 36
+    },
+    {
+      "route": "/ohio-valley-guides/columbiana-county-oh",
+      "outputFile": "out/ohio-valley-guides/columbiana-county-oh.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/ohio-valley-guides/columbiana-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/ohio-valley-guides/columbiana-county-oh",
+      "title": "Columbiana County, OH Land Market and Seller Guide | OVLP",
+      "metaDescription": "Columbiana County, OH land context, local geography, parcel considerations, and seller guidance. General information—not an appraisal or value opinion.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Answer",
+        "BreadcrumbList",
+        "ContactPoint",
+        "FAQPage",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Question",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 36
+    },
+    {
+      "route": "/ohio-valley-guides/delaware-county-oh",
+      "outputFile": "out/ohio-valley-guides/delaware-county-oh.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/ohio-valley-guides/delaware-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/ohio-valley-guides/delaware-county-oh",
+      "title": "Delaware County, OH Land Market and Seller Guide | OVLP",
+      "metaDescription": "Delaware County, OH land context, local geography, parcel considerations, and seller guidance. General information—not an appraisal or value opinion.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Answer",
+        "BreadcrumbList",
+        "ContactPoint",
+        "FAQPage",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Question",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 35
+    },
+    {
+      "route": "/ohio-valley-guides/franklin-county-oh",
+      "outputFile": "out/ohio-valley-guides/franklin-county-oh.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/ohio-valley-guides/franklin-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/ohio-valley-guides/franklin-county-oh",
+      "title": "Franklin County, OH Land Market and Seller Guide | OVLP",
+      "metaDescription": "Franklin County, OH land context, local geography, parcel considerations, and seller guidance. General information—not an appraisal or value opinion.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Answer",
+        "BreadcrumbList",
+        "ContactPoint",
+        "FAQPage",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Question",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 35
+    },
+    {
+      "route": "/ohio-valley-guides/geauga-county-oh",
+      "outputFile": "out/ohio-valley-guides/geauga-county-oh.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/ohio-valley-guides/geauga-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/ohio-valley-guides/geauga-county-oh",
+      "title": "Geauga County, OH Land Market and Seller Guide | OVLP",
+      "metaDescription": "Geauga County, OH land context, local geography, parcel considerations, and seller guidance. General information—not an appraisal or value opinion.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Answer",
+        "BreadcrumbList",
+        "ContactPoint",
+        "FAQPage",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Question",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 34
+    },
+    {
+      "route": "/ohio-valley-guides/harrison-county-oh",
+      "outputFile": "out/ohio-valley-guides/harrison-county-oh.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/ohio-valley-guides/harrison-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/ohio-valley-guides/harrison-county-oh",
+      "title": "Harrison County, OH Land Market and Seller Guide | OVLP",
+      "metaDescription": "Harrison County, OH land context, local geography, parcel considerations, and seller guidance. General information—not an appraisal or value opinion.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Answer",
+        "BreadcrumbList",
+        "ContactPoint",
+        "FAQPage",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Question",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 36
+    },
+    {
+      "route": "/ohio-valley-guides/jefferson-county-oh",
+      "outputFile": "out/ohio-valley-guides/jefferson-county-oh.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/ohio-valley-guides/jefferson-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/ohio-valley-guides/jefferson-county-oh",
+      "title": "Jefferson County, OH Land Market and Seller Guide | OVLP",
+      "metaDescription": "Jefferson County, OH land context, local geography, parcel considerations, and seller guidance. General information—not an appraisal or value opinion.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Answer",
+        "BreadcrumbList",
+        "ContactPoint",
+        "FAQPage",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Question",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 36
+    },
+    {
+      "route": "/ohio-valley-guides/marshall-county-wv",
+      "outputFile": "out/ohio-valley-guides/marshall-county-wv.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/ohio-valley-guides/marshall-county-wv",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/ohio-valley-guides/marshall-county-wv",
+      "title": "Marshall County, WV Land Market and Seller Guide | OVLP",
+      "metaDescription": "Marshall County, WV land context, local geography, parcel considerations, and seller guidance. General information—not an appraisal or value opinion.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Answer",
+        "BreadcrumbList",
+        "ContactPoint",
+        "FAQPage",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Question",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 36
+    },
+    {
+      "route": "/ohio-valley-guides/ohio-county-wv",
+      "outputFile": "out/ohio-valley-guides/ohio-county-wv.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/ohio-valley-guides/ohio-county-wv",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/ohio-valley-guides/ohio-county-wv",
+      "title": "Ohio County, WV Land Market and Seller Guide | OVLP",
+      "metaDescription": "Ohio County, WV land context, local geography, parcel considerations, and seller guidance. General information—not an appraisal or value opinion.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Answer",
+        "BreadcrumbList",
+        "ContactPoint",
+        "FAQPage",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Question",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 36
+    },
+    {
+      "route": "/p/k7m2x9q4",
+      "outputFile": "out/p/k7m2x9q4.html",
+      "indexable": false,
+      "inSitemap": false,
+      "canonical": null,
+      "openGraphUrl": "https://ohiovalleylandpartners.com/",
+      "title": "Columbus Multi-Home Infill Lot — Private Preview | Ohio Valley Land Partners",
+      "metaDescription": "Confidential Ohio Valley Land Partners network preview for invited builders.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "ContactPoint",
+        "ImageObject",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 19
+    },
+    {
+      "route": "/privacy",
+      "outputFile": "out/privacy.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/privacy",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/privacy",
+      "title": "Privacy Policy | Ohio Valley Land Partners",
+      "metaDescription": "Privacy Policy for Ohio Valley Land Partners. Learn how we collect, use, and protect your personal information.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "ContactPoint",
+        "ImageObject",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 33
+    },
+    {
+      "route": "/properties",
+      "outputFile": "out/properties.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/properties",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/properties",
+      "title": "Buy Land in the Ohio Valley | Buyer Network",
+      "metaDescription": "Join the OVLP buyer network and share the counties, acreage, use, and budget that fit your buying criteria. Inventory varies across the Ohio Valley.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "BreadcrumbList",
+        "ContactPoint",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 36
+    },
+    {
+      "route": "/properties/belmont-45-raw",
+      "outputFile": "out/properties/belmont-45-raw.html",
+      "indexable": false,
+      "inSitemap": false,
+      "canonical": null,
+      "openGraphUrl": "https://ohiovalleylandpartners.com/",
+      "title": "Buyer Network | Ohio Valley Land Partners",
+      "metaDescription": "Join the Ohio Valley Land Partners buyer network and share the counties, acreage, and property types that match your buying criteria.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "BreadcrumbList",
+        "ContactPoint",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 35
+    },
+    {
+      "route": "/properties/columbiana-residential-dev",
+      "outputFile": "out/properties/columbiana-residential-dev.html",
+      "indexable": false,
+      "inSitemap": false,
+      "canonical": null,
+      "openGraphUrl": "https://ohiovalleylandpartners.com/",
+      "title": "Buyer Network | Ohio Valley Land Partners",
+      "metaDescription": "Join the Ohio Valley Land Partners buyer network and share the counties, acreage, and property types that match your buying criteria.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "BreadcrumbList",
+        "ContactPoint",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 35
+    },
+    {
+      "route": "/properties/harrison-energy",
+      "outputFile": "out/properties/harrison-energy.html",
+      "indexable": false,
+      "inSitemap": false,
+      "canonical": null,
+      "openGraphUrl": "https://ohiovalleylandpartners.com/",
+      "title": "Buyer Network | Ohio Valley Land Partners",
+      "metaDescription": "Join the Ohio Valley Land Partners buyer network and share the counties, acreage, and property types that match your buying criteria.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "BreadcrumbList",
+        "ContactPoint",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 35
+    },
+    {
+      "route": "/properties/jefferson-commercial-site",
+      "outputFile": "out/properties/jefferson-commercial-site.html",
+      "indexable": false,
+      "inSitemap": false,
+      "canonical": null,
+      "openGraphUrl": "https://ohiovalleylandpartners.com/",
+      "title": "Buyer Network | Ohio Valley Land Partners",
+      "metaDescription": "Join the Ohio Valley Land Partners buyer network and share the counties, acreage, and property types that match your buying criteria.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "BreadcrumbList",
+        "ContactPoint",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 35
+    },
+    {
+      "route": "/properties/marshall-wholesale",
+      "outputFile": "out/properties/marshall-wholesale.html",
+      "indexable": false,
+      "inSitemap": false,
+      "canonical": null,
+      "openGraphUrl": "https://ohiovalleylandpartners.com/",
+      "title": "Buyer Network | Ohio Valley Land Partners",
+      "metaDescription": "Join the Ohio Valley Land Partners buyer network and share the counties, acreage, and property types that match your buying criteria.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "BreadcrumbList",
+        "ContactPoint",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 35
+    },
+    {
+      "route": "/properties/ohio-county-industrial",
+      "outputFile": "out/properties/ohio-county-industrial.html",
+      "indexable": false,
+      "inSitemap": false,
+      "canonical": null,
+      "openGraphUrl": "https://ohiovalleylandpartners.com/",
+      "title": "Buyer Network | Ohio Valley Land Partners",
+      "metaDescription": "Join the Ohio Valley Land Partners buyer network and share the counties, acreage, and property types that match your buying criteria.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "BreadcrumbList",
+        "ContactPoint",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 35
+    },
+    {
+      "route": "/property-uploads",
+      "outputFile": "out/property-uploads.html",
+      "indexable": false,
+      "inSitemap": false,
+      "canonical": null,
+      "openGraphUrl": "https://ohiovalleylandpartners.com/",
+      "title": "Builders Network Property Uploads | Ohio Valley Land Partners",
+      "metaDescription": "Upload your property inventory spreadsheet. List the parcels you want to sell through the Ohio Valley Land Partners buyer network.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "ContactPoint",
+        "ImageObject",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 37
+    },
+    {
+      "route": "/sell-land/belmont-county-oh",
+      "outputFile": "out/sell-land/belmont-county-oh.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/sell-land/belmont-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/sell-land/belmont-county-oh",
+      "title": "We Buy Land in Belmont County, OH | Direct Property Review",
+      "metaDescription": "Explore a direct land sale in Belmont County, Ohio. OVLP reviews each property for possible purchase. No obligation; not every parcel receives a proposal.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Answer",
+        "BreadcrumbList",
+        "ContactPoint",
+        "FAQPage",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Question",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 37
+    },
+    {
+      "route": "/sell-land/brooke-county-wv",
+      "outputFile": "out/sell-land/brooke-county-wv.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/sell-land/brooke-county-wv",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/sell-land/brooke-county-wv",
+      "title": "We Buy Land in Brooke County, WV | Direct Property Review",
+      "metaDescription": "Explore a direct land sale in Brooke County, West Virginia. OVLP reviews each property for possible purchase. No obligation; not every parcel receives a proposal.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Answer",
+        "BreadcrumbList",
+        "ContactPoint",
+        "FAQPage",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Question",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 38
+    },
+    {
+      "route": "/sell-land/carroll-county-oh",
+      "outputFile": "out/sell-land/carroll-county-oh.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/sell-land/carroll-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/sell-land/carroll-county-oh",
+      "title": "We Buy Land in Carroll County, OH | Direct Property Review",
+      "metaDescription": "Explore a direct land sale in Carroll County, Ohio. OVLP reviews each property for possible purchase. No obligation; not every parcel receives a proposal.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Answer",
+        "BreadcrumbList",
+        "ContactPoint",
+        "FAQPage",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Question",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 37
+    },
+    {
+      "route": "/sell-land/columbiana-county-oh",
+      "outputFile": "out/sell-land/columbiana-county-oh.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/sell-land/columbiana-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/sell-land/columbiana-county-oh",
+      "title": "We Buy Land in Columbiana County, OH | Direct Property Review",
+      "metaDescription": "Explore a direct land sale in Columbiana County, Ohio. OVLP reviews each property for possible purchase. No obligation; not every parcel receives a proposal.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Answer",
+        "BreadcrumbList",
+        "ContactPoint",
+        "FAQPage",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Question",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 37
+    },
+    {
+      "route": "/sell-land/franklin-county-oh",
+      "outputFile": "out/sell-land/franklin-county-oh.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/sell-land/franklin-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/sell-land/franklin-county-oh",
+      "title": "We Buy Land in Franklin County, OH | Direct Property Review",
+      "metaDescription": "Explore a direct land sale in Columbus and Central Ohio. OVLP reviews each property for possible purchase. No obligation; not every parcel receives a proposal.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Answer",
+        "BreadcrumbList",
+        "ContactPoint",
+        "FAQPage",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Question",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 35
+    },
+    {
+      "route": "/sell-land/harrison-county-oh",
+      "outputFile": "out/sell-land/harrison-county-oh.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/sell-land/harrison-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/sell-land/harrison-county-oh",
+      "title": "We Buy Land in Harrison County, OH | Direct Property Review",
+      "metaDescription": "Explore a direct land sale in Harrison County, Ohio. OVLP reviews each property for possible purchase. No obligation; not every parcel receives a proposal.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Answer",
+        "BreadcrumbList",
+        "ContactPoint",
+        "FAQPage",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Question",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 37
+    },
+    {
+      "route": "/sell-land/jefferson-county-oh",
+      "outputFile": "out/sell-land/jefferson-county-oh.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/sell-land/jefferson-county-oh",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/sell-land/jefferson-county-oh",
+      "title": "We Buy Land in Jefferson County, OH | Direct Property Review",
+      "metaDescription": "Explore a direct land sale in Jefferson County, Ohio. OVLP reviews each property for possible purchase. No obligation; not every parcel receives a proposal.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Answer",
+        "BreadcrumbList",
+        "ContactPoint",
+        "FAQPage",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Question",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 37
+    },
+    {
+      "route": "/sell-land/marshall-county-wv",
+      "outputFile": "out/sell-land/marshall-county-wv.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/sell-land/marshall-county-wv",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/sell-land/marshall-county-wv",
+      "title": "We Buy Land in Marshall County, WV | Direct Property Review",
+      "metaDescription": "Explore a direct land sale in Marshall County, West Virginia. OVLP reviews each property for possible purchase. No obligation; not every parcel receives a proposal.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Answer",
+        "BreadcrumbList",
+        "ContactPoint",
+        "FAQPage",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Question",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 37
+    },
+    {
+      "route": "/sell-land/ohio-county-wv",
+      "outputFile": "out/sell-land/ohio-county-wv.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/sell-land/ohio-county-wv",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/sell-land/ohio-county-wv",
+      "title": "We Buy Land in Ohio County, WV | Direct Property Review",
+      "metaDescription": "Explore a direct land sale in Ohio County, West Virginia. OVLP reviews each property for possible purchase. No obligation; not every parcel receives a proposal.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "Answer",
+        "BreadcrumbList",
+        "ContactPoint",
+        "FAQPage",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "PostalAddress",
+        "Question",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 37
+    },
+    {
+      "route": "/terms",
+      "outputFile": "out/terms.html",
+      "indexable": true,
+      "inSitemap": true,
+      "canonical": "https://ohiovalleylandpartners.com/terms",
+      "openGraphUrl": "https://ohiovalleylandpartners.com/terms",
+      "title": "Terms of Service | Ohio Valley Land Partners",
+      "metaDescription": "Terms of Service for Ohio Valley Land Partners. Read the terms governing your use of our website and services.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "AdministrativeArea",
+        "ContactPoint",
+        "ImageObject",
+        "Organization",
+        "PostalAddress",
+        "Service",
+        "WebSite"
+      ],
+      "internalLinkCount": 33
+    }
+  ],
+  "analyticsEvents": {
+    "homepage_property_review_cta_click": true,
+    "county_page_cta_click": true,
+    "form_started": true,
+    "form_submitted": true,
+    "successful_submission": true,
+    "form_error": true,
+    "phone_link_click": true,
+    "email_link_click": true,
+    "seller_resource_click": true,
+    "county_guide_click": true,
+    "buyer_portal_click": true,
+    "builders_network_click": true,
+    "contact_page_visit": true
+  },
+  "assetMetrics": {
+    "html": {
+      "files": 58,
+      "bytes": 4250939
+    },
+    "javascript": {
+      "files": 44,
+      "bytes": 1035337
+    },
+    "css": {
+      "files": 1,
+      "bytes": 89175
+    },
+    "images": {
+      "files": 16,
+      "bytes": 5070861
+    },
+    "video": {
+      "files": 1,
+      "bytes": 1611602
+    },
+    "fonts": {
+      "files": 17,
+      "bytes": 289124
+    }
+  }
+}

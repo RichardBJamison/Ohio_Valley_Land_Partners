@@ -1,12 +1,18 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { blogPosts, blogCategories, getBlogPost, campaignFeaturedSlug } from '@/lib/blog-data';
+import {
+  blogPosts,
+  blogCategories,
+  featuredCountyGuideSourceSlug,
+  getBlogDestination,
+  getBlogPost,
+} from '@/lib/blog-data';
 import { siteConfig } from '@/lib/seo-config';
 import { Calendar, Clock, ArrowRight, BookOpen } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { LegalDisclaimer } from '@/components/legal-disclaimer';
 export const metadata: Metadata = {
-  title: { absolute: 'Ohio Valley Land Topics & Market Observations' },
+  title: { absolute: 'Ohio Valley Land Topics & Market Observations | OVLP' },
   description:
     'General educational articles about land ownership, direct-sale inquiries, and regional market observations from Ohio Valley Land Partners.',
   keywords: [
@@ -20,11 +26,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${siteConfig.url}/blog`,
   },
+  openGraph: {
+    url: `${siteConfig.url}/blog`,
+  },
 };
 
 export default function BlogPage() {
-  const campaignPost = getBlogPost(campaignFeaturedSlug);
-  const featured = campaignPost ?? blogPosts[0];
+  const guidePost = getBlogPost(featuredCountyGuideSourceSlug);
+  const featured = guidePost ?? blogPosts[0];
   const rest = blogPosts.filter((p) => p.slug !== featured.slug);
 
   return (
@@ -54,13 +63,13 @@ export default function BlogPage() {
           ))}
         </div>
 
-        {campaignPost ? (
+        {guidePost ? (
           <div className="mb-8 rounded-2xl border border-amber/30 bg-amber/5 px-6 py-4 text-center">
             <p className="text-sm font-semibold text-amber">
-              Current acquisition focus — Geauga County, Ohio
+              County seller guide — Geauga County, Ohio
             </p>
             <p className="mt-1 text-sm text-muted-foreground">
-              Acquisition review for vacant lots and other land in western Geauga — Chesterland, Chardon, Bainbridge, and surrounding townships.
+              Property context for vacant lots and other land in western Geauga — Chesterland, Chardon, Bainbridge, and surrounding townships.
             </p>
           </div>
         ) : null}
@@ -71,11 +80,11 @@ export default function BlogPage() {
             <div className="flex items-center gap-3 mb-4">
               <Badge>{featured.category}</Badge>
               <span className="text-sm text-muted-foreground">
-                {campaignPost ? 'Acquisition Focus' : 'Featured'}
+                {guidePost ? 'County Guide' : 'Featured'}
               </span>
             </div>
             <h2 className="text-2xl font-bold text-foreground group-hover:text-amber transition-colors sm:text-3xl mb-4">
-              <Link href={`/blog/${featured.slug}`}>
+              <Link href={getBlogDestination(featured.slug)}>
                 <span className="absolute inset-0" aria-hidden="true" />
                 {featured.title}
               </Link>
@@ -93,7 +102,7 @@ export default function BlogPage() {
                 {featured.readingTime}
               </span>
               <span className="ml-auto flex items-center gap-1 font-semibold text-meadow">
-                Read article <ArrowRight className="h-4 w-4" />
+                {guidePost ? 'Read guide' : 'Read article'} <ArrowRight className="h-4 w-4" />
               </span>
             </div>
           </div>
@@ -110,7 +119,7 @@ export default function BlogPage() {
                 <Badge variant="secondary">{post.category}</Badge>
               </div>
               <h2 className="text-lg font-bold text-foreground group-hover:text-amber transition-colors mb-3 line-clamp-2">
-                <Link href={`/blog/${post.slug}`}>
+                <Link href={getBlogDestination(post.slug)}>
                   <span className="absolute inset-0" aria-hidden="true" />
                   {post.title}
                 </Link>

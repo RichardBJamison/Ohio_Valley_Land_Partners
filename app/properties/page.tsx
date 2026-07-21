@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${siteConfig.url}/properties`,
   },
+  openGraph: {
+    url: `${siteConfig.url}/properties`,
+  },
 };
 
 const regions = [

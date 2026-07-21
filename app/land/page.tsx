@@ -10,11 +10,14 @@ import { ProcessFlipGrid } from '@/components/home/flip-groups';
 import type { ProcessItem } from '@/components/home/flip-groups';
 
 export const metadata: Metadata = {
-  title: silos.land.title,
+  title: { absolute: 'Sell Land Directly in the Ohio Valley | OVLP' },
   description: silos.land.description,
   keywords: silos.land.keywords,
   alternates: {
     canonical: `${siteConfig.url}/land`,
+  },
+  openGraph: {
+    url: `${siteConfig.url}/land`,
   },
 };
 

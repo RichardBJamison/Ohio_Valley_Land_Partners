@@ -1,6 +1,11 @@
 import type { Metadata } from 'next';
-import { counties, defaultOgImages, siteConfig } from '@/lib/seo-config';
-import { countySellPages, getCountySellPage } from '@/lib/county-sell-data';
+import { defaultOgImages, siteConfig } from '@/lib/seo-config';
+import { getCountySellPage } from '@/lib/county-sell-data';
+import {
+  countyGuides,
+  getCountyGuide,
+  getSupplementalCountyGuide,
+} from '@/lib/county-guide-data';
 import { notFound } from 'next/navigation';
 import { MapPin, CheckCircle, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
@@ -13,13 +18,12 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const county = counties.find((c) => c.slug === slug);
-  const sellData = getCountySellPage(slug);
+  const county = getCountyGuide(slug);
 
   if (!county) return { title: 'County Guide Not Found' };
 
   const url = `${siteConfig.url}/ohio-valley-guides/${slug}`;
-  const guideTitle = `${county.name}, ${county.state} Land Market and Seller Guide`;
+  const guideTitle = `${county.name}, ${county.state} Land Market and Seller Guide | OVLP`;
   const guideDescription = `${county.name}, ${county.state} land context, local geography, parcel considerations, and seller guidance. General information—not an appraisal or value opinion.`;
   return {
     title: { absolute: guideTitle },
@@ -43,25 +47,29 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  return counties.map((county) => ({ slug: county.slug }));
+  return countyGuides.map((county) => ({ slug: county.slug }));
 }
 
 export default async function CountyGuidePage({ params }: Props) {
   const { slug } = await params;
-  const county = counties.find((c) => c.slug === slug);
+  const county = getCountyGuide(slug);
   const sellData = getCountySellPage(slug);
+  const supplementalData = getSupplementalCountyGuide(slug);
+  const guideData = sellData ?? supplementalData;
 
   if (!county) notFound();
 
-  const guideFaqs = sellData
+  const propertyReviewHref = sellData ? `/sell-land/${slug}#property-review` : '/#property-review';
+  const propertyReviewEvent = sellData ? 'county_page_cta_click' : 'property_review_cta_click';
+  const guideFaqs = guideData
     ? [
         {
           question: `What land conditions vary across ${county.name}?`,
-          answer: sellData.localGeography,
+          answer: guideData.localGeography,
         },
         {
           question: `Where can I verify parcel and tax information in ${county.name}?`,
-          answer: `Start with ${sellData.citations[0]?.source ?? 'the appropriate county office'} for public parcel, ownership, assessment, and tax records. Recorded documents and professional review may still be needed for title, access, mineral, estate, survey, or legal questions.`,
+          answer: `Start with ${guideData.citations[0]?.source ?? 'the appropriate county office'} for public parcel, ownership, assessment, and tax records. Recorded documents and professional review may still be needed for title, access, mineral, estate, survey, or legal questions.`,
         },
         {
           question: `Does this ${county.name} guide tell me what my land is worth?`,
@@ -69,7 +77,9 @@ export default async function CountyGuidePage({ params }: Props) {
         },
         {
           question: `How do I ask OVLP to review property in ${county.name}?`,
-          answer: 'Share the property address and the best email to reach you. OVLP will review whether the parcel fits its current buying criteria. Requesting a review does not commit you to sell, and not every property receives a proposal.',
+          answer: sellData
+            ? 'Share the property address and the best email to reach you. OVLP will review whether the parcel fits its current buying criteria. Requesting a review does not commit you to sell, and not every property receives a proposal.'
+            : 'Share the property address and the best email to reach you. Publishing this guide does not confirm active acquisition coverage in the county. OVLP may still review the inquiry, with no obligation to sell and no promise that a proposal will be presented.',
         },
       ]
     : [];
@@ -104,8 +114,8 @@ export default async function CountyGuidePage({ params }: Props) {
               </p>
               <div className="mt-8">
                 <Link
-                  href={`/sell-land/${slug}#property-review`}
-                  data-analytics-event="county_page_cta_click"
+                  href={propertyReviewHref}
+                  data-analytics-event={propertyReviewEvent}
                   className="inline-flex items-center gap-2 rounded-lg bg-amber px-6 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
                 >
                   Start My Property Review <ArrowRight className="h-4 w-4" />
@@ -116,19 +126,19 @@ export default async function CountyGuidePage({ params }: Props) {
         </section>
 
         {/* Why section */}
-        {sellData?.localGeography && (
+        {guideData?.localGeography && (
           <section className="py-16 bg-card border-t border-border">
             <div className="mx-auto max-w-3xl px-6 lg:px-8">
               <h2 className="text-2xl font-bold text-foreground mb-6">
                 {county.name} land patterns and local geography
               </h2>
-              <p className="text-muted-foreground leading-8">{sellData.localGeography}</p>
+              <p className="text-muted-foreground leading-8">{guideData.localGeography}</p>
             </div>
           </section>
         )}
 
         {/* Common situations + land types */}
-        {sellData && (
+        {guideData && (
           <section className="py-16">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
@@ -137,7 +147,7 @@ export default async function CountyGuidePage({ params }: Props) {
                     Common owner situations
                   </h2>
                   <ul className="flex flex-col gap-4">
-                    {sellData.commonSituations.map((s) => (
+                    {guideData.commonSituations.map((s) => (
                       <li key={s} className="flex items-start gap-3 text-sm text-muted-foreground">
                         <CheckCircle className="h-4 w-4 text-meadow flex-shrink-0 mt-0.5" />
                         {s}
@@ -150,7 +160,7 @@ export default async function CountyGuidePage({ params }: Props) {
                     Common {county.name} Property Types
                   </h2>
                   <div className="flex flex-wrap gap-2">
-                    {sellData.landTypes.map((type) => (
+                    {guideData.landTypes.map((type) => (
                       <span
                         key={type}
                         className="inline-flex items-center rounded-md border border-border bg-card px-3 py-1.5 text-sm font-medium text-foreground"
@@ -188,16 +198,19 @@ export default async function CountyGuidePage({ params }: Props) {
         <section className="py-20">
           <div className="mx-auto max-w-xl px-6 text-center">
             <h2 className="text-2xl font-bold text-foreground mb-4">
-              Want OVLP to review your {county.name} property?
+              {sellData
+                ? `Want OVLP to review your ${county.name} property?`
+                : `Have questions about your ${county.name} property?`}
             </h2>
             <p className="text-muted-foreground mb-8">
-              Start with the address and the best email to reach you. There is no obligation to sell,
-              and not every property receives a proposal.
+              {sellData
+                ? 'Start with the address and the best email to reach you. There is no obligation to sell, and not every property receives a proposal.'
+                : 'This guide does not establish active acquisition coverage. You may still share the address for review, with no obligation and no promise of a proposal.'}
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
-                href={`/sell-land/${slug}#property-review`}
-                data-analytics-event="county_page_cta_click"
+                href={propertyReviewHref}
+                data-analytics-event={propertyReviewEvent}
                 className="rounded-lg bg-amber px-6 py-3 text-sm font-bold text-forest hover:bg-amber/90 transition-colors"
               >
                 Start My Property Review

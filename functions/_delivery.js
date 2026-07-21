@@ -1,4 +1,5 @@
 let cachedGoogleToken = null;
+const DEFAULT_GHL_LOCATION_ID = 'bNT4wp0nukIQdBJbQDaa';
 
 function bytesToBase64(bytes) {
   let binary = '';
@@ -158,12 +159,13 @@ export async function sendNotification(env, options) {
 }
 
 export async function upsertCrmContact(env, details) {
-  if (!env.GHL_API_TOKEN || !env.GHL_LOCATION_ID) {
+  const locationId = env.GHL_LOCATION_ID || DEFAULT_GHL_LOCATION_ID;
+  if (!env.GHL_API_TOKEN) {
     throw new Error('HighLevel CRM routing is not configured');
   }
 
   const body = {
-    locationId: env.GHL_LOCATION_ID,
+    locationId,
     email: cleanHeader(details.email),
     source: cleanHeader(details.source || 'OVLP Website', 120),
     tags: ['ovlp-website', ...(details.tags || [])].map((tag) => cleanHeader(tag, 80)),

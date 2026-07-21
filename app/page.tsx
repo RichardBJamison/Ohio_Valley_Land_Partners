@@ -12,7 +12,6 @@ import { ArrowRight, Target } from 'lucide-react';
 import Link from 'next/link';
 import { defaultOgImages, siteConfig } from '@/lib/seo-config';
 import { countySellPages } from '@/lib/county-sell-data';
-import { campaignFeaturedSlug } from '@/lib/blog-data';
 import { LegalDisclaimer } from '@/components/legal-disclaimer';
 import { communityGiving, faqFraming, sellerPositioning } from '@/lib/public-copy';
 import { homepageSeoMeta } from '@/lib/seo-meta';
@@ -154,11 +153,11 @@ export default function Home() {
             counties={countySellPages.map(({ slug, name, stateAbbr }) => ({ slug, name, stateAbbr }))}
           />
           <p className="mt-8 text-center text-sm text-muted-foreground">
-            We also review property in{' '}
-            <Link href={`/blog/${campaignFeaturedSlug}`} className="text-meadow font-semibold hover:underline">
+            We also publish property context for{' '}
+            <Link href="/ohio-valley-guides/geauga-county-oh" className="text-meadow font-semibold hover:underline">
               Geauga County, Ohio
             </Link>
-            {' '}when it fits the current acquisition area —{' '}
+            {' '}—{' '}
             <Link href="/ohio-valley-guides" className="text-meadow font-semibold hover:underline">
               browse all county guides
             </Link>

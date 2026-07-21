@@ -32,12 +32,13 @@
 - /ohio-valley-guides/ohio-county-wv: Ohio County WV land market guide
 - /ohio-valley-guides/marshall-county-wv: Marshall County WV land market guide
 - /ohio-valley-guides/brooke-county-wv: Brooke County WV land market guide
+- /ohio-valley-guides/geauga-county-oh: Informational Geauga County land and seller guide; publication does not confirm active acquisition coverage
+- /ohio-valley-guides/delaware-county-oh: Informational Delaware County land and seller guide; publication does not confirm active acquisition coverage
 
 ## Blog — Educational Content for Land Sellers
 - /blog/sell-inherited-land-ohio-probate: General inherited-land questions to discuss with licensed professionals
 - /blog/cash-land-buyers-ohio-valley: General information about direct principal buyers
 - /blog/ohio-valley-land-market-2026: Observational Ohio Valley Land Market Guide
-- /blog/sell-vacant-land-delaware-county-ohio: Selling vacant land in Delaware County, Ohio
 - /blog/sell-land-back-taxes-ohio: Questions to discuss with licensed professionals when taxes are delinquent
 - /blog/land-near-intel-new-albany-ohio: Selling land near Intel New Albany semiconductor campus
 - /blog/sell-land-belmont-county-ohio-fast: Property factors buyers may review in Belmont County, Ohio
@@ -47,14 +48,17 @@
 - /blog/sell-land-marshall-county-wv-moundsville: Property factors to review in Marshall County, West Virginia
 - /blog/what-to-do-with-land-you-dont-want: What to do with land you inherited or don't want
 - /blog/brooke-harrison-carroll-county-land-buyers: Land conditions in Brooke, Harrison, and Carroll counties
-- /blog/franklin-county-ohio-sell-vacant-land-2026: Questions Franklin County vacant-land owners should review
 - /blog/brooke-county-wv-land-worth-2026: Property factors buyers may review in Brooke County, West Virginia
-- /blog/sell-vacant-land-geauga-county-ohio-2026: Vacant-land questions for Geauga County owners in Chesterland, Chardon, and western townships
+
+## Permanent County-Content Redirects
+- /blog/franklin-county-ohio-sell-vacant-land-2026 redirects to /ohio-valley-guides/franklin-county-oh
+- /blog/sell-vacant-land-geauga-county-ohio-2026 redirects to /ohio-valley-guides/geauga-county-oh
+- /blog/sell-vacant-land-delaware-county-ohio redirects to /ohio-valley-guides/delaware-county-oh
 
 ## Service Area
 Ohio counties: Belmont, Jefferson, Columbiana, Harrison, Carroll
 West Virginia counties: Ohio County, Marshall, Brooke
-Current acquisition focus also includes Franklin County, Ohio and portions of Geauga County, Ohio. Focus varies by county and campaign.
+Current published acquisition pages also include Franklin County, Ohio. Geauga and Delaware County content is informational unless a separate acquisition page is published later.
 
 ## Key Facts
 - Principal buyer — not a licensed real estate broker

@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${siteConfig.url}/community`,
   },
+  openGraph: {
+    url: `${siteConfig.url}/community`,
+  },
 };
 
 const COUNTY_PILLS = [

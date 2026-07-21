@@ -13,11 +13,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${siteConfig.url}/ohio-valley-guides`,
   },
+  openGraph: {
+    url: `${siteConfig.url}/ohio-valley-guides`,
+  },
 };
 
 const FILTER_TABS = [
   { label: 'All Guides', href: '/ohio-valley-guides', active: true },
-  { label: 'Geauga County Notes', href: '/blog/sell-vacant-land-geauga-county-ohio-2026' },
+  { label: 'Geauga County Notes', href: '/ohio-valley-guides/geauga-county-oh' },
   { label: 'Valley Market Guide', href: '/blog/ohio-valley-land-market-2026' },
   { label: 'Franklin County', href: '/ohio-valley-guides/franklin-county-oh' },
   { label: 'Belmont County', href: '/ohio-valley-guides/belmont-county-oh' },

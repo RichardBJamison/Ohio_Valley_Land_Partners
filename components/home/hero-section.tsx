@@ -16,7 +16,7 @@ const stats = [
 ];
 
 const campaignRegions = [
-  { label: 'Geauga County', href: '/blog/sell-vacant-land-geauga-county-ohio-2026', highlight: true },
+  { label: 'Geauga County', href: '/ohio-valley-guides/geauga-county-oh', highlight: true },
 ];
 
 const serviceRegions = [

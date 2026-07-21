@@ -627,7 +627,7 @@ export function ProcessFlipGrid({ steps }: { steps: ProcessItem[] }) {
 
   return (
     <>
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:hidden" role="list">
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:sr-only" role="list">
         {steps.map((step) => (
           <article key={step.step} className="h-full" role="listitem">
             <div className="h-full rounded-2xl border border-border bg-background p-8">
@@ -637,16 +637,16 @@ export function ProcessFlipGrid({ steps }: { steps: ProcessItem[] }) {
         ))}
       </div>
 
-      <div ref={runwayRef} className="relative -mt-[18vh] hidden h-[300vh] lg:block">
+      <div ref={runwayRef} className="relative -mt-[18vh] hidden h-[300vh] lg:block" aria-hidden="true">
         <div ref={shellRef} className="sticky top-0 flex h-screen items-center">
           <div
             ref={rowRef}
             className="grid w-full grid-cols-5 gap-8 [perspective:1400px]"
-            role="list"
+            role="presentation"
             data-flip-program="resonant-sticky-scroll-scrub"
           >
             {steps.map((step, index) => (
-              <article key={step.step} className="relative h-full [perspective:1000px]" role="listitem">
+              <article key={step.step} className="relative h-full [perspective:1000px]" role="presentation">
                 <div data-process-card className="relative grid h-full" data-flip-state="waiting">
                   <div
                     ref={(element) => {

@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${siteConfig.url}/contact`,
   },
+  openGraph: {
+    url: `${siteConfig.url}/contact`,
+  },
 };
 
 export default function ContactPage() {

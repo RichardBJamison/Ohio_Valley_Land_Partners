@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${siteConfig.url}${silos.development.path}`,
   },
+  openGraph: {
+    url: `${siteConfig.url}${silos.development.path}`,
+  },
 };
 
 export default function DevelopmentPage() {

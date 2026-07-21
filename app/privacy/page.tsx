@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${siteConfig.url}/privacy`,
   },
+  openGraph: {
+    url: `${siteConfig.url}/privacy`,
+  },
 };
 
 export default function PrivacyPolicyPage() {

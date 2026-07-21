@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { countySellPages, getCountySellPage } from '@/lib/county-sell-data';
-import { getBlogPost } from '@/lib/blog-data';
+import { getBlogDestination, getBlogPost } from '@/lib/blog-data';
 import { defaultOgImages, siteConfig } from '@/lib/seo-config';
 import { countySubheadline, faqFraming, sellerPositioning, softenCountyFaq } from '@/lib/public-copy';
 import { BreadcrumbSchema, FAQSchema } from '@/components/seo/json-ld';
@@ -224,7 +224,7 @@ export default function CountySellPage({ params }: Props) {
               {relatedPosts.map((post) => post && (
                 <li key={post.slug}>
                   <Link
-                    href={`/blog/${post.slug}`}
+                    href={getBlogDestination(post.slug)}
                     className="inline-flex items-center gap-2 text-sm font-medium text-amber hover:text-amber/80 transition-colors"
                   >
                     <BookOpen className="h-4 w-4" />

@@ -6,11 +6,14 @@ import { communityGiving } from '@/lib/public-copy';
 import { siteConfig } from '@/lib/seo-config';
 
 export const metadata: Metadata = {
-  title: 'About',
+  title: { absolute: 'About Ohio Valley Land Partners | Regional Land Buyer' },
   description:
     'Meet the people behind Ohio Valley Land Partners, a regional principal buyer focused on property-specific review, direct communication, and local reinvestment.',
   alternates: {
     canonical: `${siteConfig.url}/about`,
+  },
+  openGraph: {
+    url: `${siteConfig.url}/about`,
   },
 };
 

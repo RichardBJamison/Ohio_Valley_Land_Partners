@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${siteConfig.url}/terms`,
   },
+  openGraph: {
+    url: `${siteConfig.url}/terms`,
+  },
 };
 
 export default function TermsOfServicePage() {

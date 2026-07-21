@@ -30,7 +30,7 @@ export function countySellMetaDescription(
 }
 
 export const homepageSeoMeta = {
-  title: 'Sell Land in the Ohio Valley | Direct Property Review',
+  title: 'Sell Land in the Ohio Valley | Ohio Valley Land Partners',
   description:
     'Explore a direct land sale with Ohio Valley Land Partners. We review vacant, inherited, tax-burdened, and difficult-to-manage property with no obligation.',
   keywords: [

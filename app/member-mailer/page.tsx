@@ -10,6 +10,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://ohiovalleylandpartners.com/member-mailer',
   },
+  openGraph: {
+    url: 'https://ohiovalleylandpartners.com/member-mailer',
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function MemberMailerPage() {

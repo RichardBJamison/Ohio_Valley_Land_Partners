@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T06:51:43.176Z",
+  "generatedAt": "2026-07-21T11:17:10.663Z",
   "baseUrl": "https://ohiovalleylandpartners.com",
   "passed": true,
   "errors": [],
@@ -1655,11 +1655,11 @@
   "assetMetrics": {
     "html": {
       "files": 58,
-      "bytes": 4250939
+      "bytes": 4253159
     },
     "javascript": {
       "files": 44,
-      "bytes": 1035337
+      "bytes": 1036807
     },
     "css": {
       "files": 1,

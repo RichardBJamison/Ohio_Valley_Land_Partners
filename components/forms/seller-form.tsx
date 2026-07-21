@@ -12,6 +12,8 @@ import { siteConfig } from '@/lib/seo-config';
 import { trackConversionEvent } from '@/components/analytics/conversion-tracker';
 
 export function SellerForm() {
+  const [startedAt] = useState(() => Date.now());
+  const [website, setWebsite] = useState('');
   const [address, setAddress] = useState('');
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
@@ -36,7 +38,7 @@ export function SellerForm() {
       const res = await fetch('/api/seller', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ address, email, turnstileToken }),
+        body: JSON.stringify({ address, email, turnstileToken, startedAt, website }),
       });
       if (!res.ok) throw new Error('Submission failed');
       setSubmitted(true);
@@ -72,6 +74,16 @@ export function SellerForm() {
       className="flex flex-col gap-4"
       data-analytics-form="seller_property_review"
     >
+      <input
+        type="text"
+        name="website"
+        value={website}
+        onChange={(event) => setWebsite(event.target.value)}
+        className="hidden"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+      />
       <div className="flex flex-col gap-1.5">
         <Label htmlFor="seller-address" className="text-sm font-semibold text-foreground">
           Property Address

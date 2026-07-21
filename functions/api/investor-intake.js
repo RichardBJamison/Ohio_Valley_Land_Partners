@@ -1,4 +1,5 @@
 import { escapeHtml, guardFormRequest, jsonResponse } from '../_utils.js';
+import { sendNotification, upsertCrmContact } from '../_delivery.js';
 
 export async function onRequestPost(context) {
   try {
@@ -13,34 +14,28 @@ export async function onRequestPost(context) {
 
     const countyList = Array.isArray(counties) ? counties.join(', ') : String(counties ?? '');
 
-    const res = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${context.env.RESEND_API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        from: 'OVLP Website <noreply@ohiovalleylandpartners.com>',
-        to: 'info@ohiovalleylandpartners.com',
-        subject: `New Investor/Buyer Lead — ${escapeHtml(name).slice(0, 80)}`,
-        html: `
-          <h2>New Investor / Deal List Signup</h2>
-          <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-          <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-          <p><strong>Phone:</strong> ${phone?.trim() ? escapeHtml(phone) : 'Not collected on this form. Phone/SMS opt-in is handled by the GHL chat widget.'}</p>
-          <p><strong>Counties of Interest:</strong> ${escapeHtml(countyList || 'Not specified')}</p>
-          <p><strong>Acreage Range:</strong> ${escapeHtml(acreage || 'Not specified')}</p>
-          <p><strong>Intended Use:</strong> ${escapeHtml(useCase || 'Not specified')}</p>
-          <p><strong>Budget Range:</strong> ${escapeHtml(budget || 'Not specified')}</p>
-          <p><strong>Source:</strong> Investor Portal — Get on the Deal List form</p>
-        `,
-      }),
+    await upsertCrmContact(context.env, {
+      name,
+      email,
+      phone,
+      source: 'OVLP Website — Builders Network',
+      tags: ['builders-network', 'buyer-lead'],
     });
-
-    if (!res.ok) {
-      console.error('Resend error:', await res.text());
-      return jsonResponse({ error: 'Failed to submit' }, 500);
-    }
+    await sendNotification(context.env, {
+      subject: `New Investor/Buyer Lead — ${String(name).slice(0, 80)}`,
+      replyTo: email,
+      html: `
+        <h2>New Investor / Deal List Signup</h2>
+        <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+        <p><strong>Phone:</strong> ${phone?.trim() ? escapeHtml(phone) : 'Not collected on this form. Phone/SMS opt-in is handled by the GHL chat widget.'}</p>
+        <p><strong>Counties of Interest:</strong> ${escapeHtml(countyList || 'Not specified')}</p>
+        <p><strong>Acreage Range:</strong> ${escapeHtml(acreage || 'Not specified')}</p>
+        <p><strong>Intended Use:</strong> ${escapeHtml(useCase || 'Not specified')}</p>
+        <p><strong>Budget Range:</strong> ${escapeHtml(budget || 'Not specified')}</p>
+        <p><strong>Source:</strong> Investor Portal — Get on the Deal List form</p>
+      `,
+    });
 
     return jsonResponse({ success: true }, 201);
   } catch (err) {

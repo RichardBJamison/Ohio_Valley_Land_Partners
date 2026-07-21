@@ -9,7 +9,7 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "audit:seo": "node scripts/seo-release-audit.mjs",
-    "test:forms": "node --experimental-default-type=module scripts/form-function-test.mjs"
+    "test:forms": "node scripts/form-function-test.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",

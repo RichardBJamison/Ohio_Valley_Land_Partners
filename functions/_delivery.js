@@ -1,5 +1,4 @@
 const DEFAULT_GHL_LOCATION_ID = 'bNT4wp0nukIQdBJbQDaa';
-const NOTIFICATION_CONTACT_ID = 'iEWFMH1a30jMEB65nzW2';
 const NOTIFICATION_SENDER = 'info@ohiovalleylandpartners.com';
 const NOTIFICATION_RECIPIENT = 'rbjpholdings@gmail.com';
 
@@ -89,12 +88,17 @@ export async function sendNotification(env, options) {
     }
 
     const html = String(options.html || '');
+    const notificationContact = await upsertCrmContact(env, {
+      email: NOTIFICATION_RECIPIENT,
+      source: 'OVLP Website — Notification Recipient',
+      tags: ['notification-recipient'],
+    });
     const response = await fetch('https://services.leadconnectorhq.com/conversations/messages', {
       method: 'POST',
       headers: highLevelHeaders(env, true),
       body: JSON.stringify({
         type: 'Email',
-        contactId: NOTIFICATION_CONTACT_ID,
+        contactId: notificationContact.contact.id,
         locationId,
         emailFrom: NOTIFICATION_SENDER,
         emailTo: NOTIFICATION_RECIPIENT,

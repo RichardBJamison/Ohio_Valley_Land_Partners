@@ -2,6 +2,14 @@
 
 *Last updated: 2026-07-20 · source: CODEX · Status: LIVE — approved Flip motion systems deployed*
 
+## Form routing and seller follow-up — LIVE (2026-07-27)
+
+- **Release commit:** `9d8d7de`
+- **Cloudflare production deployment:** `e261aa74-9624-42a3-a748-5b9e5ba3a4ad` (Active)
+- **Notification routing:** HighLevel form notifications now go to `rbjpholdings@gmail.com`; the sending identity remains `info@ohiovalleylandpartners.com`.
+- **Seller flow:** the first step still asks only for property address and email and sends that lead immediately. A second, optional step carries those values forward and requests the seller name, with parcel/county and notes optional; “Skip for Now” preserves the initial lead.
+- **Verification:** form-function test, changed-file ESLint, TypeScript typecheck, and exact production 62-page build passed.
+
 ---
 
 ## Approved Flip motion systems — LIVE (2026-07-20)

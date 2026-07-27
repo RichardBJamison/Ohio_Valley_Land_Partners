@@ -10,6 +10,15 @@
 - **Seller flow:** the first step still asks only for property address and email and sends that lead immediately. A second, optional step carries those values forward and requests the seller name, with parcel/county and notes optional; “Skip for Now” preserves the initial lead.
 - **Verification:** form-function test, changed-file ESLint, TypeScript typecheck, and exact production 62-page build passed.
 
+## Corrective recipient association — LIVE (2026-07-27)
+
+- **Release commit:** `bb98ae0`
+- **Cloudflare production deployment:** `6e6a28bd-b5dd-4521-a56d-1aa999dce3c9` (Active)
+- **Correction:** HighLevel now upserts the RBJP notification recipient and uses that returned contact ID when `emailTo` is `rbjpholdings@gmail.com`; the stale `info@` contact ID is no longer used.
+- **Reliability:** seller notification delivery runs before the seller CRM update; a CRM update failure is logged without turning a successfully sent notification into a form error.
+- **Verification:** form-function test passed (13 checks), TypeScript passed, changed-file ESLint passed, and the exact production 62-page build passed.
+- **Pending live check:** submit one fresh seller form after deployment and confirm arrival in RBJP.
+
 ---
 
 ## Approved Flip motion systems — LIVE (2026-07-20)

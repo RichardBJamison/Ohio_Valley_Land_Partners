@@ -42,7 +42,7 @@ globalThis.fetch = async (url, options = {}) => {
   if (String(url).includes('services.leadconnectorhq.com/conversations/messages')) {
     const payload = JSON.parse(options.body);
     assert.equal(payload.type, 'Email');
-    assert.equal(payload.contactId, 'iEWFMH1a30jMEB65nzW2');
+    assert.equal(payload.contactId, 'qa-notification-contact-id');
     assert.equal(payload.locationId, 'qa-location');
     assert.equal(payload.emailFrom, 'info@ohiovalleylandpartners.com');
     assert.equal(payload.emailTo, 'rbjpholdings@gmail.com');
@@ -53,6 +53,9 @@ globalThis.fetch = async (url, options = {}) => {
   if (String(url).includes('services.leadconnectorhq.com/contacts/upsert')) {
     const payload = JSON.parse(options.body);
     assert.equal(payload.locationId, 'qa-location');
+    if (payload.email === 'rbjpholdings@gmail.com') {
+      return Response.json({ contact: { id: 'qa-notification-contact-id' }, new: false });
+    }
     assert.equal(payload.email, 'qa@example.com');
     return Response.json({ contact: { id: 'qa-contact-id' }, new: true });
   }
@@ -82,7 +85,7 @@ await sendNotification(env, {
 });
 globalThis.fetch = originalFetch;
 
-assert.equal(requests.filter((entry) => entry.url.includes('contacts/upsert')).length, 1);
+assert.equal(requests.filter((entry) => entry.url.includes('contacts/upsert')).length, 2);
 assert.equal(requests.filter((entry) => entry.url.includes('medias/upload-file')).length, 1);
 assert.equal(requests.filter((entry) => entry.url.includes('conversations/messages')).length, 1);
-console.log(JSON.stringify({ passed: true, checks: 12 }, null, 2));
+console.log(JSON.stringify({ passed: true, checks: 13 }, null, 2));

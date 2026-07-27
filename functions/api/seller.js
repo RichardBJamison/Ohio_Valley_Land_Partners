@@ -17,15 +17,6 @@ export async function onRequestPost(context) {
       return jsonResponse({ error: 'Name is required for the follow-up' }, 400);
     }
 
-    await upsertCrmContact(context.env, {
-      name: fullName,
-      email,
-      address,
-      source: isFollowUp
-        ? 'OVLP Website — Property Review Follow-up'
-        : 'OVLP Website — Property Review',
-      tags: ['seller-property-review', ...(isFollowUp ? ['seller-property-review-details'] : [])],
-    });
     await sendNotification(context.env, {
       subject: isFollowUp
         ? `Seller Lead Details — ${String(fullName).slice(0, 80)}`
@@ -42,6 +33,20 @@ export async function onRequestPost(context) {
         <p><strong>Source:</strong> ${isFollowUp ? 'Property Review follow-up form' : 'Homepage — Property Review form'}</p>
       `,
     });
+
+    try {
+      await upsertCrmContact(context.env, {
+        name: fullName,
+        email,
+        address,
+        source: isFollowUp
+          ? 'OVLP Website — Property Review Follow-up'
+          : 'OVLP Website — Property Review',
+        tags: ['seller-property-review', ...(isFollowUp ? ['seller-property-review-details'] : [])],
+      });
+    } catch (crmError) {
+      console.error('Seller CRM update failed after notification:', crmError);
+    }
 
     return jsonResponse({ success: true }, 201);
   } catch (err) {

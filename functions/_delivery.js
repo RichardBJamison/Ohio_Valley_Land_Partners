@@ -1,6 +1,7 @@
 const DEFAULT_GHL_LOCATION_ID = 'bNT4wp0nukIQdBJbQDaa';
 const NOTIFICATION_CONTACT_ID = 'iEWFMH1a30jMEB65nzW2';
-const NOTIFICATION_EMAIL = 'info@ohiovalleylandpartners.com';
+const NOTIFICATION_SENDER = 'info@ohiovalleylandpartners.com';
+const NOTIFICATION_RECIPIENT = 'rbjpholdings@gmail.com';
 
 function cleanHeader(value, maxLength = 254) {
   return String(value ?? '').replace(/[\r\n]+/g, ' ').trim().slice(0, maxLength);
@@ -95,8 +96,8 @@ export async function sendNotification(env, options) {
         type: 'Email',
         contactId: NOTIFICATION_CONTACT_ID,
         locationId,
-        emailFrom: NOTIFICATION_EMAIL,
-        emailTo: NOTIFICATION_EMAIL,
+        emailFrom: NOTIFICATION_SENDER,
+        emailTo: NOTIFICATION_RECIPIENT,
         subject: cleanHeader(options.subject, 160),
         html,
         message: plainText(html),

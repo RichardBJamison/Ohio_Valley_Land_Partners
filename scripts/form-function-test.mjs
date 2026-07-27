@@ -44,7 +44,8 @@ globalThis.fetch = async (url, options = {}) => {
     assert.equal(payload.type, 'Email');
     assert.equal(payload.contactId, 'iEWFMH1a30jMEB65nzW2');
     assert.equal(payload.locationId, 'qa-location');
-    assert.equal(payload.emailTo, 'info@ohiovalleylandpartners.com');
+    assert.equal(payload.emailFrom, 'info@ohiovalleylandpartners.com');
+    assert.equal(payload.emailTo, 'rbjpholdings@gmail.com');
     assert.equal(payload.status, 'pending');
     assert.deepEqual(payload.attachments, ['https://storage.example.invalid/qa-properties.csv']);
     return Response.json({ messageId: 'qa-message-id', conversationId: 'qa-conversation-id' }, { status: 201 });

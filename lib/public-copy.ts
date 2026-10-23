@@ -27,7 +27,7 @@ export const sellerPositioning = {
   countySectionSub:
     'Our county pages preserve local property context and provide a direct path to start a property review.',
   formTitle: 'Start My Property Review',
-  formSub: 'Share the property address and the best email to reach you.',
+  formSub: 'Share the property address, a phone number, and the best email to reach you.',
   reassurance:
     'Requesting a review does not commit you to sell. If the property fits our current criteria, we will contact you, ask a few questions, and determine whether a written proposal makes sense.',
   reviewExplanation:

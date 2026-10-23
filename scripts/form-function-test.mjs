@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 
 import assert from 'node:assert/strict';
-import { guardFormRequest } from '../functions/_utils.js';
+import { guardFormRequest, hmacSha256Hex, timingSafeEqualHex } from '../functions/_utils.js';
 import { sendNotification, upsertCrmContact } from '../functions/_delivery.js';
+import { onRequestPost as wayneLead } from '../functions/api/wayne-lead.js';
 
 function request(body, origin = 'https://ohiovalleylandpartners.com') {
   return new Request('https://ohiovalleylandpartners.com/api/seller', {
@@ -88,4 +89,87 @@ globalThis.fetch = originalFetch;
 assert.equal(requests.filter((entry) => entry.url.includes('contacts/upsert')).length, 2);
 assert.equal(requests.filter((entry) => entry.url.includes('medias/upload-file')).length, 1);
 assert.equal(requests.filter((entry) => entry.url.includes('conversations/messages')).length, 1);
-console.log(JSON.stringify({ passed: true, checks: 13 }, null, 2));
+
+result = await guardFormRequest({
+  request: request(validBody, 'http://127.0.0.1:8893'),
+  env: {},
+});
+assert.equal(result.ok, true, 'lab origin should be accepted');
+
+const secret = 'ovlp-wayne-test-secret-abcdefghijklmnopqrstuvwxyz012345';
+const envelope = JSON.stringify({
+  arguments: JSON.stringify({
+    consent: true,
+    email: 'qa@example.com',
+    full_name: 'Pat Seller',
+    notes: 'inherited lot',
+    phone: '6145550100',
+    property_address: '123 Test St, Newark, OH',
+  }),
+  conversation_id: 'c-test',
+  inference_id: 'inf-test',
+  name: 'submit_property_review',
+  tool_call_id: 'call-test',
+  turn_idx: 4,
+});
+const signature = await hmacSha256Hex(secret, envelope);
+assert.equal(timingSafeEqualHex(signature, signature), true);
+assert.equal(timingSafeEqualHex(signature, '0'.repeat(signature.length)), false);
+
+const missingSecret = await wayneLead({
+  request: new Request('https://ohiovalleylandpartners.com/api/wayne-lead', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'X-Tavus-Signature': signature },
+    body: envelope,
+  }),
+  env: {},
+});
+assert.equal(missingSecret.status, 503);
+
+const badSig = await wayneLead({
+  request: new Request('https://ohiovalleylandpartners.com/api/wayne-lead', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'X-Tavus-Signature': 'ab'.repeat(32) },
+    body: envelope,
+  }),
+  env: { TAVUS_TOOL_SECRET: secret },
+});
+assert.equal(badSig.status, 401);
+
+const wayneRequests = [];
+globalThis.fetch = async (url, options = {}) => {
+  wayneRequests.push({ url: String(url), options });
+  if (String(url).includes('services.leadconnectorhq.com/conversations/messages')) {
+    return Response.json({ messageId: 'qa-message-id', conversationId: 'qa-conversation-id' }, { status: 201 });
+  }
+  if (String(url).includes('services.leadconnectorhq.com/contacts/upsert')) {
+    const payload = JSON.parse(options.body);
+    if (payload.email === 'rbjpholdings@gmail.com') {
+      return Response.json({ contact: { id: 'qa-notification-contact-id' }, new: false });
+    }
+    assert.equal(payload.email, 'qa@example.com');
+    assert.equal(payload.phone, '+16145550100');
+    assert.equal(payload.address1, '123 Test St, Newark, OH');
+    return Response.json({ contact: { id: 'qa-contact-id' }, new: true });
+  }
+  throw new Error('Unexpected Wayne request: ' + url);
+};
+
+const okLead = await wayneLead({
+  request: new Request('https://ohiovalleylandpartners.com/api/wayne-lead', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'X-Tavus-Signature': signature },
+    body: envelope,
+  }),
+  env: {
+    TAVUS_TOOL_SECRET: secret,
+    GHL_API_TOKEN: 'qa-ghl-token',
+    GHL_LOCATION_ID: 'qa-location',
+  },
+});
+assert.equal(okLead.status, 200);
+assert.match(await okLead.text(), /Property review received/);
+assert.equal(wayneRequests.filter((entry) => entry.url.includes('contacts/upsert')).length, 2);
+globalThis.fetch = originalFetch;
+
+console.log(JSON.stringify({ passed: true, checks: 19 }, null, 2));

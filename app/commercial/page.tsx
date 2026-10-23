@@ -102,7 +102,7 @@ export default function CommercialPage() {
           <div className="mx-auto max-w-xl px-6 text-center">
             <h2 className="text-2xl font-bold text-foreground mb-4">Have a Commercial Property to Discuss?</h2>
             <p className="text-muted-foreground mb-8">
-              Use the contact form and select &quot;Commercial&quot; as your inquiry type. Share the address and the best email to reach you.
+              Use the contact form and select &quot;Commercial&quot; as your inquiry type. Share the address, a phone number, and the best email to reach you.
             </p>
             <Link
               href="/contact?type=commercial"

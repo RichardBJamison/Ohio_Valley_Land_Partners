@@ -25,7 +25,7 @@ export default function ContactPage() {
             Get in Touch
           </h1>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            For a property review, share the property address and the best email to reach you.
+            For a property review, share the property address, a phone number, and the best email to reach you.
             You do not need to answer a long list of property questions before the first
             conversation. Buyer-network, partnership, and general questions can use the same form.
           </p>

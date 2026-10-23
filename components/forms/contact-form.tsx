@@ -30,7 +30,12 @@ import { trackConversionEvent } from '@/components/analytics/conversion-tracker'
 const contactFormSchema = z.object({
   fullName: z.string().min(2, { message: 'Name must be at least 2 characters' }),
   email: z.string().email({ message: 'Invalid email address' }),
-  phone: z.string().optional(),
+  phone: z
+    .string()
+    .optional()
+    .refine((value) => !value || value.replace(/\D/g, '').length >= 10, {
+      message: 'Enter a valid phone number',
+    }),
   leadType: z.enum(['land', 'commercial', 'investor', 'partnership', 'inquiry']),
   message: z.string().min(10, { message: 'Message must be at least 10 characters' }),
 });
@@ -152,9 +157,19 @@ export function ContactForm({ defaultLeadType = 'inquiry' }: ContactFormProps) {
             )}
           />
 
-          {/* Phone field hidden for GHL A2P compliance — GHL widget is the single opt-in source */}
-          <input type="hidden" name="phone" value={form.getValues('phone')} />
-
+          <FormField
+            control={form.control}
+            name="phone"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Phone</FormLabel>
+                <FormControl>
+                  <Input type="tel" autoComplete="tel" placeholder="(614) 653-7430" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
         </div>
 
         <FormField

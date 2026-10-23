@@ -16,6 +16,7 @@ export function SellerForm() {
   const [startedAt] = useState(() => Date.now());
   const [website, setWebsite] = useState('');
   const [address, setAddress] = useState('');
+  const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [fullName, setFullName] = useState('');
   const [parcelNumber, setParcelNumber] = useState('');
@@ -33,6 +34,7 @@ export function SellerForm() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         address: address.trim(),
+        phone: phone.trim(),
         email: email.trim(),
         fullName: fullName.trim(),
         parcelNumber: parcelNumber.trim(),
@@ -49,8 +51,8 @@ export function SellerForm() {
   async function handleInitialSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError('');
-    if (!address.trim() || !email.trim()) {
-      setError('Both fields are required.');
+    if (!address.trim() || !email.trim() || phone.replace(/\D/g, '').length < 10) {
+      setError('Address, phone, and email are required.');
       trackConversionEvent('form_error', {
         form_name: 'seller_property_review',
         error_type: 'validation',
@@ -111,7 +113,7 @@ export function SellerForm() {
         <CheckCircle className="h-12 w-12 text-green-500" />
         <h3 className="text-xl font-bold text-foreground">We Got It</h3>
         <p className="text-muted-foreground text-sm max-w-xs">
-          Your address and email are in. We&apos;ll review the property and determine whether it fits our current buying criteria. There is no obligation to sell.
+          Your property, phone, and email are in. We&apos;ll review the property and determine whether it fits our current buying criteria. There is no obligation to sell.
         </p>
       </div>
     );
@@ -127,10 +129,11 @@ export function SellerForm() {
         <div className="rounded-lg border border-border bg-background p-4 text-sm">
           <p className="font-semibold text-foreground">Your first step is complete.</p>
           <p className="mt-1 text-muted-foreground">
-            Add these details if you have them. Your property address and email are already saved.
+            Add these details if you have them. Your property address, phone, and email are already saved.
           </p>
           <div className="mt-3 grid gap-2 text-xs text-muted-foreground">
             <p><span className="font-semibold text-foreground">Property:</span> {address}</p>
+            <p><span className="font-semibold text-foreground">Phone:</span> {phone}</p>
             <p><span className="font-semibold text-foreground">Email:</span> {email}</p>
           </div>
         </div>
@@ -227,6 +230,25 @@ export function SellerForm() {
             placeholder="123 Elm St, Newark, OH 43055"
             value={address}
             onChange={(e) => setAddress(e.target.value)}
+            className="pl-9"
+            required
+          />
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-1.5">
+        <Label htmlFor="seller-phone" className="text-sm font-semibold text-foreground">
+          Phone
+        </Label>
+        <div className="relative">
+          <Phone className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <Input
+            id="seller-phone"
+            type="tel"
+            autoComplete="tel"
+            placeholder="(614) 653-7430"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
             className="pl-9"
             required
           />

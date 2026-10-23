@@ -1,0 +1,13 @@
+{
+  "pal_id": "p166113e8f91",
+  "pal_name": "Wayne \u2014 Ohio Valley Land Partners",
+  "face_id": "r72f7f7f7c8b",
+  "deployment_id": "ab0ac811-8aac-4648-821f-0bde28e6f53d",
+  "tool_id": "td47fe84d5d0d",
+  "tool_name": "submit_property_review",
+  "objectives_id": "o42b7df7e426f",
+  "document_id": "d8-4c0aea00d890",
+  "about_document_id": "d0-947722c8b435",
+  "embed_script": "https://unpkg.com/@tavus/embed@0.18.0",
+  "created": "2026-10-23T15:28:04Z"
+}

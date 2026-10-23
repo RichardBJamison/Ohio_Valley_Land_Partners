@@ -78,8 +78,8 @@ export default async function CountyGuidePage({ params }: Props) {
         {
           question: `How do I ask OVLP to review property in ${county.name}?`,
           answer: sellData
-            ? 'Share the property address and the best email to reach you. OVLP will review whether the parcel fits its current buying criteria. Requesting a review does not commit you to sell, and not every property receives a proposal.'
-            : 'Share the property address and the best email to reach you. Publishing this guide does not confirm active acquisition coverage in the county. OVLP may still review the inquiry, with no obligation to sell and no promise that a proposal will be presented.',
+            ? 'Share the property address, a phone number, and the best email to reach you. OVLP will review whether the parcel fits its current buying criteria. Requesting a review does not commit you to sell, and not every property receives a proposal.'
+            : 'Share the property address, a phone number, and the best email to reach you. Publishing this guide does not confirm active acquisition coverage in the county. OVLP may still review the inquiry, with no obligation to sell and no promise that a proposal will be presented.',
         },
       ]
     : [];
@@ -204,7 +204,7 @@ export default async function CountyGuidePage({ params }: Props) {
             </h2>
             <p className="text-muted-foreground mb-8">
               {sellData
-                ? 'Start with the address and the best email to reach you. There is no obligation to sell, and not every property receives a proposal.'
+                ? 'Start with the address, a phone number, and the best email to reach you. There is no obligation to sell, and not every property receives a proposal.'
                 : 'This guide does not establish active acquisition coverage. You may still share the address for review, with no obligation and no promise of a proposal.'}
             </p>
             <div className="flex flex-wrap gap-4 justify-center">

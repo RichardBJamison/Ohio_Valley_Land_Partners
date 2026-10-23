@@ -28,7 +28,7 @@ export async function onRequestPost(context) {
         <h2>New Investor / Deal List Signup</h2>
         <p><strong>Name:</strong> ${escapeHtml(name)}</p>
         <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-        <p><strong>Phone:</strong> ${phone?.trim() ? escapeHtml(phone) : 'Not collected on this form. Phone/SMS opt-in is handled by the GHL chat widget.'}</p>
+        <p><strong>Phone:</strong> ${phone?.trim() ? escapeHtml(phone) : 'Not provided'}</p>
         <p><strong>Counties of Interest:</strong> ${escapeHtml(countyList || 'Not specified')}</p>
         <p><strong>Acreage Range:</strong> ${escapeHtml(acreage || 'Not specified')}</p>
         <p><strong>Intended Use:</strong> ${escapeHtml(useCase || 'Not specified')}</p>

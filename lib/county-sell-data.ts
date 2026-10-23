@@ -111,7 +111,7 @@ export const countySellPages: CountySellData[] = [
       },
       {
         q: 'Will you text me after I submit my property?',
-        a: 'The short property-review form collects an email address. Phone and SMS communication is available only through the site’s GHL chat widget and its consent process. OVLP will use the contact method the owner provides.',
+        a: 'The property-review form collects a phone number, email, and property address. OVLP will use the contact method the owner provides, including a call or text to the number they submit.',
       },
       {
         q: 'Can I sell land in Franklin County if the property taxes are past due?',

@@ -129,8 +129,17 @@ export function InvestorIntakeForm() {
             required
           />
         </div>
-        {/* Phone field hidden for GHL A2P compliance — GHL widget is the single opt-in source */}
-        <input type="hidden" value={form.phone} />
+        <div className="flex flex-col gap-1.5">
+          <Label htmlFor="inv-phone">Phone</Label>
+          <Input
+            id="inv-phone"
+            type="tel"
+            autoComplete="tel"
+            placeholder="(614) 653-7430"
+            value={form.phone}
+            onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
+          />
+        </div>
       </div>
 
       <div className="flex flex-col gap-1.5">

@@ -6,11 +6,13 @@ export async function onRequestPost(context) {
     const guard = await guardFormRequest(context);
     if (!guard.ok) return guard.response;
 
-    const { address, email, stage, fullName, parcelNumber, notes } = guard.body;
+    const { address, email, phone, stage, fullName, parcelNumber, notes, source } = guard.body;
     const isFollowUp = stage === 'follow-up';
+    const fromWayne = source === 'wayne';
+    const phoneDigits = String(phone || '').replace(/\D/g, '');
 
-    if (!address?.trim() || !email?.trim()) {
-      return jsonResponse({ error: 'Address and email are required' }, 400);
+    if (!address?.trim() || !email?.trim() || phoneDigits.length < 10) {
+      return jsonResponse({ error: 'Address, phone, and email are required' }, 400);
     }
 
     if (isFollowUp && !fullName?.trim()) {
@@ -25,12 +27,12 @@ export async function onRequestPost(context) {
       html: `
         <h2>${isFollowUp ? 'Seller Lead Details' : 'New Seller Lead'}</h2>
         <p><strong>Property Address:</strong> ${escapeHtml(address)}</p>
+        <p><strong>Phone:</strong> ${escapeHtml(phone)}</p>
         <p><strong>Email:</strong> ${escapeHtml(email)}</p>
         ${fullName ? `<p><strong>Name:</strong> ${escapeHtml(fullName)}</p>` : ''}
         ${parcelNumber ? `<p><strong>Parcel Number / County:</strong> ${escapeHtml(parcelNumber)}</p>` : ''}
         ${notes ? `<p><strong>Additional Notes:</strong><br/>${escapeHtml(notes)}</p>` : ''}
-        <p><strong>Phone:</strong> Not collected on this form. Phone/SMS opt-in is handled by the GHL chat widget.</p>
-        <p><strong>Source:</strong> ${isFollowUp ? 'Property Review follow-up form' : 'Homepage — Property Review form'}</p>
+        <p><strong>Source:</strong> ${fromWayne ? 'Wayne AI avatar — written form' : isFollowUp ? 'Property Review follow-up form' : 'Homepage — Property Review form'}</p>
       `,
     });
 
@@ -38,11 +40,18 @@ export async function onRequestPost(context) {
       await upsertCrmContact(context.env, {
         name: fullName,
         email,
+        phone,
         address,
-        source: isFollowUp
-          ? 'OVLP Website — Property Review Follow-up'
-          : 'OVLP Website — Property Review',
-        tags: ['seller-property-review', ...(isFollowUp ? ['seller-property-review-details'] : [])],
+        source: fromWayne
+          ? 'OVLP Website — Wayne Avatar Form'
+          : isFollowUp
+            ? 'OVLP Website — Property Review Follow-up'
+            : 'OVLP Website — Property Review',
+        tags: [
+          'seller-property-review',
+          ...(fromWayne ? ['wayne-avatar'] : []),
+          ...(isFollowUp ? ['seller-property-review-details'] : []),
+        ],
       });
     } catch (crmError) {
       console.error('Seller CRM update failed after notification:', crmError);

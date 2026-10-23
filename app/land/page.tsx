@@ -37,7 +37,7 @@ const process: ProcessItem[] = [
   {
     step: '0.1',
     title: 'Share the Property',
-    description: 'Send the property address and the best email to reach you. A parcel number is helpful later, but it is not required to begin.',
+    description: 'Send the property address, a phone number, and the best email to reach you. A parcel number is helpful later, but it is not required to begin.',
   },
   {
     step: '0.2',

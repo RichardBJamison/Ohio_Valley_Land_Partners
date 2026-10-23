@@ -106,7 +106,7 @@ export function WayneAvatar() {
 
   return (
     <section
-      className="fixed z-[80] left-4 top-24 w-[min(20rem,calc(100vw-2rem))] overflow-hidden rounded-xl border border-border bg-card text-card-foreground shadow-2xl"
+      className="fixed z-[80] left-4 bottom-[5.75rem] lg:bottom-5 w-[min(20rem,calc(100vw-2rem))] overflow-hidden rounded-xl border border-border bg-card text-card-foreground shadow-2xl"
       aria-label="Wayne, Ohio Valley Land Partners AI host"
     >
       <div className="flex items-center gap-2 bg-dark px-3 py-2 text-dark-foreground">
